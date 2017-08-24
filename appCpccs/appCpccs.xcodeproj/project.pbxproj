@@ -13,6 +13,7 @@
 		DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB00537E1F4F75CE00664030 /* Images.xcassets */; };
 		DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0053801F4F75CE00664030 /* LaunchScreen.xib */; };
 		DB00538E1F4F75CE00664030 /* appCpccsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00538D1F4F75CE00664030 /* appCpccsTests.swift */; };
+		DB00539D1F4F7DAB00664030 /* freepik.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB00539C1F4F7DAB00664030 /* freepik.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DB0053871F4F75CE00664030 /* appCpccsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appCpccsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB00538C1F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB00538D1F4F75CE00664030 /* appCpccsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appCpccsTests.swift; sourceTree = "<group>"; };
+		DB00539C1F4F7DAB00664030 /* freepik.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freepik.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		DB0053741F4F75CE00664030 /* appCpccs */ = {
 			isa = PBXGroup;
 			children = (
+				DB00539B1F4F7DAB00664030 /* _images */,
 				DB0053771F4F75CE00664030 /* AppDelegate.swift */,
 				DB0053791F4F75CE00664030 /* ViewController.swift */,
 				DB00537B1F4F75CE00664030 /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				DB00538C1F4F75CE00664030 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB00539B1F4F7DAB00664030 /* _images */ = {
+			isa = PBXGroup;
+			children = (
+				DB00539C1F4F7DAB00664030 /* freepik.jpg */,
+			);
+			path = _images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB00539D1F4F7DAB00664030 /* freepik.jpg in Resources */,
 				DB00537D1F4F75CE00664030 /* Main.storyboard in Resources */,
 				DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */,
 				DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */,
@@ -407,6 +419,7 @@
 				DB0053931F4F75CE00664030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB0053941F4F75CE00664030 /* Build configuration list for PBXNativeTarget "appCpccsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +428,7 @@
 				DB0053961F4F75CE00664030 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
