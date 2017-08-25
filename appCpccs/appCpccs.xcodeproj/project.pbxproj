@@ -13,7 +13,23 @@
 		DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB00537E1F4F75CE00664030 /* Images.xcassets */; };
 		DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0053801F4F75CE00664030 /* LaunchScreen.xib */; };
 		DB00538E1F4F75CE00664030 /* appCpccsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00538D1F4F75CE00664030 /* appCpccsTests.swift */; };
-		DB00539D1F4F7DAB00664030 /* freepik.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB00539C1F4F7DAB00664030 /* freepik.jpg */; };
+		DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5031F50B9EC003409AE /* cabecera.jpg */; };
+		DBEEF5141F50B9EC003409AE /* control_social.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5041F50B9EC003409AE /* control_social.png */; };
+		DBEEF5151F50B9EC003409AE /* denuncias.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5051F50B9EC003409AE /* denuncias.png */; };
+		DBEEF5161F50B9EC003409AE /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5061F50B9EC003409AE /* facebook.png */; };
+		DBEEF5171F50B9EC003409AE /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5071F50B9EC003409AE /* fondo.png */; };
+		DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5081F50B9EC003409AE /* fondo2.png */; };
+		DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5091F50B9EC003409AE /* footer.jpg */; };
+		DBEEF51A1F50B9EC003409AE /* freepik.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50A1F50B9EC003409AE /* freepik.jpg */; };
+		DBEEF51B1F50B9EC003409AE /* logo_youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50B1F50B9EC003409AE /* logo_youtube.png */; };
+		DBEEF51C1F50B9EC003409AE /* lucha_anti_corrupcion.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50C1F50B9EC003409AE /* lucha_anti_corrupcion.png */; };
+		DBEEF51D1F50B9EC003409AE /* marker_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50D1F50B9EC003409AE /* marker_logo.png */; };
+		DBEEF51E1F50B9EC003409AE /* participacion_ciudadana.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50E1F50B9EC003409AE /* participacion_ciudadana.png */; };
+		DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF50F1F50B9EC003409AE /* preguntasfrecuentes.png */; };
+		DBEEF5201F50B9EC003409AE /* transparencia.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5101F50B9EC003409AE /* transparencia.png */; };
+		DBEEF5211F50B9EC003409AE /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5111F50B9EC003409AE /* twitter_logo.png */; };
+		DBEEF5221F50B9EC003409AE /* ubicacion_provincias.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5121F50B9EC003409AE /* ubicacion_provincias.png */; };
+		DBEEF5241F50CF02003409AE /* noticias2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5231F50CF02003409AE /* noticias2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +53,23 @@
 		DB0053871F4F75CE00664030 /* appCpccsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appCpccsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB00538C1F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB00538D1F4F75CE00664030 /* appCpccsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appCpccsTests.swift; sourceTree = "<group>"; };
-		DB00539C1F4F7DAB00664030 /* freepik.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freepik.jpg; sourceTree = "<group>"; };
+		DBEEF5031F50B9EC003409AE /* cabecera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cabecera.jpg; sourceTree = "<group>"; };
+		DBEEF5041F50B9EC003409AE /* control_social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_social.png; sourceTree = "<group>"; };
+		DBEEF5051F50B9EC003409AE /* denuncias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denuncias.png; sourceTree = "<group>"; };
+		DBEEF5061F50B9EC003409AE /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		DBEEF5071F50B9EC003409AE /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
+		DBEEF5081F50B9EC003409AE /* fondo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo2.png; sourceTree = "<group>"; };
+		DBEEF5091F50B9EC003409AE /* footer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footer.jpg; sourceTree = "<group>"; };
+		DBEEF50A1F50B9EC003409AE /* freepik.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freepik.jpg; sourceTree = "<group>"; };
+		DBEEF50B1F50B9EC003409AE /* logo_youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_youtube.png; sourceTree = "<group>"; };
+		DBEEF50C1F50B9EC003409AE /* lucha_anti_corrupcion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lucha_anti_corrupcion.png; sourceTree = "<group>"; };
+		DBEEF50D1F50B9EC003409AE /* marker_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_logo.png; sourceTree = "<group>"; };
+		DBEEF50E1F50B9EC003409AE /* participacion_ciudadana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = participacion_ciudadana.png; sourceTree = "<group>"; };
+		DBEEF50F1F50B9EC003409AE /* preguntasfrecuentes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preguntasfrecuentes.png; sourceTree = "<group>"; };
+		DBEEF5101F50B9EC003409AE /* transparencia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparencia.png; sourceTree = "<group>"; };
+		DBEEF5111F50B9EC003409AE /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
+		DBEEF5121F50B9EC003409AE /* ubicacion_provincias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ubicacion_provincias.png; sourceTree = "<group>"; };
+		DBEEF5231F50CF02003409AE /* noticias2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noticias2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +111,7 @@
 		DB0053741F4F75CE00664030 /* appCpccs */ = {
 			isa = PBXGroup;
 			children = (
-				DB00539B1F4F7DAB00664030 /* _images */,
+				DBEEF5021F50B9EC003409AE /* _images */,
 				DB0053771F4F75CE00664030 /* AppDelegate.swift */,
 				DB0053791F4F75CE00664030 /* ViewController.swift */,
 				DB00537B1F4F75CE00664030 /* Main.storyboard */,
@@ -115,10 +147,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DB00539B1F4F7DAB00664030 /* _images */ = {
+		DBEEF5021F50B9EC003409AE /* _images */ = {
 			isa = PBXGroup;
 			children = (
-				DB00539C1F4F7DAB00664030 /* freepik.jpg */,
+				DBEEF5231F50CF02003409AE /* noticias2.png */,
+				DBEEF5031F50B9EC003409AE /* cabecera.jpg */,
+				DBEEF5041F50B9EC003409AE /* control_social.png */,
+				DBEEF5051F50B9EC003409AE /* denuncias.png */,
+				DBEEF5061F50B9EC003409AE /* facebook.png */,
+				DBEEF5071F50B9EC003409AE /* fondo.png */,
+				DBEEF5081F50B9EC003409AE /* fondo2.png */,
+				DBEEF5091F50B9EC003409AE /* footer.jpg */,
+				DBEEF50A1F50B9EC003409AE /* freepik.jpg */,
+				DBEEF50B1F50B9EC003409AE /* logo_youtube.png */,
+				DBEEF50C1F50B9EC003409AE /* lucha_anti_corrupcion.png */,
+				DBEEF50D1F50B9EC003409AE /* marker_logo.png */,
+				DBEEF50E1F50B9EC003409AE /* participacion_ciudadana.png */,
+				DBEEF50F1F50B9EC003409AE /* preguntasfrecuentes.png */,
+				DBEEF5101F50B9EC003409AE /* transparencia.png */,
+				DBEEF5111F50B9EC003409AE /* twitter_logo.png */,
+				DBEEF5121F50B9EC003409AE /* ubicacion_provincias.png */,
 			);
 			path = _images;
 			sourceTree = "<group>";
@@ -203,9 +251,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB00539D1F4F7DAB00664030 /* freepik.jpg in Resources */,
+				DBEEF5211F50B9EC003409AE /* twitter_logo.png in Resources */,
+				DBEEF51D1F50B9EC003409AE /* marker_logo.png in Resources */,
 				DB00537D1F4F75CE00664030 /* Main.storyboard in Resources */,
+				DBEEF51E1F50B9EC003409AE /* participacion_ciudadana.png in Resources */,
+				DBEEF5141F50B9EC003409AE /* control_social.png in Resources */,
+				DBEEF5171F50B9EC003409AE /* fondo.png in Resources */,
+				DBEEF5201F50B9EC003409AE /* transparencia.png in Resources */,
+				DBEEF51A1F50B9EC003409AE /* freepik.jpg in Resources */,
+				DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */,
+				DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */,
+				DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */,
+				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
+				DBEEF5161F50B9EC003409AE /* facebook.png in Resources */,
+				DBEEF51B1F50B9EC003409AE /* logo_youtube.png in Resources */,
 				DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */,
+				DBEEF5221F50B9EC003409AE /* ubicacion_provincias.png in Resources */,
+				DBEEF5241F50CF02003409AE /* noticias2.png in Resources */,
+				DBEEF51C1F50B9EC003409AE /* lucha_anti_corrupcion.png in Resources */,
+				DBEEF5151F50B9EC003409AE /* denuncias.png in Resources */,
 				DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
