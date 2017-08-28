@@ -13,6 +13,7 @@
 		DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB00537E1F4F75CE00664030 /* Images.xcassets */; };
 		DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0053801F4F75CE00664030 /* LaunchScreen.xib */; };
 		DB00538E1F4F75CE00664030 /* appCpccsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00538D1F4F75CE00664030 /* appCpccsTests.swift */; };
+		DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5706AE1F54CC7A00BFAF3F /* logo.png */; };
 		DBDBD6921F54B2C800006221 /* noticiasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6911F54B2C800006221 /* noticiasController.swift */; };
 		DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5031F50B9EC003409AE /* cabecera.jpg */; };
 		DBEEF5141F50B9EC003409AE /* control_social.png in Resources */ = {isa = PBXBuildFile; fileRef = DBEEF5041F50B9EC003409AE /* control_social.png */; };
@@ -54,6 +55,7 @@
 		DB0053871F4F75CE00664030 /* appCpccsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appCpccsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB00538C1F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB00538D1F4F75CE00664030 /* appCpccsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appCpccsTests.swift; sourceTree = "<group>"; };
+		DB5706AE1F54CC7A00BFAF3F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DBDBD6911F54B2C800006221 /* noticiasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noticiasController.swift; sourceTree = "<group>"; };
 		DBEEF5031F50B9EC003409AE /* cabecera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cabecera.jpg; sourceTree = "<group>"; };
 		DBEEF5041F50B9EC003409AE /* control_social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_social.png; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		DBEEF5021F50B9EC003409AE /* _images */ = {
 			isa = PBXGroup;
 			children = (
+				DB5706AE1F54CC7A00BFAF3F /* logo.png */,
 				DBEEF5231F50CF02003409AE /* noticias2.png */,
 				DBEEF5031F50B9EC003409AE /* cabecera.jpg */,
 				DBEEF5041F50B9EC003409AE /* control_social.png */,
@@ -265,6 +268,7 @@
 				DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */,
 				DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */,
 				DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */,
+				DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */,
 				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
 				DBEEF5161F50B9EC003409AE /* facebook.png in Resources */,
 				DBEEF51B1F50B9EC003409AE /* logo_youtube.png in Resources */,
