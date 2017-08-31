@@ -454,8 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3L-du-W4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="548" y="2409"/>
+            <point key="canvasLocation" x="-408" y="1905"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LEj-Aa-G2Q">
@@ -534,9 +533,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwk-TY-lMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2125" y="2673"/>
-=======
-            <point key="canvasLocation" x="1354" y="595"/>
->>>>>>> aff7e5b746a659e22ab861553c8c44b6de64d385
         </scene>
         <!--Noticias View Controller-->
         <scene sceneID="0HV-96-C0b">
@@ -600,6 +596,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7e9-nd-REY"/>
+        <segue reference="BiA-oa-Q9C"/>
     </inferredMetricsTieBreakers>
 </document>
