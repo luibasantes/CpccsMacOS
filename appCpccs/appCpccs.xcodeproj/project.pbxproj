@@ -13,6 +13,9 @@
 		DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB00537E1F4F75CE00664030 /* Images.xcassets */; };
 		DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0053801F4F75CE00664030 /* LaunchScreen.xib */; };
 		DB00538E1F4F75CE00664030 /* appCpccsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00538D1F4F75CE00664030 /* appCpccsTests.swift */; };
+		DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29FB541F5DE5310022FC70 /* FacebookController.swift */; };
+		DB29FB571F5DE7400022FC70 /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29FB561F5DE7400022FC70 /* TwitterController.swift */; };
+		DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB29FB581F5DE7730022FC70 /* YoutubeController.swift */; };
 		DB491DEC1F58ACC600B26BF9 /* barraIconos.png in Resources */ = {isa = PBXBuildFile; fileRef = DB491DDC1F58ACC600B26BF9 /* barraIconos.png */; };
 		DB491DED1F58ACC600B26BF9 /* barraIconosGris.png in Resources */ = {isa = PBXBuildFile; fileRef = DB491DDD1F58ACC600B26BF9 /* barraIconosGris.png */; };
 		DB491DEE1F58ACC600B26BF9 /* barraRedesSociales.png in Resources */ = {isa = PBXBuildFile; fileRef = DB491DDE1F58ACC600B26BF9 /* barraRedesSociales.png */; };
@@ -76,6 +79,9 @@
 		DB0053871F4F75CE00664030 /* appCpccsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = appCpccsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB00538C1F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB00538D1F4F75CE00664030 /* appCpccsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appCpccsTests.swift; sourceTree = "<group>"; };
+		DB29FB541F5DE5310022FC70 /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
+		DB29FB561F5DE7400022FC70 /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
+		DB29FB581F5DE7730022FC70 /* YoutubeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeController.swift; sourceTree = "<group>"; };
 		DB491DDC1F58ACC600B26BF9 /* barraIconos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barraIconos.png; sourceTree = "<group>"; };
 		DB491DDD1F58ACC600B26BF9 /* barraIconosGris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barraIconosGris.png; sourceTree = "<group>"; };
 		DB491DDE1F58ACC600B26BF9 /* barraRedesSociales.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barraRedesSociales.png; sourceTree = "<group>"; };
@@ -168,6 +174,9 @@
 				DB0053751F4F75CE00664030 /* Supporting Files */,
 				DBDBD6911F54B2C800006221 /* noticiasController.swift */,
 				DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */,
+				DB29FB541F5DE5310022FC70 /* FacebookController.swift */,
+				DB29FB561F5DE7400022FC70 /* TwitterController.swift */,
+				DB29FB581F5DE7730022FC70 /* YoutubeController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -396,8 +405,11 @@
 			files = (
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
+				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
 				DBDBD6941F54CF2D00006221 /* denunciasPageViewController.swift in Sources */,
+				DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */,
 				DBDBD6921F54B2C800006221 /* noticiasController.swift in Sources */,
+				DB29FB571F5DE7400022FC70 /* TwitterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
