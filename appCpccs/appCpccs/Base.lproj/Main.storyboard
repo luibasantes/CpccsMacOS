@@ -774,15 +774,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xQC-hE-yub">
-                                <rect key="frame" x="243" y="20" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                <state key="normal" title="CONTACTO">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="pressNoticias:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="Zhx-AI-vog"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSEJO DE PARTICIPACION CIUDADANA Y CONTROL SOCIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRp-zN-xsB">
                                 <rect key="frame" x="7" y="3" width="166" height="65"/>
@@ -852,6 +846,9 @@
                                 <state key="normal" title="Button" image="participacionGris.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressParticipacion:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="vn4-tq-pGG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hTY-Lq-yzr">
                                 <rect key="frame" x="87" y="390" width="55" height="55"/>
@@ -859,6 +856,9 @@
                                 <state key="normal" title="Button" image="controlSocialGris.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressControlSocial:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="2qu-TP-3N0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LH9-mL-y8Y">
                                 <rect key="frame" x="169" y="390" width="55" height="55"/>
@@ -866,6 +866,9 @@
                                 <state key="normal" title="Button" image="transparenciaGris.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressTransparencia:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="Lcf-Wr-WmM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="66h-vS-vcw">
                                 <rect key="frame" x="250" y="390" width="55" height="55"/>
@@ -873,6 +876,9 @@
                                 <state key="normal" title="Button" image="luchaContraCGris.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressTransparencia:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="o6P-nM-smM"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" id="v7s-ue-SF2">
                                 <rect key="frame" x="0.0" y="181" width="320" height="201"/>
@@ -921,9 +927,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xQC-hE-yub">
+                                <rect key="frame" x="238" y="20" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <state key="normal" title="CONTACTO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressContactos:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="X9Z-ga-ULJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnControlSocial" destination="hTY-Lq-yzr" id="f4g-pk-Xk7"/>
+                        <outlet property="btnParticipacion" destination="bN0-Yh-vVl" id="r1K-c5-vay"/>
+                        <outlet property="btnTransparencia" destination="LH9-mL-y8Y" id="CwU-VA-MTP"/>
+                        <outlet property="labelTema" destination="NOk-zz-jDC" id="3wu-vs-G5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksO-BT-nYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
