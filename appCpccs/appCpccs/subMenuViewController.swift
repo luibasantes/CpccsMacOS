@@ -31,7 +31,8 @@ class subMenuViewController: UIViewController {
     
     
     func showParticipacionCiudadana(){
-        
+        let image = UIImage(named: "participacion.png")
+        btnParticipacion.setImage(image,forState: .Normal)
     }
     
     func showControlSocial(){
