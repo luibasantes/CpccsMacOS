@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imf-8k-s1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="-259"/>
+            <point key="canvasLocation" x="-628" y="-315"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="saQ-O1-LS3">
@@ -234,7 +234,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKv-h8-DPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196.5" y="-259.5"/>
+            <point key="canvasLocation" x="-201.5" y="-367.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -301,9 +301,6 @@
                                 <state key="normal" title="A" image="lucha_anti_corrupcion.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="iSv-2y-e2o" kind="modal" id="S5z-SH-g3p"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRANSPARENCIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fcG-ih-T8k">
                                 <rect key="frame" x="34" y="455" width="118" height="21"/>
@@ -365,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="713"/>
+            <point key="canvasLocation" x="-685" y="382"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="abg-ST-WeR">
@@ -381,7 +378,7 @@
                                 <items>
                                     <barButtonItem systemItem="reply" id="Y7r-xm-Suk">
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="modal" id="BiA-oa-Q9C"/>
+                                            <segue destination="Chv-Tj-BBp" kind="modal" id="051-2c-mEk"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -468,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9z-hy-Qwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2125" y="2009"/>
+            <point key="canvasLocation" x="1004" y="2551"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2LQ-ga-IFk">
@@ -488,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpT-L0-aM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="2009"/>
+            <point key="canvasLocation" x="624" y="2551"/>
         </scene>
         <!--Denuncias Page View Controller-->
         <scene sceneID="BaW-a8-0PK">
@@ -496,7 +493,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="FUw-73-cxl" customClass="denunciasPageViewController" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQs-9o-doj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="2252"/>
+            <point key="canvasLocation" x="-61" y="2883"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="d33-vt-xoJ">
@@ -504,7 +501,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="e6A-Od-1wO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBx-lZ-C0A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="3393"/>
+            <point key="canvasLocation" x="-418" y="2883"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pf0-DM-KGA">
@@ -518,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGN-xi-tfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="2673"/>
+            <point key="canvasLocation" x="624" y="3215"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DPu-KZ-4pl">
@@ -532,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwk-TY-lMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2125" y="2673"/>
+            <point key="canvasLocation" x="1004" y="3215"/>
         </scene>
         <!--Noticias View Controller-->
         <scene sceneID="0HV-96-C0b">
@@ -576,12 +573,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRz-iR-Dgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="-278"/>
+            <point key="canvasLocation" x="-160" y="272"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="P1C-Zs-Yge">
             <objects>
-                <viewController id="Chv-Tj-BBp" sceneMemberID="viewController">
+                <viewController id="Chv-Tj-BBp" customClass="menuViewController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WI9-Mb-2uh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -641,15 +638,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jGO-zG-ixD">
-                                <rect key="frame" x="197" y="440" width="51" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="twitter.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1R7-YA-QsS">
-                                <rect key="frame" x="136" y="440" width="53" height="54"/>
+                                <rect key="frame" x="136" y="440" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -659,7 +649,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O18-93-2pX">
-                                <rect key="frame" x="72" y="440" width="56" height="54"/>
+                                <rect key="frame" x="72" y="440" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="youtube.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -676,32 +666,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DFP-UK-eCz">
-                                <rect key="frame" x="5" y="277" width="60" height="59"/>
+                                <rect key="frame" x="5" y="277" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="particpacion.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="R0n-xu-ZUU" kind="modal" id="ldg-du-OSV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="l2x-RH-WkF">
-                                <rect key="frame" x="87" y="277" width="52" height="59"/>
+                                <rect key="frame" x="87" y="277" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="controlSocial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9jM-Y8-8Sa">
-                                <rect key="frame" x="169" y="277" width="54" height="59"/>
+                                <rect key="frame" x="169" y="277" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="transparencia.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c1A-iJ-sUm">
-                                <rect key="frame" x="250" y="277" width="52" height="59"/>
+                                <rect key="frame" x="250" y="277" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="luchaContraC.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iSv-2y-e2o" kind="modal" id="bgT-UX-qQl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participacion Ciudadana" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sga-LG-fp9">
                                 <rect key="frame" x="5" y="344" width="68" height="34"/>
@@ -732,7 +728,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CXg-Lx-bSY">
-                                <rect key="frame" x="202" y="440" width="51" height="54"/>
+                                <rect key="frame" x="204" y="440" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -743,11 +739,195 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VMi-hI-VMF" appends="YES" id="jCW-cg-ZF1"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mk-TY-ShN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="VMi-hI-VMF"/>
             </objects>
             <point key="canvasLocation" x="624" y="731"/>
+        </scene>
+        <!--Sub Menu View Controller-->
+        <scene sceneID="N9v-C9-Agc">
+            <objects>
+                <viewController id="R0n-xu-ZUU" customClass="subMenuViewController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="usA-io-q9I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pab-OC-DLH">
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bl4-Pr-Zuq">
+                                <rect key="frame" x="177" y="20" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <state key="normal" title="NOTICIAS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xQC-hE-yub">
+                                <rect key="frame" x="243" y="20" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <state key="normal" title="CONTACTO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSEJO DE PARTICIPACION CIUDADANA Y CONTROL SOCIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRp-zN-xsB">
+                                <rect key="frame" x="7" y="3" width="166" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bjV-Qt-Mst">
+                                <rect key="frame" x="-1" y="531" width="321" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fyh-PU-Sja">
+                                <rect key="frame" x="0.0" y="535" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="www.cpcss.gob.ec">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d92-13-91g">
+                                <rect key="frame" x="0.0" y="482" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.57647058819999997" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ibu-yj-IFU">
+                                <rect key="frame" x="166" y="512" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="youtube.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="w8K-5T-vVx" kind="modal" id="N8s-ER-NeE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Ha-7q-s73">
+                                <rect key="frame" x="219" y="512" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3II-IJ-d4n" kind="modal" id="99P-3s-Cru"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pOX-gz-gc7">
+                                <rect key="frame" x="272" y="512" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="csC-6J-6f2" kind="modal" id="kGR-QG-mw3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bN0-Yh-vVl">
+                                <rect key="frame" x="13" y="390" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="participacionGris.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hTY-Lq-yzr">
+                                <rect key="frame" x="87" y="390" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="controlSocialGris.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LH9-mL-y8Y">
+                                <rect key="frame" x="169" y="390" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="transparenciaGris.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="66h-vS-vcw">
+                                <rect key="frame" x="250" y="390" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="luchaContraCGris.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="v7s-ue-SF2">
+                                <rect key="frame" x="0.0" y="181" width="320" height="201"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="IKU-nc-Ku5" kind="embed" id="z0m-hO-YGn"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoTopMenu.png" id="WcR-Ih-8Ez">
+                                <rect key="frame" x="0.0" y="67" width="320" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Participacion Ciudadana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NOk-zz-jDC">
+                                <rect key="frame" x="0.0" y="142" width="321" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.26666666666666666" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participacion Ciudadana" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Dt-Eb-5dh">
+                                <rect key="frame" x="6" y="447" width="68" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Social" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pse-hF-mdq">
+                                <rect key="frame" x="84" y="447" width="60" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transparencia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r3b-DD-NuZ">
+                                <rect key="frame" x="162" y="447" width="68" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucha contra la corrupción" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Udo-sU-UeM">
+                                <rect key="frame" x="242" y="447" width="70" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksO-BT-nYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="737"/>
         </scene>
         <!--Youtube Controller-->
         <scene sceneID="ctt-TR-GqO">
@@ -887,22 +1067,42 @@
             </objects>
             <point key="canvasLocation" x="1291" y="1641"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="qtc-0F-9VL">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="IKU-nc-Ku5" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DxA-m6-puH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jae-9a-Dmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="20"/>
+        </scene>
     </scenes>
     <resources>
         <image name="controlSocial.png" width="169" height="166"/>
+        <image name="controlSocialGris.png" width="165" height="171"/>
         <image name="control_social.png" width="170" height="170"/>
         <image name="facebook.png" width="153" height="157"/>
         <image name="fondo.png" width="452" height="768"/>
         <image name="footer.jpg" width="1920" height="36"/>
         <image name="fotoMenu.png" width="1310" height="671"/>
+        <image name="fotoTopMenu.png" width="1298" height="172"/>
         <image name="logo.png" width="422" height="300"/>
         <image name="luchaContraC.png" width="170" height="163"/>
+        <image name="luchaContraCGris.png" width="170" height="171"/>
         <image name="lucha_anti_corrupcion.png" width="170" height="170"/>
         <image name="noticias2.png" width="100" height="100"/>
+        <image name="participacionGris.png" width="163" height="171"/>
         <image name="participacion_ciudadana.png" width="170" height="170"/>
         <image name="particpacion.png" width="258" height="258"/>
         <image name="preguntasfrecuentes.png" width="100" height="100"/>
         <image name="transparencia.png" width="161" height="164"/>
+        <image name="transparenciaGris.png" width="163" height="171"/>
         <image name="twitter.png" width="153" height="157"/>
         <image name="youtube.png" width="151" height="157"/>
     </resources>
@@ -912,7 +1112,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eZn-Oz-qUg"/>
+        <segue reference="051-2c-mEk"/>
+        <segue reference="99P-3s-Cru"/>
+        <segue reference="kGR-QG-mw3"/>
+        <segue reference="N8s-ER-NeE"/>
         <segue reference="FUq-sj-hHR"/>
     </inferredMetricsTieBreakers>
 </document>
