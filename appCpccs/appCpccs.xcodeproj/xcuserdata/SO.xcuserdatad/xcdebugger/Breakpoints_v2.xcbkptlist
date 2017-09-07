@@ -9,6 +9,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIViewController.h"
             timestampString = "526506748.80127"
             startingColumnNumber = "9223372036854775807"
@@ -32,6 +33,15 @@
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "add(asChildViewController:)"
+=======
+            filePath = "appCpccs/menuViewController.swift"
+            timestampString = "526508217.727505"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "toolBar(_:)"
+>>>>>>> 92c6ba9c6d409c18dc983aa58a36b3233f67261e
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
