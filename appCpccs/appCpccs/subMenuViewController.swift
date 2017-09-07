@@ -15,8 +15,32 @@ class subMenuViewController: UIViewController {
     @IBOutlet weak var btnControlSocial: UIButton!
     @IBOutlet weak var btnTransparencia: UIButton!
     @IBOutlet weak var labelTema: UILabel!
+   
+    private lazy var participacionController: ParticipacionController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ParticipacionController") as ParticipacionController
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
     
-    
+    private lazy var controlSocialController: ControlSocialController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("SessionsViewController") as ControlSocialController
+        
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
+
     
     
     override func viewDidLoad() {
@@ -33,10 +57,11 @@ class subMenuViewController: UIViewController {
     func showParticipacionCiudadana(){
         let image = UIImage(named: "participacion.png")
         btnParticipacion.setImage(image,forState: .Normal)
+        //add(asChildViewController: participacionController)
     }
     
     func showControlSocial(){
-        
+        //add(asChildViewController: controlSocialController)
     }
     
     func showTransparencia(){
@@ -49,6 +74,31 @@ class subMenuViewController: UIViewController {
     
     func showContacto(){
         
+    }
+    
+    private func add(asChildViewController viewController: UIViewController) {
+        // Add Child View Controller
+        addChildViewController(viewController)
+        
+        // Add Child View as Subview
+        view.addSubview(viewController.view)
+        
+        // Configure Child View
+        viewController.view.frame = view.bounds
+        //viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        // Notify Child View Controller
+        viewController.didMoveToParentViewController(self)
+    }
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMoveToParentViewController(nil)
+        
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+        
+        // Notify Child View Controller
+        viewController.removeFromParentViewController()
     }
     
     

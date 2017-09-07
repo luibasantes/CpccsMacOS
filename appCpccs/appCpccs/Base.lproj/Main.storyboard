@@ -794,6 +794,53 @@
             </objects>
             <point key="canvasLocation" x="624" y="731"/>
         </scene>
+        <!--Participacion Controller-->
+        <scene sceneID="diF-v4-Yhn">
+            <objects>
+                <viewController id="9vo-kz-4Rq" customClass="ParticipacionController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MVO-rJ-Dn5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui estas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kOX-ZK-PM2">
+                                <rect key="frame" x="99" y="259" width="108" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partcipacion Ciudadana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nwg-Hx-OFT">
+                                <rect key="frame" x="106" y="78" width="185" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fv-Tw-AJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507" y="207"/>
+        </scene>
+        <!--Control Social Controller-->
+        <scene sceneID="SOd-gb-CMf">
+            <objects>
+                <viewController id="t51-BB-FxG" customClass="ControlSocialController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYq-1B-xno">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7iR-3U-BUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="225"/>
+        </scene>
         <!--Sub Menu View Controller-->
         <scene sceneID="N9v-C9-Agc">
             <objects>
@@ -927,9 +974,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" id="v7s-ue-SF2">
                                 <rect key="frame" x="0.0" y="181" width="320" height="201"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="IKU-nc-Ku5" kind="embed" id="z0m-hO-YGn"/>
-                                </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoTopMenu.png" id="WcR-Ih-8Ez">
                                 <rect key="frame" x="0.0" y="67" width="320" height="75"/>
@@ -1135,21 +1179,6 @@
             </objects>
             <point key="canvasLocation" x="1291" y="1641"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="qtc-0F-9VL">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="IKU-nc-Ku5" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DxA-m6-puH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jae-9a-Dmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1210" y="20"/>
-        </scene>
     </scenes>
     <resources>
         <image name="controlSocial.png" width="169" height="166"/>
@@ -1180,10 +1209,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="051-2c-mEk"/>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="Ovz-yT-5yI"/>
-        <segue reference="jtG-qD-f20"/>
         <segue reference="FUq-sj-hHR"/>
+        <segue reference="eZn-Oz-qUg"/>
+        <segue reference="N8s-ER-NeE"/>
+        <segue reference="99P-3s-Cru"/>
+        <segue reference="kGR-QG-mw3"/>
     </inferredMetricsTieBreakers>
 </document>

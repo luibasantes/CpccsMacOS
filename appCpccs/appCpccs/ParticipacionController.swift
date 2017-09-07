@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIkit
+
+class ParticipacionController: UIViewController{
+
+}
