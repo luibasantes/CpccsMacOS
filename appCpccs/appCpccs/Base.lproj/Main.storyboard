@@ -429,7 +429,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FUw-73-cxl" kind="modal" id="bqg-tz-cCF"/>
+                                    <segue destination="hef-P9-Iix" kind="modal" id="o9W-tP-t42"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KyN-zW-JOz">
@@ -448,6 +448,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fd2-jd-QVL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3L-du-W4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -466,6 +467,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9z-hy-Qwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1004" y="2551"/>
+        </scene>
+        <!--Denuncias Controller-->
+        <scene sceneID="Tzl-Dt-pbL">
+            <objects>
+                <viewController id="hef-P9-Iix" customClass="DenunciasController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PIp-NK-0eV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provincia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mmv-GV-omf">
+                                <rect key="frame" x="125" y="20" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="aqui se muestra lo que devuelve el WS" id="cZQ-gD-oXT">
+                                <rect key="frame" x="40" y="63" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YOl-qm-gG1">
+                                <rect key="frame" x="137" y="193" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cargarProv:" destination="hef-P9-Iix" eventType="touchUpInside" id="BU4-U6-hrZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtProvincias" destination="cZQ-gD-oXT" id="b44-3h-mRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9A-Mi-LWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="2344"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2LQ-ga-IFk">
@@ -1137,9 +1181,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="051-2c-mEk"/>
-        <segue reference="99P-3s-Cru"/>
-        <segue reference="kGR-QG-mw3"/>
-        <segue reference="N8s-ER-NeE"/>
+        <segue reference="8ac-0B-ITq"/>
+        <segue reference="Ovz-yT-5yI"/>
+        <segue reference="jtG-qD-f20"/>
         <segue reference="FUq-sj-hHR"/>
     </inferredMetricsTieBreakers>
 </document>
