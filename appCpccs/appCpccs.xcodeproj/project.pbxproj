@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
+		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
+		D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E45101F61D73B00DDD2DB /* MessageViewController.swift */; };
+		D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2201F6302D900C01340 /* Ciudad.swift */; };
+		D39BC2231F630B4000C01340 /* Etnia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2221F630B4000C01340 /* Etnia.swift */; };
+		D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2241F630F2300C01340 /* EstadoCivil.swift */; };
+		D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2261F6310AB00C01340 /* NivelEducacion.swift */; };
 		D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */; };
 		D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */; };
 		D3D4E03F1F61DCBA004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5893271F6081FD007E4726 /* subMenuViewController.swift */; };
-=======
-		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
-		D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E45101F61D73B00DDD2DB /* MessageViewController.swift */; };
->>>>>>> 92c6ba9c6d409c18dc983aa58a36b3233f67261e
 		DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0053771F4F75CE00664030 /* AppDelegate.swift */; };
 		DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0053791F4F75CE00664030 /* ViewController.swift */; };
 		DB00537D1F4F75CE00664030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB00537B1F4F75CE00664030 /* Main.storyboard */; };
@@ -83,13 +84,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
-		D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlSocialController.swift; sourceTree = "<group>"; };
-=======
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		D36E45101F61D73B00DDD2DB /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
->>>>>>> 92c6ba9c6d409c18dc983aa58a36b3233f67261e
+		D39BC2201F6302D900C01340 /* Ciudad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ciudad.swift; sourceTree = "<group>"; };
+		D39BC2221F630B4000C01340 /* Etnia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Etnia.swift; sourceTree = "<group>"; };
+		D39BC2241F630F2300C01340 /* EstadoCivil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoCivil.swift; sourceTree = "<group>"; };
+		D39BC2261F6310AB00C01340 /* NivelEducacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NivelEducacion.swift; sourceTree = "<group>"; };
+		D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
+		D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlSocialController.swift; sourceTree = "<group>"; };
 		DB0053721F4F75CE00664030 /* appCpccs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCpccs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0053761F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB0053771F4F75CE00664030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,13 +209,10 @@
 				DB29FB581F5DE7730022FC70 /* YoutubeController.swift */,
 				DB5893271F6081FD007E4726 /* subMenuViewController.swift */,
 				DB5893291F608AAA007E4726 /* menuViewController.swift */,
-<<<<<<< HEAD
 				D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */,
 				D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */,
-=======
 				D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */,
 				D36E45101F61D73B00DDD2DB /* MessageViewController.swift */,
->>>>>>> 92c6ba9c6d409c18dc983aa58a36b3233f67261e
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -248,6 +247,10 @@
 			children = (
 				DB0D926C1F61B21100AF626B /* Provincia.swift */,
 				DB0D926F1F61B43900AF626B /* ConexionWS.swift */,
+				D39BC2201F6302D900C01340 /* Ciudad.swift */,
+				D39BC2221F630B4000C01340 /* Etnia.swift */,
+				D39BC2241F630F2300C01340 /* EstadoCivil.swift */,
+				D39BC2261F6310AB00C01340 /* NivelEducacion.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -452,17 +455,18 @@
 				DB58932A1F608AAA007E4726 /* menuViewController.swift in Sources */,
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
+				D39BC2231F630B4000C01340 /* Etnia.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
+				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
 				D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
+				D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */,
 				D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */,
 				DB0D923B1F618BE900AF626B /* DenunciasController.swift in Sources */,
-<<<<<<< HEAD
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,
-=======
 				D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */,
->>>>>>> 92c6ba9c6d409c18dc983aa58a36b3233f67261e
 				DBDBD6941F54CF2D00006221 /* denunciasPageViewController.swift in Sources */,
+				D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */,
 				DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */,
 				D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */,
 				DBDBD6921F54B2C800006221 /* noticiasController.swift in Sources */,

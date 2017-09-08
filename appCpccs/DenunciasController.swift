@@ -11,19 +11,37 @@ import UIKit
 
 class DenunciasController: UIViewController{
     @IBOutlet weak var txtProvincias: UITextView!
-    
-    
+    var provinciasEC: Array<Provincia>!
+    var ciudadesEC: Array<Ciudad>!
+    var etniasEC: Array<Etnia>!
+    var estadosC: Array<EstadoCivil>!
+    var nivelesEduc: Array<NivelEducacion>!
+
     @IBAction func cargarProv(sender: UIButton) {
-        var conn = ConexionWS()
-        var provinciasEC = Provincia()
-        provinciasEC.getDatos("provincias")
-        println(provinciasEC.provinciasEC)
-        
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ConexionWS.getDatos("provincias/?limit=100"){ result in
+            self.provinciasEC = Provincia.dataProvincias(result)
+            println("Provincias: \(self.provinciasEC.count)")
+        }
+        ConexionWS.getDatos("ciudades/?\(1)&limit=100"){ result in
+            self.ciudadesEC = Ciudad.dataCiudad(result)
+            println("ciudades: \(self.ciudadesEC.count)")
+        }
+        ConexionWS.getDatos("etnias/?limit=10"){ result in
+            self.etniasEC = Etnia.dataEtnia(result)
+            println("etnias \(self.etniasEC.count)")
+        }
+        ConexionWS.getDatos("estados-civiles/?limit=10"){ result in
+            self.estadosC = EstadoCivil.dataEstadoC(result)
+            println("estado civil: \(self.estadosC.count)")
+        }
+        ConexionWS.getDatos("niveles-educacion/?limit=10"){ result in
+            self.nivelesEduc = NivelEducacion.dataNivelEduc(result)
+            println("niveles de educacion: \(self.nivelesEduc.count)")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

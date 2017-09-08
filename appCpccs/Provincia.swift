@@ -10,41 +10,28 @@ import Foundation
 class Provincia {
     var id: Int!
     var nombre: String!
-    var provinciasEC: Array<String>!
     init(){
-        provinciasEC = Array<String>()
     }
-    
     init(id: String, nombre: String){
         self.id = id.toInt()
         self.nombre = nombre
     }
-    func getDatos(datoaRecuperar:String){
-        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/provincias/?limit=100")!
-        let session = NSURLSession.sharedSession()
-        let loadTask=session.dataTaskWithURL(url) { data, response, error -> Void in
-            if error != nil {
-                println(error.localizedDescription)
-                return
-            }else{
-                var result:NSData = NSData(data: data)
-                self.dataProvincias(result)
-            }
-            
-        }
-        loadTask.resume()
+    init(id: Int, nombre: String){
+        self.id = id
+        self.nombre = nombre
     }
-    
-    func dataProvincias(nsdatos: NSData){
-        var provinciasEC: [String] = []
+    class func dataProvincias(nsdatos: NSData) -> Array<Provincia>{
+        var provinciasEC: [Provincia] = []
         let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let provincias = jsonData["results"]
         if let provinciasArray = provincias as? NSArray{
             provinciasArray.enumerateObjectsUsingBlock({model, index, stop in
-                let provincia=model["nombre"] as String
-                println(provincia)
-                self.provinciasEC.append(provincia)
+                var id = model["id"] as Int
+                var nombre = model["nombre"] as String
+                var provincia: Provincia = Provincia(id: id, nombre: nombre)
+                provinciasEC.append(provincia)
             });
         }
+        return provinciasEC
     }
 }
