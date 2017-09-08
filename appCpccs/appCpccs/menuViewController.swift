@@ -22,11 +22,7 @@ class menuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func toolBar(sender: AnyObject) {
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("sbPopUpID") as MessageViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame=self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMoveToParentViewController(self)
+      println("hola")
         
     }
 }

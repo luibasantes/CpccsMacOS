@@ -945,6 +945,7 @@
                                 <rect key="frame" x="0.0" y="68" width="320" height="181"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-yr-oAK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0E9-yr-oAK">
                                 <rect key="frame" x="0.0" y="531" width="321" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1051,15 +1052,131 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="IIIIII">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="BE4-T0-w5W">
+                                <rect key="frame" x="31" y="539" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="0.96204682870000002" blue="0.98335757710000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="toolBar:" destination="Chv-Tj-BBp" eventType="touchUpInside" id="gYN-h3-TLA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" id="NeK-7D-UiS">
+                                <rect key="frame" x="0.0" y="68" width="320" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="531" id="vZR-u3-ZNF">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="531"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vZR-u3-ZNF" id="3dh-5g-PH1">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999999999999991" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wmu-yG-3yP" userLabel="FONDO">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="530"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SideMenu.png" id="qcp-b3-cbh">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="o5s-8H-5cz">
+                                            <rect key="frame" x="0.0" y="159" width="190" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.20392156859999999" green="0.1960784314" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="&gt;">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" MISION">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="mPO-OS-50h">
+                                            <rect key="frame" x="0.0" y="208" width="190" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.20392156859999999" green="0.1960784314" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="&gt; ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="VISION">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="SOX-Ig-6Ig">
+                                            <rect key="frame" x="0.0" y="297" width="190" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.20392156859999999" green="0.1960784314" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="&gt;">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" CPCCSTV">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="k8o-Yu-MPk">
+                                            <rect key="frame" x="0.0" y="254" width="190" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.20392156859999999" green="0.1960784314" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="&gt;">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content=" OFICINAS">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="0.96204682867932645" blue="0.983357577089636" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mk-TY-ShN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1291,7 +1408,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="btnContacto" destination="xQC-hE-yub" id="Rwe-pa-O8E"/>
                         <outlet property="btnControlSocial" destination="hTY-Lq-yzr" id="f4g-pk-Xk7"/>
+                        <outlet property="btnNoticias" destination="bl4-Pr-Zuq" id="Yms-FE-9Fg"/>
                         <outlet property="btnParticipacion" destination="bN0-Yh-vVl" id="r1K-c5-vay"/>
                         <outlet property="btnTransparencia" destination="LH9-mL-y8Y" id="CwU-VA-MTP"/>
                         <outlet property="labelTema" destination="NOk-zz-jDC" id="3wu-vs-G5Z"/>
@@ -1463,6 +1582,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SideMenu.png" width="761" height="539"/>
         <image name="controlSocial.png" width="169" height="166"/>
         <image name="controlSocialGris.png" width="165" height="171"/>
         <image name="control_social.png" width="170" height="170"/>
@@ -1496,5 +1616,10 @@
         <segue reference="051-2c-mEk"/>
         <segue reference="kGR-QG-mw3"/>
         <segue reference="N8s-ER-NeE"/>
+        <segue reference="7e9-nd-REY"/>
+        <segue reference="jtG-qD-f20"/>
+        <segue reference="trb-we-6CP"/>
+        <segue reference="Ovz-yT-5yI"/>
+        <segue reference="8ac-0B-ITq"/>
     </inferredMetricsTieBreakers>
 </document>
