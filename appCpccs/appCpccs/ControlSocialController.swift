@@ -12,6 +12,11 @@ import UIkit
 
 class ControlSocialController : UIViewController{
     
+    @IBOutlet weak var headLabel: UILabel!
+    @IBOutlet weak var saluteButton: UIButton!
+    @IBAction func salute(sender: UIButton) {
+        headLabel.text = "HELLO FROM CONTROL SOCIAL"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

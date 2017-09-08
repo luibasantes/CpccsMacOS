@@ -11,4 +11,11 @@ import UIkit
 
 class ParticipacionController: UIViewController{
 
+    @IBOutlet weak var saluteButton: UIButton!
+    @IBOutlet weak var headLabel: UILabel!
+    
+    @IBAction func salute(sender: UIButton) {
+            headLabel.text = "Hello From\n Participacion View"
+    }
+    
 }

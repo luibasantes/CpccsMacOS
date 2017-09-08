@@ -839,49 +839,93 @@
         <!--Participacion Controller-->
         <scene sceneID="diF-v4-Yhn">
             <objects>
-                <viewController id="9vo-kz-4Rq" customClass="ParticipacionController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParticipacionController" id="9vo-kz-4Rq" customClass="ParticipacionController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVO-rJ-Dn5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui estas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kOX-ZK-PM2">
-                                <rect key="frame" x="99" y="259" width="108" height="50"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="H0A-16-6Cu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partcipacion Ciudadana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nwg-Hx-OFT">
-                                <rect key="frame" x="106" y="78" width="185" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paritcipacion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Kw-NP-h1i">
+                                        <rect key="frame" x="110" y="34" width="101" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nz8-eK-mD8">
+                                        <rect key="frame" x="140" y="87" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="salute">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="salute:" destination="9vo-kz-4Rq" eventType="touchUpInside" id="GB3-lz-0CI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <connections>
+                        <outlet property="headLabel" destination="7Kw-NP-h1i" id="y70-MK-D0W"/>
+                        <outlet property="saluteButton" destination="Nz8-eK-mD8" id="DRC-C6-n09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fv-Tw-AJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1507" y="207"/>
+            <point key="canvasLocation" x="1426" y="91"/>
         </scene>
         <!--Control Social Controller-->
         <scene sceneID="SOd-gb-CMf">
             <objects>
-                <viewController id="t51-BB-FxG" customClass="ControlSocialController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ControlSocialController" id="t51-BB-FxG" customClass="ControlSocialController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PYq-1B-xno">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" id="Xs1-UE-rtO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="648"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTROL SOCIAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PKE-e3-vT1">
+                                        <rect key="frame" x="86" y="78" width="149" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Piz-1D-i4j">
+                                        <rect key="frame" x="126" y="150" width="69" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Click here">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="salute:" destination="t51-BB-FxG" eventType="touchUpInside" id="Yms-CC-V5D"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="headLabel" destination="PKE-e3-vT1" id="ZCV-Hu-zyH"/>
+                        <outlet property="saluteButton" destination="Piz-1D-i4j" id="Kec-XY-ciC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iR-3U-BUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="225"/>
+            <point key="canvasLocation" x="1657" y="699"/>
         </scene>
         <!--Sub Menu View Controller-->
         <scene sceneID="N9v-C9-Agc">
@@ -908,7 +952,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressNoticias:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="Zhx-AI-vog"/>
+                                    <action selector="pressNoticias:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="2lO-y6-PlJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONSEJO DE PARTICIPACION CIUDADANA Y CONTROL SOCIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRp-zN-xsB">
@@ -1000,7 +1044,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressTransparencia:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="Lcf-Wr-WmM"/>
+                                    <action selector="pressTransparencia:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="fWu-2f-IfP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="66h-vS-vcw">
@@ -1013,10 +1057,6 @@
                                     <action selector="pressTransparencia:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="o6P-nM-smM"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="v7s-ue-SF2">
-                                <rect key="frame" x="0.0" y="181" width="320" height="201"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoTopMenu.png" id="WcR-Ih-8Ez">
                                 <rect key="frame" x="0.0" y="67" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1069,6 +1109,13 @@
                                     <action selector="pressContactos:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="X9Z-ga-ULJ"/>
                                 </connections>
                             </button>
+                            <containerView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="v7s-ue-SF2">
+                                <rect key="frame" x="0.0" y="181" width="320" height="201"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="9vo-kz-4Rq" kind="embed" id="UBi-BS-rUt"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1076,6 +1123,7 @@
                         <outlet property="btnControlSocial" destination="hTY-Lq-yzr" id="f4g-pk-Xk7"/>
                         <outlet property="btnParticipacion" destination="bN0-Yh-vVl" id="r1K-c5-vay"/>
                         <outlet property="btnTransparencia" destination="LH9-mL-y8Y" id="CwU-VA-MTP"/>
+                        <outlet property="contenedor" destination="v7s-ue-SF2" id="grj-NY-Xxd"/>
                         <outlet property="labelTema" destination="NOk-zz-jDC" id="3wu-vs-G5Z"/>
                     </connections>
                 </viewController>
@@ -1221,20 +1269,79 @@
             </objects>
             <point key="canvasLocation" x="1291" y="1641"/>
         </scene>
-        <!--View Controller-->
+        <!--Transparencia Controller-->
         <scene sceneID="qtc-0F-9VL">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="IKU-nc-Ku5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransparenciaController" automaticallyAdjustsScrollViewInsets="NO" id="IKU-nc-Ku5" customClass="TransparenciaController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DxA-m6-puH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="REY-2m-fZK">
+                                <rect key="frame" x="125" y="142" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saludar:" destination="IKU-nc-Ku5" eventType="touchUpInside" id="JWs-id-5Q8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transparencia" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g2t-3i-vKO">
+                                <rect key="frame" x="102" y="75" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tcJ-X1-g6U"/>
+                    <connections>
+                        <outlet property="headingLabel" destination="g2t-3i-vKO" id="kgj-xr-C5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jae-9a-Dmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702" y="741.5"/>
+            <point key="canvasLocation" x="2042" y="699"/>
+        </scene>
+        <!--Noticias Tab Controller-->
+        <scene sceneID="lh8-Ab-5I0">
+            <objects>
+                <viewController storyboardIdentifier="NoticiasTabController" id="igm-O5-599" customClass="NoticiasTabController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VfQ-lT-ym6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8HI-FQ-JXw">
+                                <rect key="frame" x="130" y="114" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="salute:" destination="igm-O5-599" eventType="touchUpInside" id="a9Y-gM-Nun"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noticias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="APl-Sz-Ig3">
+                                <rect key="frame" x="129" y="40" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="headLabel" destination="APl-Sz-Ig3" id="gum-sX-Aw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="028-75-NPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="47"/>
         </scene>
     </scenes>
     <resources>
@@ -1266,15 +1373,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FUq-sj-hHR"/>
-        <segue reference="eZn-Oz-qUg"/>
+        <segue reference="trb-we-6CP"/>
+        <segue reference="kGR-QG-mw3"/>
         <segue reference="N8s-ER-NeE"/>
         <segue reference="99P-3s-Cru"/>
-        <segue reference="kGR-QG-mw3"/>
         <segue reference="7e9-nd-REY"/>
-        <segue reference="trb-we-6CP"/>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="Ovz-yT-5yI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
 		D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E45101F61D73B00DDD2DB /* MessageViewController.swift */; };
+		D393D35E1F632E5C00519D34 /* TransparenciaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393D35D1F632E5C00519D34 /* TransparenciaController.swift */; };
+		D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D393D35F1F632FF100519D34 /* NoticiasTabController.swift */; };
 		D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2201F6302D900C01340 /* Ciudad.swift */; };
 		D39BC2231F630B4000C01340 /* Etnia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2221F630B4000C01340 /* Etnia.swift */; };
 		D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2241F630F2300C01340 /* EstadoCivil.swift */; };
@@ -86,6 +88,8 @@
 /* Begin PBXFileReference section */
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		D36E45101F61D73B00DDD2DB /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		D393D35D1F632E5C00519D34 /* TransparenciaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparenciaController.swift; sourceTree = "<group>"; };
+		D393D35F1F632FF100519D34 /* NoticiasTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTabController.swift; sourceTree = "<group>"; };
 		D39BC2201F6302D900C01340 /* Ciudad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ciudad.swift; sourceTree = "<group>"; };
 		D39BC2221F630B4000C01340 /* Etnia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Etnia.swift; sourceTree = "<group>"; };
 		D39BC2241F630F2300C01340 /* EstadoCivil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoCivil.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */,
 				D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */,
 				D36E45101F61D73B00DDD2DB /* MessageViewController.swift */,
+				D393D35D1F632E5C00519D34 /* TransparenciaController.swift */,
+				D393D35F1F632FF100519D34 /* NoticiasTabController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
 				D39BC2231F630B4000C01340 /* Etnia.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
+				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
 				D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
@@ -466,6 +473,7 @@
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,
 				D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */,
 				DBDBD6941F54CF2D00006221 /* denunciasPageViewController.swift in Sources */,
+				D393D35E1F632E5C00519D34 /* TransparenciaController.swift in Sources */,
 				D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */,
 				DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */,
 				D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */,
