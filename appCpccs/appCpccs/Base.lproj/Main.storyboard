@@ -696,10 +696,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" id="NeK-7D-UiS">
-                                <rect key="frame" x="0.0" y="68" width="320" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0E9-yr-oAK">
                                 <rect key="frame" x="0.0" y="531" width="321" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -827,6 +823,10 @@
                                     <action selector="toolBar:" destination="Chv-Tj-BBp" eventType="touchUpInside" id="gYN-h3-TLA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" id="NeK-7D-UiS">
+                                <rect key="frame" x="0.0" y="68" width="320" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1073,7 +1073,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="btnContacto" destination="xQC-hE-yub" id="Rwe-pa-O8E"/>
                         <outlet property="btnControlSocial" destination="hTY-Lq-yzr" id="f4g-pk-Xk7"/>
+                        <outlet property="btnNoticias" destination="bl4-Pr-Zuq" id="Yms-FE-9Fg"/>
                         <outlet property="btnParticipacion" destination="bN0-Yh-vVl" id="r1K-c5-vay"/>
                         <outlet property="btnTransparencia" destination="LH9-mL-y8Y" id="CwU-VA-MTP"/>
                         <outlet property="labelTema" destination="NOk-zz-jDC" id="3wu-vs-G5Z"/>
@@ -1226,7 +1228,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="IKU-nc-Ku5" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DxA-m6-puH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1266,15 +1268,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FUq-sj-hHR"/>
-        <segue reference="eZn-Oz-qUg"/>
-        <segue reference="N8s-ER-NeE"/>
-        <segue reference="99P-3s-Cru"/>
-        <segue reference="kGR-QG-mw3"/>
         <segue reference="7e9-nd-REY"/>
+        <segue reference="kGR-QG-mw3"/>
         <segue reference="trb-we-6CP"/>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="Ovz-yT-5yI"/>
+        <segue reference="99P-3s-Cru"/>
+        <segue reference="N8s-ER-NeE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,8 @@ import UIKit
 
 class subMenuViewController: UIViewController {
     
+    @IBOutlet weak var btnContacto: UIButton!
+    @IBOutlet weak var btnNoticias: UIButton!
     @IBOutlet weak var btnParticipacion: UIButton!
     @IBOutlet weak var btnControlSocial: UIButton!
     @IBOutlet weak var btnTransparencia: UIButton!
@@ -55,25 +57,61 @@ class subMenuViewController: UIViewController {
     
     
     func showParticipacionCiudadana(){
-        let image = UIImage(named: "participacion.png")
-        btnParticipacion.setImage(image,forState: .Normal)
+        let imageParticipacion = UIImage(named: "particpacion.png")
+        btnParticipacion.setImage(imageParticipacion,forState: .Normal)
+        let imageControl = UIImage(named: "controlSocialGris.png")
+        btnControlSocial.setImage(imageControl,forState: .Normal)
+        let imageTransparencia = UIImage(named: "transparenciaGris.png")
+        btnTransparencia.setImage(imageTransparencia,forState: .Normal)
+        btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
         //add(asChildViewController: participacionController)
     }
     
     func showControlSocial(){
+        let imageParticipacion = UIImage(named: "participacionGris.png")
+        btnParticipacion.setImage(imageParticipacion,forState: .Normal)
+        let imageControl = UIImage(named: "controlSocial.png")
+        btnControlSocial.setImage(imageControl,forState: .Normal)
+        let imageTransparencia = UIImage(named: "transparenciaGris.png")
+        btnTransparencia.setImage(imageTransparencia,forState: .Normal)
+        btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         //add(asChildViewController: controlSocialController)
     }
     
     func showTransparencia(){
-        
+        let imageParticipacion = UIImage(named: "participacionGris.png")
+        btnParticipacion.setImage(imageParticipacion,forState: .Normal)
+        let imageControl = UIImage(named: "controlSocialGris.png")
+        btnControlSocial.setImage(imageControl,forState: .Normal)
+        let imageTransparencia = UIImage(named: "transparencia.png")
+        btnTransparencia.setImage(imageTransparencia,forState: .Normal)
+        btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
     
     func showNoticias(){
-        
+        let imageParticipacion = UIImage(named: "participacionGris.png")
+        btnParticipacion.setImage(imageParticipacion,forState: .Normal)
+        let imageControl = UIImage(named: "controlSocialGris.png")
+        btnControlSocial.setImage(imageControl,forState: .Normal)
+        let imageTransparencia = UIImage(named: "transparenciaGris.png")
+        btnTransparencia.setImage(imageTransparencia,forState: .Normal)
+        btnNoticias.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
     
     func showContacto(){
-        
+        let imageParticipacion = UIImage(named: "participacionGris.png")
+        btnParticipacion.setImage(imageParticipacion,forState: .Normal)
+        let imageControl = UIImage(named: "controlSocialGris.png")
+        btnControlSocial.setImage(imageControl,forState: .Normal)
+        let imageTransparencia = UIImage(named: "transparenciaGris.png")
+        btnTransparencia.setImage(imageTransparencia,forState: .Normal)
+        btnContacto.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
     
     private func add(asChildViewController viewController: UIViewController) {

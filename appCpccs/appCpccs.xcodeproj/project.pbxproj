@@ -13,6 +13,7 @@
 		D39BC2231F630B4000C01340 /* Etnia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2221F630B4000C01340 /* Etnia.swift */; };
 		D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2241F630F2300C01340 /* EstadoCivil.swift */; };
 		D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2261F6310AB00C01340 /* NivelEducacion.swift */; };
+		D3AE59B31F6327E900AB04D1 /* Cosas-Importantes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */; };
 		D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */; };
 		D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */; };
@@ -90,6 +91,7 @@
 		D39BC2221F630B4000C01340 /* Etnia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Etnia.swift; sourceTree = "<group>"; };
 		D39BC2241F630F2300C01340 /* EstadoCivil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoCivil.swift; sourceTree = "<group>"; };
 		D39BC2261F6310AB00C01340 /* NivelEducacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NivelEducacion.swift; sourceTree = "<group>"; };
+		D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Cosas-Importantes.txt"; sourceTree = "<group>"; };
 		D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
 		D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlSocialController.swift; sourceTree = "<group>"; };
 		DB0053721F4F75CE00664030 /* appCpccs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCpccs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 				D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */,
 				D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */,
 				D36E45101F61D73B00DDD2DB /* MessageViewController.swift */,
+				D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				DBEEF51C1F50B9EC003409AE /* lucha_anti_corrupcion.png in Resources */,
 				DB491DFA1F58ACC600B26BF9 /* twitter.png in Resources */,
 				DBEEF5151F50B9EC003409AE /* denuncias.png in Resources */,
+				D3AE59B31F6327E900AB04D1 /* Cosas-Importantes.txt in Resources */,
 				DB00537F1F4F75CE00664030 /* Images.xcassets in Resources */,
 				DB491E031F58AF7600B26BF9 /* Recurso 17.svg in Resources */,
 			);
