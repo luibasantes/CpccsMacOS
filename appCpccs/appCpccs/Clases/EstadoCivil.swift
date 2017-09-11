@@ -30,5 +30,5 @@ class EstadoCivil{
             });
         }
         return estadoC
-    }
+    }∂
 }

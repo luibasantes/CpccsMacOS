@@ -16,10 +16,7 @@ class DenunciasController: UIViewController{
     var etniasEC: Array<Etnia>!
     var estadosC: Array<EstadoCivil>!
     var nivelesEduc: Array<NivelEducacion>!
-    
-    @IBOutlet weak var txtEstadoCivil: UITextField!
-    var autocompleteCharacterCount = 0
-    
+
     @IBAction func cargarProv(sender: UIButton) {
     }
     override func viewDidLoad() {
@@ -46,6 +43,7 @@ class DenunciasController: UIViewController{
         }
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
