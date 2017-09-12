@@ -822,7 +822,72 @@
                     <view key="view" contentMode="scaleToFill" id="tX2-j2-nuL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuQ-7k-6Ei">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="reply" id="D5N-e3-F1S">
+                                        <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de la Denuncia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iW-ha-PVX">
+                                <rect key="frame" x="10" y="74" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describa el motivo de su denuncia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blr-qM-VlJ">
+                                <rect key="frame" x="10" y="105" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-gP-IAT">
+                                <rect key="frame" x="10" y="136" width="300" height="129"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="BDh-Kn-MPZ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desea Comparecer ante el CPCCS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUm-Im-Bd2">
+                                <rect key="frame" x="10" y="273" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bT9-a0-U9Z">
+                                <rect key="frame" x="10" y="302" width="92" height="29"/>
+                                <segments>
+                                    <segment title="SI"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cuQ-7k-6Ei" firstAttribute="leading" secondItem="tX2-j2-nuL" secondAttribute="leading" id="0gG-jr-0YH"/>
+                            <constraint firstItem="D1e-gP-IAT" firstAttribute="top" secondItem="Blr-qM-VlJ" secondAttribute="bottom" constant="10" id="1JW-Wj-4Ki"/>
+                            <constraint firstAttribute="trailing" secondItem="bT9-a0-U9Z" secondAttribute="trailing" constant="218" id="5Fd-4L-ws8"/>
+                            <constraint firstItem="D1e-gP-IAT" firstAttribute="trailing" secondItem="Blr-qM-VlJ" secondAttribute="trailing" id="FhG-jo-e55"/>
+                            <constraint firstAttribute="trailing" secondItem="Blr-qM-VlJ" secondAttribute="trailing" constant="10" id="LD9-Pc-lrB"/>
+                            <constraint firstItem="D1e-gP-IAT" firstAttribute="leading" secondItem="Blr-qM-VlJ" secondAttribute="leading" id="Lp2-JG-jFT"/>
+                            <constraint firstItem="7iW-ha-PVX" firstAttribute="leading" secondItem="tX2-j2-nuL" secondAttribute="leading" constant="10" id="QbJ-nN-EPs"/>
+                            <constraint firstItem="7iW-ha-PVX" firstAttribute="top" secondItem="cuQ-7k-6Ei" secondAttribute="bottom" constant="10" id="Rm5-cU-YGC"/>
+                            <constraint firstAttribute="trailing" secondItem="cuQ-7k-6Ei" secondAttribute="trailing" id="V61-dT-yxc"/>
+                            <constraint firstItem="bT9-a0-U9Z" firstAttribute="top" secondItem="iUm-Im-Bd2" secondAttribute="bottom" constant="8" id="Vet-Mv-nOr"/>
+                            <constraint firstItem="D1e-gP-IAT" firstAttribute="leading" secondItem="iUm-Im-Bd2" secondAttribute="leading" id="XVH-jy-dlX"/>
+                            <constraint firstItem="cuQ-7k-6Ei" firstAttribute="top" secondItem="Oup-QR-Syu" secondAttribute="bottom" id="b7o-FK-hxH"/>
+                            <constraint firstItem="Blr-qM-VlJ" firstAttribute="leading" secondItem="tX2-j2-nuL" secondAttribute="leading" constant="10" id="iVs-p8-l7C"/>
+                            <constraint firstItem="iUm-Im-Bd2" firstAttribute="top" secondItem="D1e-gP-IAT" secondAttribute="bottom" constant="8" id="iqG-1g-bjs"/>
+                            <constraint firstItem="bT9-a0-U9Z" firstAttribute="leading" secondItem="tX2-j2-nuL" secondAttribute="leading" constant="10" id="mab-IR-rMd"/>
+                            <constraint firstItem="Blr-qM-VlJ" firstAttribute="top" secondItem="7iW-ha-PVX" secondAttribute="bottom" constant="10" id="mp2-C3-79J"/>
+                            <constraint firstAttribute="trailing" secondItem="7iW-ha-PVX" secondAttribute="trailing" constant="10" id="vmo-MS-bex"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BN-zQ-CVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
