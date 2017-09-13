@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DenunciasController: UIViewController{
+class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     @IBOutlet weak var txtProvincias: UITextView!
     var provinciasEC: Array<Provincia>!
     var ciudadesEC: Array<Ciudad>!
@@ -17,8 +17,19 @@ class DenunciasController: UIViewController{
     var estadosC: Array<EstadoCivil>!
     var nivelesEduc: Array<NivelEducacion>!
 
-    @IBAction func cargarProv(sender: UIButton) {
-    }
+    
+    let pickerCiudades = UIPickerView()
+    let pickerGenero = UIPickerView()
+    let pickerEtnia = UIPickerView()
+    let pickerEducacion = UIPickerView()
+    
+    @IBOutlet weak var txtGenero: UITextField!
+    @IBOutlet weak var txtEducacion: UITextField!
+    @IBOutlet weak var txtEtnia: UITextField!
+    @IBOutlet weak var txtCiudad: UITextField!
+    
+    var genero = ["Masculino","Femenino","GLBTI"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ConexionWS.getDatos("provincias/?limit=100"){ result in
@@ -41,9 +52,68 @@ class DenunciasController: UIViewController{
             self.nivelesEduc = NivelEducacion.dataNivelEduc(result)
             println("niveles de educacion: \(self.nivelesEduc.count)")
         }
-        
+        pickerCiudades.delegate = self
+        pickerEtnia.delegate = self
+        pickerEducacion.delegate = self
+        cargarPickers()
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        if pickerView == pickerCiudades{
+            return 1
+        }
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var countrows : Int = 0
+        if pickerView == pickerEducacion {
+            return self.nivelesEduc.count
+        }else if pickerView == pickerEtnia {
+            return self.etniasEC.count
+        }else if pickerView == pickerGenero {
+            return self.genero.count
+        }else if pickerView == pickerCiudades{
+            return self.ciudadesEC.count
+        }
+        return countrows
     }
     
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        if pickerView == pickerEducacion {
+            return self.nivelesEduc[row].descripcion
+        }else if pickerView == pickerEtnia {
+            return self.etniasEC[row].nombre
+        }else if pickerView == pickerGenero {
+            return self.genero[row]
+        }else if pickerView == pickerCiudades{
+            return self.ciudadesEC[row].nombre
+        }
+        return "error"
+    }
+    func cargarPickers(){
+        let toolbarCiudad = UIToolbar()
+        toolbarCiudad.sizeToFit()
+        let doneCiudadButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "doneCiudadPressed")
+        toolbarCiudad.setItems([doneCiudadButton], animated: false)
+        txtCiudad.inputAccessoryView = toolbarCiudad
+        txtCiudad.inputView = pickerCiudades
+        
+        let toolbarEtnia = UIToolbar()
+        toolbarEtnia.sizeToFit()
+        let doneEtniaButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "doneEtniaPressed")
+        toolbarEtnia.setItems([doneEtniaButton], animated: false)
+        txtEtnia.inputAccessoryView = toolbarEtnia
+        txtEtnia.inputView = pickerEtnia
+    }
+    func doneCiudadPressed(){
+        let row = pickerCiudades.selectedRowInComponent(0)
+        txtCiudad.text = "\(ciudadesEC[row].nombre)"
+        self.view.endEditing(true)
+    }
+    func doneEtniaPressed(){
+        let row = pickerEtnia.selectedRowInComponent(0)
+        txtEtnia.text = "\(etniasEC[row].nombre)"
+        self.view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

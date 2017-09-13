@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32C5D511F6989B600553FCB /* Genero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D501F6989B600553FCB /* Genero.swift */; };
 		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
 		D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E45101F61D73B00DDD2DB /* MessageViewController.swift */; };
 		D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC2201F6302D900C01340 /* Ciudad.swift */; };
@@ -87,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D32C5D501F6989B600553FCB /* Genero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genero.swift; sourceTree = "<group>"; };
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		D36E45101F61D73B00DDD2DB /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		D39BC2201F6302D900C01340 /* Ciudad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ciudad.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				D39BC2221F630B4000C01340 /* Etnia.swift */,
 				D39BC2241F630F2300C01340 /* EstadoCivil.swift */,
 				D39BC2261F6310AB00C01340 /* NivelEducacion.swift */,
+				D32C5D501F6989B600553FCB /* Genero.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				DB0D923B1F618BE900AF626B /* DenunciasController.swift in Sources */,
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,
 				D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */,
+				D32C5D511F6989B600553FCB /* Genero.swift in Sources */,
 				DBDBD6941F54CF2D00006221 /* denunciasPageViewController.swift in Sources */,
 				D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */,
 				DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */,

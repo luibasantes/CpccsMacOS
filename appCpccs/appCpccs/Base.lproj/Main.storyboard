@@ -637,6 +637,9 @@
                                                 <items>
                                                     <barButtonItem systemItem="reply" id="Iyj-bw-hSZ">
                                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                        <connections>
+                                                            <segue destination="iSv-2y-e2o" kind="modal" id="agg-Xm-s6c"/>
+                                                        </connections>
                                                     </barButtonItem>
                                                 </items>
                                                 <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -775,6 +778,12 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="720"/>
+                    <connections>
+                        <outlet property="txtCiudad" destination="jWg-4v-NeH" id="9jx-xP-vOv"/>
+                        <outlet property="txtEducacion" destination="LUA-At-eib" id="dSZ-Ex-N9L"/>
+                        <outlet property="txtEtnia" destination="nbE-EX-F1X" id="4e5-Ym-yCx"/>
+                        <outlet property="txtGenero" destination="DFa-XD-l3f" id="yPO-pX-2Ie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9A-Mi-LWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -828,6 +837,9 @@
                                 <items>
                                     <barButtonItem systemItem="reply" id="D5N-e3-F1S">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="hef-P9-Iix" kind="modal" id="R5y-sj-C8r"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -892,7 +904,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BN-zQ-CVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="3338"/>
+            <point key="canvasLocation" x="-77" y="3406"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pf0-DM-KGA">
@@ -1751,10 +1763,12 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eZn-Oz-qUg"/>
         <segue reference="N8s-ER-NeE"/>
-        <segue reference="99P-3s-Cru"/>
+        <segue reference="eZn-Oz-qUg"/>
         <segue reference="kGR-QG-mw3"/>
+        <segue reference="99P-3s-Cru"/>
+        <segue reference="agg-Xm-s6c"/>
+        <segue reference="R5y-sj-C8r"/>
         <segue reference="7e9-nd-REY"/>
     </inferredMetricsTieBreakers>
 </document>
