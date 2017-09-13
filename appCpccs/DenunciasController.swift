@@ -28,7 +28,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var txtEtnia: UITextField!
     @IBOutlet weak var txtCiudad: UITextField!
     
-    var genero = ["Masculino","Femenino","GLBTI"]
+    var genero = ["Masculino","Femenino","LGBTI"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +55,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         pickerCiudades.delegate = self
         pickerEtnia.delegate = self
         pickerEducacion.delegate = self
+        pickerGenero.delegate = self
         cargarPickers()
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -103,6 +104,20 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         toolbarEtnia.setItems([doneEtniaButton], animated: false)
         txtEtnia.inputAccessoryView = toolbarEtnia
         txtEtnia.inputView = pickerEtnia
+        
+        let toolbarEducacion = UIToolbar()
+        toolbarEducacion.sizeToFit()
+        let doneEducacionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "doneEducacionPressed")
+        toolbarEducacion.setItems([doneEducacionButton], animated: false)
+        txtEducacion.inputAccessoryView = toolbarEducacion
+        txtEducacion.inputView = pickerEducacion
+        
+        let toolbarGenero = UIToolbar()
+        toolbarGenero.sizeToFit()
+        let doneGeneroButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "doneGeneroPressed")
+        toolbarGenero.setItems([doneGeneroButton], animated: false)
+        txtGenero.inputAccessoryView = toolbarGenero
+        txtGenero.inputView = pickerGenero
     }
     func doneCiudadPressed(){
         let row = pickerCiudades.selectedRowInComponent(0)
@@ -112,6 +127,16 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     func doneEtniaPressed(){
         let row = pickerEtnia.selectedRowInComponent(0)
         txtEtnia.text = "\(etniasEC[row].nombre)"
+        self.view.endEditing(true)
+    }
+    func doneEducacionPressed(){
+        let row = pickerEducacion.selectedRowInComponent(0)
+        txtEducacion.text = "\(nivelesEduc[row].nombre)"
+        self.view.endEditing(true)
+    }
+    func doneGeneroPressed(){
+        let row = pickerGenero.selectedRowInComponent(0)
+        txtGenero.text = "\(genero[row])"
         self.view.endEditing(true)
     }
     override func didReceiveMemoryWarning() {
