@@ -36,10 +36,6 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
             self.provinciasEC = Provincia.dataProvincias(result)
             println("Provincias: \(self.provinciasEC.count)")
         }
-        ConexionWS.getDatos("ciudades/?\(1)&limit=100"){ result in
-            self.ciudadesEC = Ciudad.dataCiudad(result)
-            println("ciudades: \(self.ciudadesEC.count)")
-        }
         ConexionWS.getDatos("etnias/?limit=10"){ result in
             self.etniasEC = Etnia.dataEtnia(result)
             println("etnias \(self.etniasEC.count)")
@@ -60,7 +56,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         if pickerView == pickerCiudades{
-            return 1
+            return 2
         }
         return 1
     }
@@ -73,7 +69,10 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         }else if pickerView == pickerGenero {
             return self.genero.count
         }else if pickerView == pickerCiudades{
-            return self.ciudadesEC.count
+            if component == 0 {
+                return self.provinciasEC.count
+            }
+            return self.provinciasEC[pickerView.selectedRowInComponent(0)].ciudades.count
         }
         return countrows
     }
@@ -86,7 +85,10 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         }else if pickerView == pickerGenero {
             return self.genero[row]
         }else if pickerView == pickerCiudades{
-            return self.ciudadesEC[row].nombre
+            if component == 0{
+                return self.provinciasEC[row].nombre
+            }
+            return self.provinciasEC[pickerView.selectedRowInComponent(0)].ciudades[row].nombre
         }
         return "error"
     }

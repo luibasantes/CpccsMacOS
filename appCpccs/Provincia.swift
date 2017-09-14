@@ -44,7 +44,7 @@ class Provincia {
         var ciudadesProv : Array<Ciudad>  = Array<Ciudad>()
         ConexionWS.getDatos("ciudades/?provincia=\(id)&limit=100"){ result in
             ciudadesProv = Ciudad.dataCiudad(result)
-            println("ciudades: \(ciudadesProv.count)")
+            println("ciudades de \(self.nombre): \(ciudadesProv.count)")
             self.ciudades = ciudadesProv
         }
     }
