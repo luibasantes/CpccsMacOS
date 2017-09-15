@@ -1,16 +1,22 @@
 //
-//  ParticipacionController.swift
+//  TransparenciaController.swift
 //  appCpccs
 //
-//  Created by Sistemas Operativos on 7/9/17.
+//  Created by Sistemas Operativos on 8/9/17.
 //  Copyright (c) 2017 Espol. All rights reserved.
 //
 
 import Foundation
 import UIkit
 
-class ParticipacionController: UIViewController{
-
+class TransparenciaController : UIViewController{
+    
+    
+    @IBOutlet weak var headingLabel: UILabel!
+    
+    @IBAction func saludar(sender: UIButton) {
+        headingLabel.text = "Hello from \n Transparencia View"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

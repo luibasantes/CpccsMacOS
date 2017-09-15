@@ -17,7 +17,8 @@ class subMenuViewController: UIViewController {
     @IBOutlet weak var btnControlSocial: UIButton!
     @IBOutlet weak var btnTransparencia: UIButton!
     @IBOutlet weak var labelTema: UILabel!
-   
+    @IBOutlet weak var contenedor: UIView!
+    
     private lazy var participacionController: ParticipacionController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -35,7 +36,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("SessionsViewController") as ControlSocialController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ControlSocialController") as ControlSocialController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -43,6 +44,31 @@ class subMenuViewController: UIViewController {
         return viewController
     }()
 
+    private lazy var transparenciaController: TransparenciaController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("TransparenciaController") as TransparenciaController
+        
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
+    
+    private lazy var noticiasController: NoticiasTabController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("NoticiasTabController") as NoticiasTabController
+        
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
     
     
     override func viewDidLoad() {
@@ -65,8 +91,7 @@ class subMenuViewController: UIViewController {
         btnTransparencia.setImage(imageTransparencia,forState: .Normal)
         btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        
-        //add(asChildViewController: participacionController)
+        add(asChildViewController: participacionController)
     }
     
     func showControlSocial(){
@@ -78,7 +103,7 @@ class subMenuViewController: UIViewController {
         btnTransparencia.setImage(imageTransparencia,forState: .Normal)
         btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        //add(asChildViewController: controlSocialController)
+        add(asChildViewController: controlSocialController)
     }
     
     func showTransparencia(){
@@ -90,6 +115,7 @@ class subMenuViewController: UIViewController {
         btnTransparencia.setImage(imageTransparencia,forState: .Normal)
         btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        add(asChildViewController: transparenciaController)
     }
     
     func showNoticias(){
@@ -101,6 +127,7 @@ class subMenuViewController: UIViewController {
         btnTransparencia.setImage(imageTransparencia,forState: .Normal)
         btnNoticias.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         btnContacto.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        add(asChildViewController: noticiasController)
     }
     
     func showContacto(){
@@ -116,16 +143,17 @@ class subMenuViewController: UIViewController {
     
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
+        contenedor.addSubview(viewController.view)
         addChildViewController(viewController)
         
         // Add Child View as Subview
-        view.addSubview(viewController.view)
+        //view.addSubview(viewController.view)
         
         // Configure Child View
-        viewController.view.frame = view.bounds
+        viewController.view.frame = contenedor.bounds
         //viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         // Notify Child View Controller
-        viewController.didMoveToParentViewController(self)
+        //viewController.didMoveToParentViewController()
     }
     
     private func remove(asChildViewController viewController: UIViewController) {
@@ -154,10 +182,12 @@ class subMenuViewController: UIViewController {
         labelTema.text = " Transparencia"
         showTransparencia()
     }
+    
     @IBAction func pressNoticias(sender: UIButton) {
         labelTema.text = " Noticias"
         showNoticias()
     }
+    
     @IBAction func pressContactos(sender: UIButton) {
         labelTema.text = " Contacto"
         showContacto()
