@@ -1353,19 +1353,6 @@
                                     <segue destination="3II-IJ-d4n" kind="modal" id="99P-3s-Cru"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOX-gz-gc7">
-                                <rect key="frame" x="272" y="512" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0gh-k6-EeY"/>
-                                    <constraint firstAttribute="width" constant="40" id="9UK-tJ-Tkp"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="twitter.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="csC-6J-6f2" kind="modal" id="kGR-QG-mw3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-Lq-yzr">
                                 <rect key="frame" x="84" y="391" width="58" height="58"/>
                                 <constraints>
@@ -1402,7 +1389,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7s-ue-SF2">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7s-ue-SF2">
                                 <rect key="frame" x="-1" y="180" width="320" height="208"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="208" id="Mhv-Xn-4ZV"/>
@@ -1493,6 +1480,19 @@
                                 </state>
                                 <connections>
                                     <action selector="pressParticipacion:" destination="R0n-xu-ZUU" eventType="touchUpInside" id="vn4-tq-pGG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOX-gz-gc7">
+                                <rect key="frame" x="272" y="512" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0gh-k6-EeY"/>
+                                    <constraint firstAttribute="width" constant="40" id="9UK-tJ-Tkp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="csC-6J-6f2" kind="modal" id="kGR-QG-mw3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1740,6 +1740,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACAAA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkO-1j-ewK">
+                                        <rect key="frame" x="80" y="379" width="57" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1807,24 +1813,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d41-Xr-Ism">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d41-Xr-Ism">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PARTCIPACION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3V-Cj-UX0">
-                                        <rect key="frame" x="99" y="83" width="123" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ih1-Xt-iZy">
+                                        <rect key="frame" x="0.0" y="75" width="320" height="196"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-gp-JRl">
+                                                <rect key="frame" x="0.0" y="-8" width="320" height="168"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="C4N-wZ-i7t"/>
+                                            <constraint firstAttribute="height" constant="196" id="JuT-BI-NZa"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoK-Gp-vce">
+                                        <rect key="frame" x="60" y="279" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="fzZ-MA-bU8"/>
+                                            <constraint firstAttribute="height" constant="30" id="mYE-l8-Cgb"/>
+                                        </constraints>
+                                        <state key="normal" title="Consejo Ciudadano Sectorial">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJW-Yt-uJe">
+                                        <rect key="frame" x="10" y="317" width="302" height="237"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-JM-sAk">
+                                                <rect key="frame" x="0.0" y="0.0" width="302" height="183"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="302" id="8HT-xR-KNZ"/>
+                                            <constraint firstAttribute="height" constant="237" id="OIz-Rd-rji"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8j-lD-9U5">
+                                        <rect key="frame" x="0.0" y="37" width="320" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8sP-R6-1vt"/>
+                                            <constraint firstAttribute="width" constant="320" id="xp8-Gl-iHP"/>
+                                        </constraints>
+                                        <state key="normal" title="Asamblea Ciudadana">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showContent1:" destination="v11-Vg-3Rq" eventType="touchUpInside" id="B4B-k3-5gB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ih1-Xt-iZy" firstAttribute="top" secondItem="O8j-lD-9U5" secondAttribute="bottom" constant="8" id="XlE-aT-wQG"/>
+                                    <constraint firstItem="GoK-Gp-vce" firstAttribute="top" secondItem="Ih1-Xt-iZy" secondAttribute="bottom" constant="8" id="f2d-u3-r2P"/>
+                                    <constraint firstItem="VJW-Yt-uJe" firstAttribute="top" secondItem="GoK-Gp-vce" secondAttribute="bottom" constant="8" id="zZj-Av-aLR"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="d41-Xr-Ism" secondAttribute="trailing" constant="-16" id="3bw-l7-wgH"/>
+                            <constraint firstItem="3wc-ne-ELz" firstAttribute="top" secondItem="d41-Xr-Ism" secondAttribute="bottom" id="ZBD-KW-2aD"/>
+                            <constraint firstItem="d41-Xr-Ism" firstAttribute="top" secondItem="3BG-Si-DGt" secondAttribute="topMargin" id="iKS-l5-Xk9"/>
+                            <constraint firstItem="d41-Xr-Ism" firstAttribute="leading" secondItem="3BG-Si-DGt" secondAttribute="leadingMargin" constant="-16" id="sdi-85-HSS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView1" destination="Ih1-Xt-iZy" id="wME-gc-TWB"/>
+                        <outlet property="contentView2" destination="VJW-Yt-uJe" id="hCs-Us-jqZ"/>
+                        <outlet property="textView1" destination="SWj-gp-JRl" id="HR8-69-evc"/>
+                        <outlet property="view1Height" destination="JuT-BI-NZa" id="Vrm-5P-ZdD"/>
+                        <outlet property="view2Height" destination="OIz-Rd-rji" id="L57-Zv-Jfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZU-b6-pIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445" y="67"/>
+            <point key="canvasLocation" x="1445" y="63"/>
         </scene>
         <!--Noticias Tab Controller-->
         <scene sceneID="lh8-Ab-5I0">
@@ -1899,12 +1974,12 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="R5y-sj-C8r"/>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="eZn-Oz-qUg"/>
-        <segue reference="Ovz-yT-5yI"/>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="bgT-UX-qQl"/>
         <segue reference="7e9-nd-REY"/>
+        <segue reference="bgT-UX-qQl"/>
+        <segue reference="trb-we-6CP"/>
+        <segue reference="kGR-QG-mw3"/>
+        <segue reference="N8s-ER-NeE"/>
+        <segue reference="99P-3s-Cru"/>
+        <segue reference="R5y-sj-C8r"/>
     </inferredMetricsTieBreakers>
 </document>

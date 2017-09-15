@@ -10,11 +10,21 @@ import Foundation
 import UIkit
 
 class ParticipacionController: UIViewController{
-
     
+    @IBOutlet weak var contentView1: UIView!
+    @IBOutlet weak var contentView2: UIView!
+    @IBOutlet weak var textView1: UITextView!
+    var view2Dimension = CGRect()
+    
+    @IBOutlet weak var view2Height: NSLayoutConstraint!
+    @IBOutlet weak var view1Height: NSLayoutConstraint!
+    @IBAction func showContent1(sender: UIButton) {
+    }
     override func viewDidLoad() {
+        view1Height.constant=0
+        view2Height.constant=0
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
