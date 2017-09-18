@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "appCpccs.DenunciasController.pickerView (appCpccs.DenunciasController)(ObjectiveC.UIPickerView, titleForRow : Swift.Int, forComponent : Swift.Int) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;:DenunciasController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].nombre">
+            </PersistentString>
+            <PersistentString
+               value = "pickerView.selectedRowInComponent(0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

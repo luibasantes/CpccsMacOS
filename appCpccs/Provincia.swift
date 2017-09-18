@@ -48,4 +48,7 @@ class Provincia {
             self.ciudades = ciudadesProv
         }
     }
+    class func buscarProvinciaId(provincias: Array<Provincia>,ciudadBuscar: String) -> Int{
+        return 0
+    }
 }

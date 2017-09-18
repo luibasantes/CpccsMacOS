@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DenunciasController.swift"
-            timestampString = "527095045.468593"
+            timestampString = "527454847.922043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "pickerView(_:titleForRow:forComponent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -49,6 +49,78 @@
             endingLineNumber = "34"
             landmarkName = "ParticipacionController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appCpccs.ParticipacionController.v3HeightContainer.getter : ObjectiveC.NSLayoutConstraint"
+                  moduleName = "appCpccs"
+                  urlString = "file:///Volumes/SO/Users/SO/Desktop/CpccsMacOS/appCpccs/appCpccs/ParticipacionController.swift"
+                  timestampString = "527455009.846524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appCpccs.ParticipacionController.v3HeightContainer.materializeForSet : ObjectiveC.NSLayoutConstraint"
+                  moduleName = "appCpccs"
+                  urlString = "file:///Volumes/SO/Users/SO/Desktop/CpccsMacOS/appCpccs/appCpccs/ParticipacionController.swift"
+                  timestampString = "527455009.84679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appCpccs.ParticipacionController.init (appCpccs.ParticipacionController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; appCpccs.ParticipacionController"
+                  moduleName = "appCpccs"
+                  urlString = "file:///Volumes/SO/Users/SO/Desktop/CpccsMacOS/appCpccs/appCpccs/ParticipacionController.swift"
+                  timestampString = "527455009.846906"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "975">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appCpccs.ParticipacionController.init (appCpccs.ParticipacionController.Type)() -&gt; appCpccs.ParticipacionController"
+                  moduleName = "appCpccs"
+                  urlString = "file:///Volumes/SO/Users/SO/Desktop/CpccsMacOS/appCpccs/appCpccs/ParticipacionController.swift"
+                  timestampString = "527455009.84705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "961">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appCpccs.ParticipacionController.init (appCpccs.ParticipacionController.Type)(coder : ObjectiveC.NSCoder) -&gt; appCpccs.ParticipacionController"
+                  moduleName = "appCpccs"
+                  urlString = "file:///Volumes/SO/Users/SO/Desktop/CpccsMacOS/appCpccs/appCpccs/ParticipacionController.swift"
+                  timestampString = "527455009.847177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "974">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
