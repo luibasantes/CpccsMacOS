@@ -142,7 +142,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         datos.telefono = self.txtTelefono.text
         datos.celular = self.txtCelular.text
         datos.direccion = self.txtDireccion.text
-        var prov: String[]
+        var prov: [String]
         prov=txtCiudad.text.componentsSeparatedByString(",")
         //datos.provincia_denunciado_id = Provincia.buscarProvinciaId(provinciasEC,prov[0])
         //datos.ciudad_denunciado_id = Ciudad.buscarCiudadId(provinciasEC[datos.provincia_denunciado_id].ciudades,prov[1])
@@ -205,6 +205,6 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destino = segue.destinationViewController as EvidenciaController
-        destino.datos = "vdvdvd"
+        //destino.datos = "vdvdvd"
     }
 }

@@ -14,6 +14,10 @@
 		64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item.png */; };
 		64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB741F6F56AE00694AD6 /* sharp bar item.png */; };
 		64DA9FED1F70256800FD2B3F /* section background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9FEC1F70256800FD2B3F /* section background.png */; };
+		64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA1A511F71689500718EE8 /* DenunciadoController.swift */; };
+		64EA1A541F71689500718EE8 /* EvidenciaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA1A521F71689500718EE8 /* EvidenciaController.swift */; };
+		64EA1A571F7170DE00718EE8 /* left arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA1A551F7170DD00718EE8 /* left arrow.png */; };
+		64EA1A581F7170DE00718EE8 /* right arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA1A561F7170DD00718EE8 /* right arrow.png */; };
 		64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */; };
 		64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */; };
 		D32C5D511F6989B600553FCB /* Genero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D501F6989B600553FCB /* Genero.swift */; };
@@ -107,6 +111,10 @@
 		64A9CB731F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "../../../../../Downloads/sharp bar item.png"; sourceTree = "<group>"; };
 		64DA9FEC1F70256800FD2B3F /* section background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section background.png"; sourceTree = "<group>"; };
+		64EA1A511F71689500718EE8 /* DenunciadoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciadoController.swift; sourceTree = "<group>"; };
+		64EA1A521F71689500718EE8 /* EvidenciaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenciaController.swift; sourceTree = "<group>"; };
+		64EA1A551F7170DD00718EE8 /* left arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left arrow.png"; sourceTree = "<group>"; };
+		64EA1A561F7170DD00718EE8 /* right arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right arrow.png"; sourceTree = "<group>"; };
 		64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoControlSocial.swift; sourceTree = "<group>"; };
 		64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoParticipacionCiudadana.swift; sourceTree = "<group>"; };
 		D32C5D501F6989B600553FCB /* Genero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genero.swift; sourceTree = "<group>"; };
@@ -204,6 +212,8 @@
 		DB0053691F4F75CE00664030 = {
 			isa = PBXGroup;
 			children = (
+				64EA1A511F71689500718EE8 /* DenunciadoController.swift */,
+				64EA1A521F71689500718EE8 /* EvidenciaController.swift */,
 				DB0D923A1F618BE900AF626B /* DenunciasController.swift */,
 				DB0053741F4F75CE00664030 /* appCpccs */,
 				DB00538A1F4F75CE00664030 /* appCpccsTests */,
@@ -297,6 +307,8 @@
 		DB491DDB1F58ACC600B26BF9 /* _iconos */ = {
 			isa = PBXGroup;
 			children = (
+				64EA1A551F7170DD00718EE8 /* left arrow.png */,
+				64EA1A561F7170DD00718EE8 /* right arrow.png */,
 				D3AE59B41F632E0D00AB04D1 /* SideMenu.png */,
 				DB491DDC1F58ACC600B26BF9 /* barraIconos.png */,
 				DB491DDD1F58ACC600B26BF9 /* barraIconosGris.png */,
@@ -458,6 +470,7 @@
 				DB491DEC1F58ACC600B26BF9 /* barraIconos.png in Resources */,
 				DB491E021F58AF7600B26BF9 /* Recurso 16.svg in Resources */,
 				DB491DFB1F58ACC600B26BF9 /* youtube.png in Resources */,
+				64EA1A581F7170DE00718EE8 /* right arrow.png in Resources */,
 				DBEEF5171F50B9EC003409AE /* fondo.png in Resources */,
 				DBEEF5201F50B9EC003409AE /* transparencia.png in Resources */,
 				DB491DF71F58ACC600B26BF9 /* particpacion.png in Resources */,
@@ -479,6 +492,7 @@
 				DB491E061F58AF7600B26BF9 /* Recurso 20.svg in Resources */,
 				DB491E051F58AF7600B26BF9 /* Recurso 19.svg in Resources */,
 				DB0053821F4F75CE00664030 /* LaunchScreen.xib in Resources */,
+				64EA1A571F7170DE00718EE8 /* left arrow.png in Resources */,
 				DB491DEF1F58ACC600B26BF9 /* controlSocial.png in Resources */,
 				64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */,
 				DBEEF5221F50B9EC003409AE /* ubicacion_provincias.png in Resources */,
@@ -507,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CCE8621F70502700C3EB23 /* (null) in Sources */,
+				64EA1A541F71689500718EE8 /* EvidenciaController.swift in Sources */,
 				DB58932A1F608AAA007E4726 /* menuViewController.swift in Sources */,
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
@@ -517,6 +532,7 @@
 				D3CCE8601F702ED800C3EB23 /* (null) in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
+				64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
 				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
