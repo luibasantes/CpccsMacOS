@@ -11,7 +11,7 @@
 		64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */; };
 		64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB711F6F56AE00694AD6 /* bar item narrow.png */; };
 		64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB721F6F56AE00694AD6 /* bar item.png */; };
-		64A9CB771F6F56AE00694AD6 /* sharp bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */; };
+		64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item.png */; };
 		64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB741F6F56AE00694AD6 /* sharp bar item.png */; };
 		64DA9FED1F70256800FD2B3F /* section background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9FEC1F70256800FD2B3F /* section background.png */; };
 		64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */; };
@@ -29,9 +29,8 @@
 		D3AE59B31F6327E900AB04D1 /* Cosas-Importantes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */; };
 		D3AE59B51F632E0D00AB04D1 /* SideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B41F632E0D00AB04D1 /* SideMenu.png */; };
 		D3AE59B71F632E1F00AB04D1 /* sidemenuINTERFAZ.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B61F632E1F00AB04D1 /* sidemenuINTERFAZ.png */; };
-		D3CCE8601F702ED800C3EB23 /* DenunciadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCE85F1F702ED800C3EB23 /* DenunciadoController.swift */; };
-		D3CCE8621F70502700C3EB23 /* EvidenciaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCE8611F70502700C3EB23 /* EvidenciaController.swift */; };
-		D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
+		D3CCE8601F702ED800C3EB23 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D3CCE8621F70502700C3EB23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */; };
 		D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */; };
 		D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5893271F6081FD007E4726 /* subMenuViewController.swift */; };
@@ -103,9 +102,9 @@
 /* Begin PBXFileReference section */
 		64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
 		64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoTransparencia.swift; sourceTree = "<group>"; };
-		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "../../../../../Downloads/bar item narrow.png"; sourceTree = "<group>"; };
-		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "../../../../../Downloads/bar item.png"; sourceTree = "<group>"; };
-		64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item narrow.png"; path = "../../../../../Downloads/sharp bar item narrow.png"; sourceTree = "<group>"; };
+		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "appCpccs/_images/bar item narrow.png"; sourceTree = SOURCE_ROOT; };
+		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "appCpccs/_images/bar item.png"; sourceTree = SOURCE_ROOT; };
+		64A9CB731F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "../../../../../Downloads/sharp bar item.png"; sourceTree = "<group>"; };
 		64DA9FEC1F70256800FD2B3F /* section background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section background.png"; sourceTree = "<group>"; };
 		64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoControlSocial.swift; sourceTree = "<group>"; };
@@ -205,9 +204,7 @@
 		DB0053691F4F75CE00664030 = {
 			isa = PBXGroup;
 			children = (
-				D3CCE8611F70502700C3EB23 /* EvidenciaController.swift */,
 				DB0D923A1F618BE900AF626B /* DenunciasController.swift */,
-				D3CCE85F1F702ED800C3EB23 /* DenunciadoController.swift */,
 				DB0053741F4F75CE00664030 /* appCpccs */,
 				DB00538A1F4F75CE00664030 /* appCpccsTests */,
 				DB0053731F4F75CE00664030 /* Products */,
@@ -340,7 +337,7 @@
 				64DA9FEC1F70256800FD2B3F /* section background.png */,
 				64A9CB711F6F56AE00694AD6 /* bar item narrow.png */,
 				64A9CB721F6F56AE00694AD6 /* bar item.png */,
-				64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */,
+				64A9CB731F6F56AE00694AD6 /* sharp bar item.png */,
 				64A9CB741F6F56AE00694AD6 /* sharp bar item.png */,
 				DB5706AE1F54CC7A00BFAF3F /* logo.png */,
 				DBEEF5231F50CF02003409AE /* noticias2.png */,
@@ -469,7 +466,7 @@
 				D3AE59B51F632E0D00AB04D1 /* SideMenu.png in Resources */,
 				DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */,
 				DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */,
-				64A9CB771F6F56AE00694AD6 /* sharp bar item narrow.png in Resources */,
+				64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */,
 				DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */,
 				DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */,
 				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
@@ -509,7 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CCE8621F70502700C3EB23 /* EvidenciaController.swift in Sources */,
+				D3CCE8621F70502700C3EB23 /* (null) in Sources */,
 				DB58932A1F608AAA007E4726 /* menuViewController.swift in Sources */,
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
@@ -517,7 +514,7 @@
 				64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */,
 				D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
-				D3CCE8601F702ED800C3EB23 /* DenunciadoController.swift in Sources */,
+				D3CCE8601F702ED800C3EB23 /* (null) in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
