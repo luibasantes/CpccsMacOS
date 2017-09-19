@@ -10,25 +10,40 @@ import Foundation
 import UIKit
 
 class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
-    @IBOutlet weak var txtProvincias: UITextView!
     var provinciasEC: Array<Provincia>!
     var ciudadesEC: Array<Ciudad>!
     var etniasEC: Array<Etnia>!
     var estadosC: Array<EstadoCivil>!
     var nivelesEduc: Array<NivelEducacion>!
-
+    
+    var datosDenuncia: Denuncia!
     
     let pickerCiudades = UIPickerView()
     let pickerGenero = UIPickerView()
     let pickerEtnia = UIPickerView()
     let pickerEducacion = UIPickerView()
     
+    @IBOutlet weak var optIdentidad: UISwitch!
     @IBOutlet weak var txtGenero: UITextField!
     @IBOutlet weak var txtEducacion: UITextField!
     @IBOutlet weak var txtEtnia: UITextField!
     @IBOutlet weak var txtCiudad: UITextField!
     
-    var genero = ["Masculino","Femenino","LGBTI"]
+    @IBOutlet weak var txtNombres: UITextField!
+    @IBOutlet weak var txtApellidos: UITextField!
+    @IBOutlet weak var txtEdad: UITextField!
+    @IBOutlet weak var txtCorreo: UITextField!
+    @IBOutlet weak var txtTelefono: UITextField!
+    @IBOutlet weak var txtCelular: UITextField!
+    @IBOutlet weak var txtDireccion: UITextField!
+    @IBOutlet weak var txtInstitucion: UITextField!
+    @IBOutlet weak var txtCargo: UITextField!
+    @IBOutlet weak var txtCed: UITextField!
+    @IBOutlet weak var txtPais: UITextField!
+    
+    
+    
+    var genero = ["MASCULINO","FEMENINO","LGBTI"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +91,14 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         }
         return countrows
     }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == pickerCiudades{
+            if component == 0 {
+                pickerCiudades.reloadComponent(1)
+                pickerCiudades.selectRow(0, inComponent: 1, animated: true)
+            }
+        }
+    }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         if pickerView == pickerEducacion {
@@ -86,11 +109,45 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
             return self.genero[row]
         }else if pickerView == pickerCiudades{
             if component == 0{
+                pickerView.selectRow(0, inComponent: 1, animated: false)
                 return self.provinciasEC[row].nombre
+            }else if component == 1 {
+                return self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades[row].nombre
             }
-            return self.provinciasEC[pickerView.selectedRowInComponent(0)].ciudades[row].nombre
+            
         }
         return "error"
+    }
+    @IBAction func btnADenunciado(sender: UIButton) {
+        if txtNombres.text.isEmpty || txtApellidos.text.isEmpty || txtEdad.text.isEmpty || txtCorreo.text.isEmpty || txtTelefono.text.isEmpty || txtDireccion.text.isEmpty || txtInstitucion.text.isEmpty || txtCed.text.isEmpty || txtPais.text.isEmpty{
+            
+            let alertController = UIAlertController(title: "Error", message: "Debe completar los campos para pasar a la siguiente parte de su denuncia", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction?) in
+                println("you have pressed Yes button");
+                //Call another alert here
+            }
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true, completion:nil)
+        }
+        else{
+            recolectarDatos()
+        }
+    }
+    func recolectarDatos(){
+        var datos: Denuncia = Denuncia()
+        datos.identidad_reservada = self.optIdentidad.selected
+        datos.nombres_apellidos_denunciado = "\(self.txtNombres) \(self.txtApellidos)"
+        datos.edad_denunciante = self.txtEdad.text.toInt()
+        datos.correo_denunciante = self.txtCorreo.text
+        datos.telefono = self.txtTelefono.text
+        datos.celular = self.txtCelular.text
+        datos.direccion = self.txtDireccion.text
+        var prov: String[]
+        prov=txtCiudad.text.componentsSeparatedByString(",")
+        //datos.provincia_denunciado_id = Provincia.buscarProvinciaId(provinciasEC,prov[0])
+        //datos.ciudad_denunciado_id = Ciudad.buscarCiudadId(provinciasEC[datos.provincia_denunciado_id].ciudades,prov[1])
+        datos.genero_denunciado = txtGenero.text
+        //datos.etnia = Etnia.buscarEtniaId(etniasEC)
     }
     func cargarPickers(){
         let toolbarCiudad = UIToolbar()
@@ -123,7 +180,8 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     func doneCiudadPressed(){
         let row = pickerCiudades.selectedRowInComponent(0)
-        txtCiudad.text = "\(ciudadesEC[row].nombre)"
+        let row2 = pickerCiudades.selectedRowInComponent(1)
+        txtCiudad.text = "\(provinciasEC[row].nombre), \(provinciasEC[row].ciudades[row2].nombre)"
         self.view.endEditing(true)
     }
     func doneEtniaPressed(){
@@ -144,5 +202,9 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destino = segue.destinationViewController as EvidenciaController
+        destino.datos = "vdvdvd"
     }
 }

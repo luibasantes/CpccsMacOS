@@ -29,6 +29,9 @@
 		D3AE59B31F6327E900AB04D1 /* Cosas-Importantes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */; };
 		D3AE59B51F632E0D00AB04D1 /* SideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B41F632E0D00AB04D1 /* SideMenu.png */; };
 		D3AE59B71F632E1F00AB04D1 /* sidemenuINTERFAZ.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B61F632E1F00AB04D1 /* sidemenuINTERFAZ.png */; };
+		D3CCE8601F702ED800C3EB23 /* DenunciadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCE85F1F702ED800C3EB23 /* DenunciadoController.swift */; };
+		D3CCE8621F70502700C3EB23 /* EvidenciaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCE8611F70502700C3EB23 /* EvidenciaController.swift */; };
+		D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */; };
 		D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */; };
 		D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5893271F6081FD007E4726 /* subMenuViewController.swift */; };
@@ -202,7 +205,9 @@
 		DB0053691F4F75CE00664030 = {
 			isa = PBXGroup;
 			children = (
+				D3CCE8611F70502700C3EB23 /* EvidenciaController.swift */,
 				DB0D923A1F618BE900AF626B /* DenunciasController.swift */,
+				D3CCE85F1F702ED800C3EB23 /* DenunciadoController.swift */,
 				DB0053741F4F75CE00664030 /* appCpccs */,
 				DB00538A1F4F75CE00664030 /* appCpccsTests */,
 				DB0053731F4F75CE00664030 /* Products */,
@@ -504,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CCE8621F70502700C3EB23 /* EvidenciaController.swift in Sources */,
 				DB58932A1F608AAA007E4726 /* menuViewController.swift in Sources */,
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
@@ -511,6 +517,7 @@
 				64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */,
 				D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
+				D3CCE8601F702ED800C3EB23 /* DenunciadoController.swift in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
