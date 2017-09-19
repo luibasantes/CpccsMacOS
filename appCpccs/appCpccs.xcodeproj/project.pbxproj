@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */; };
+		64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */; };
 		64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB711F6F56AE00694AD6 /* bar item narrow.png */; };
 		64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB721F6F56AE00694AD6 /* bar item.png */; };
 		64A9CB771F6F56AE00694AD6 /* sharp bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */; };
 		64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB741F6F56AE00694AD6 /* sharp bar item.png */; };
+		64DA9FED1F70256800FD2B3F /* section background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9FEC1F70256800FD2B3F /* section background.png */; };
+		64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */; };
+		64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */; };
 		D32C5D511F6989B600553FCB /* Genero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D501F6989B600553FCB /* Genero.swift */; };
 		D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D521F69A8A200553FCB /* Denuncia.swift */; };
 		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
@@ -24,10 +29,8 @@
 		D3AE59B31F6327E900AB04D1 /* Cosas-Importantes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */; };
 		D3AE59B51F632E0D00AB04D1 /* SideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B41F632E0D00AB04D1 /* SideMenu.png */; };
 		D3AE59B71F632E1F00AB04D1 /* sidemenuINTERFAZ.png in Resources */ = {isa = PBXBuildFile; fileRef = D3AE59B61F632E1F00AB04D1 /* sidemenuINTERFAZ.png */; };
-		D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */; };
 		D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBD6931F54CF2D00006221 /* denunciasPageViewController.swift */; };
-		D3D4E03F1F61DCBA004AEB67 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */; };
 		D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5893271F6081FD007E4726 /* subMenuViewController.swift */; };
 		DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0053771F4F75CE00664030 /* AppDelegate.swift */; };
 		DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0053791F4F75CE00664030 /* ViewController.swift */; };
@@ -95,10 +98,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
+		64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoTransparencia.swift; sourceTree = "<group>"; };
 		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "../../../../../Downloads/bar item narrow.png"; sourceTree = "<group>"; };
 		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "../../../../../Downloads/bar item.png"; sourceTree = "<group>"; };
 		64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item narrow.png"; path = "../../../../../Downloads/sharp bar item narrow.png"; sourceTree = "<group>"; };
 		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "../../../../../Downloads/sharp bar item.png"; sourceTree = "<group>"; };
+		64DA9FEC1F70256800FD2B3F /* section background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section background.png"; sourceTree = "<group>"; };
+		64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoControlSocial.swift; sourceTree = "<group>"; };
+		64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoParticipacionCiudadana.swift; sourceTree = "<group>"; };
 		D32C5D501F6989B600553FCB /* Genero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genero.swift; sourceTree = "<group>"; };
 		D32C5D521F69A8A200553FCB /* Denuncia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Denuncia.swift; sourceTree = "<group>"; };
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +120,6 @@
 		D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Cosas-Importantes.txt"; sourceTree = "<group>"; };
 		D3AE59B41F632E0D00AB04D1 /* SideMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SideMenu.png; path = appCpccs/_images/SideMenu.png; sourceTree = SOURCE_ROOT; };
 		D3AE59B61F632E1F00AB04D1 /* sidemenuINTERFAZ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenuINTERFAZ.png; sourceTree = "<group>"; };
-		D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
 		D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlSocialController.swift; sourceTree = "<group>"; };
 		DB0053721F4F75CE00664030 /* appCpccs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appCpccs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0053761F4F75CE00664030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,13 +238,13 @@
 				DB29FB581F5DE7730022FC70 /* YoutubeController.swift */,
 				DB5893271F6081FD007E4726 /* subMenuViewController.swift */,
 				DB5893291F608AAA007E4726 /* menuViewController.swift */,
-				D3D4E03A1F61D7E1004AEB67 /* ParticipacionController.swift */,
 				D3D4E03C1F61D843004AEB67 /* ControlSocialController.swift */,
 				D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */,
 				D36E45101F61D73B00DDD2DB /* MessageViewController.swift */,
 				D3AE59B21F6327E900AB04D1 /* Cosas-Importantes.txt */,
 				D393D35D1F632E5C00519D34 /* TransparenciaController.swift */,
 				D393D35F1F632FF100519D34 /* NoticiasTabController.swift */,
+				64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -278,6 +285,9 @@
 				D39BC2261F6310AB00C01340 /* NivelEducacion.swift */,
 				D32C5D501F6989B600553FCB /* Genero.swift */,
 				D32C5D521F69A8A200553FCB /* Denuncia.swift */,
+				64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */,
+				64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */,
+				64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -322,6 +332,7 @@
 		DBEEF5021F50B9EC003409AE /* _images */ = {
 			isa = PBXGroup;
 			children = (
+				64DA9FEC1F70256800FD2B3F /* section background.png */,
 				64A9CB711F6F56AE00694AD6 /* bar item narrow.png */,
 				64A9CB721F6F56AE00694AD6 /* bar item.png */,
 				64A9CB731F6F56AE00694AD6 /* sharp bar item narrow.png */,
@@ -458,6 +469,7 @@
 				DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */,
 				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
 				DB491DEE1F58ACC600B26BF9 /* barraRedesSociales.png in Resources */,
+				64DA9FED1F70256800FD2B3F /* section background.png in Resources */,
 				DBEEF51B1F50B9EC003409AE /* logo_youtube.png in Resources */,
 				DB491DF21F58ACC600B26BF9 /* fotoMenu.png in Resources */,
 				DB491DF31F58ACC600B26BF9 /* fotoTopMenu.png in Resources */,
@@ -496,13 +508,16 @@
 				DB00537A1F4F75CE00664030 /* ViewController.swift in Sources */,
 				DB0053781F4F75CE00664030 /* AppDelegate.swift in Sources */,
 				D39BC2231F630B4000C01340 /* Etnia.swift in Sources */,
+				64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */,
 				D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
-				D3D4E03B1F61D7E1004AEB67 /* ParticipacionController.swift in Sources */,
+				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
+				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
 				D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */,
+				64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */,
 				D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */,
 				DB0D923B1F618BE900AF626B /* DenunciasController.swift in Sources */,
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,
@@ -523,7 +538,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D4E03F1F61DCBA004AEB67 /* ParticipacionController.swift in Sources */,
 				D3D4E03E1F61DCB5004AEB67 /* denunciasPageViewController.swift in Sources */,
 				DB00538E1F4F75CE00664030 /* appCpccsTests.swift in Sources */,
 			);
