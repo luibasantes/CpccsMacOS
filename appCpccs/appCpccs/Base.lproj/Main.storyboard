@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -428,6 +428,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NVm-xB-8u2" kind="modal" id="qhA-hU-9or"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1929,10 +1932,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WI-Zs-seW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Mapa Ubicacion Controller-->
         <scene sceneID="MfW-kU-9dk">
             <objects>
-                <viewController id="NVm-xB-8u2" sceneMemberID="viewController">
+                <viewController id="NVm-xB-8u2" customClass="MapaUbicacionController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmY-14-QKk"/>
                         <viewControllerLayoutGuide type="bottom" id="QZh-OP-mNe"/>
@@ -1941,7 +1944,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb7-Od-2ve">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kb7-Od-2ve">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="reply" id="f2v-Lp-ACl">
@@ -1950,19 +1953,33 @@
                                 </items>
                                 <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mC6-TI-ooG">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-PQ-QSS">
+                                <rect key="frame" x="0.0" y="103" width="320" height="465"/>
                             </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpT-ph-rUy">
+                                <rect key="frame" x="10" y="65" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QZh-OP-mNe" firstAttribute="top" secondItem="mC6-TI-ooG" secondAttribute="bottom" id="Dvy-I4-fJr"/>
-                            <constraint firstItem="mC6-TI-ooG" firstAttribute="top" secondItem="kb7-Od-2ve" secondAttribute="bottom" id="Iia-Y2-o8u"/>
-                            <constraint firstItem="mC6-TI-ooG" firstAttribute="top" secondItem="kb7-Od-2ve" secondAttribute="bottom" id="RVz-Oo-ebn"/>
-                            <constraint firstItem="mC6-TI-ooG" firstAttribute="leading" secondItem="koc-5t-a20" secondAttribute="leadingMargin" id="Wim-OZ-jQe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mC6-TI-ooG" secondAttribute="trailing" id="Y69-pg-Ozt"/>
+                            <constraint firstItem="dpT-ph-rUy" firstAttribute="centerX" secondItem="koc-5t-a20" secondAttribute="centerX" id="4jQ-Va-17y"/>
+                            <constraint firstItem="yqa-PQ-QSS" firstAttribute="trailing" secondItem="kb7-Od-2ve" secondAttribute="trailing" id="7Jg-PF-cZM"/>
+                            <constraint firstItem="yqa-PQ-QSS" firstAttribute="bottom" secondItem="QZh-OP-mNe" secondAttribute="top" id="B8M-yq-jo6"/>
+                            <constraint firstItem="yqa-PQ-QSS" firstAttribute="leading" secondItem="kb7-Od-2ve" secondAttribute="leading" id="DPF-Fh-Y2s"/>
+                            <constraint firstItem="yqa-PQ-QSS" firstAttribute="top" secondItem="dpT-ph-rUy" secondAttribute="bottom" constant="8" symbolic="YES" id="QWh-T4-YnK"/>
+                            <constraint firstItem="dpT-ph-rUy" firstAttribute="centerX" secondItem="kb7-Od-2ve" secondAttribute="centerX" id="VVb-d1-m3K"/>
+                            <constraint firstItem="dpT-ph-rUy" firstAttribute="top" secondItem="koc-5t-a20" secondAttribute="top" constant="65" id="Wba-ji-arc"/>
+                            <constraint firstItem="yqa-PQ-QSS" firstAttribute="leading" secondItem="koc-5t-a20" secondAttribute="leading" id="qee-Nn-hi9"/>
+                            <constraint firstItem="dpT-ph-rUy" firstAttribute="top" secondItem="kb7-Od-2ve" secondAttribute="bottom" constant="1" id="sGK-SQ-r0G"/>
+                            <constraint firstItem="dpT-ph-rUy" firstAttribute="leading" secondItem="koc-5t-a20" secondAttribute="leadingMargin" constant="-6" id="twQ-aD-9gg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapa" destination="yqa-PQ-QSS" id="dfR-y9-DgS"/>
+                        <outlet property="txtUbicacion" destination="dpT-ph-rUy" id="6ba-30-OEn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5k-aC-OLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2060,15 +2077,6 @@
                                                 </items>
                                                 <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </toolbar>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-IL-03l">
-                                                <rect key="frame" x="246" y="390" width="64" height="30"/>
-                                                <state key="normal" title="Siguiente">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="btnADenunciado:forEvent:" destination="XKb-ga-uRW" eventType="touchUpInside" id="tvE-qX-Dj0"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIq-cD-Szy">
                                                 <rect key="frame" x="77" y="192" width="233" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2102,6 +2110,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-IL-03l">
+                                                <rect key="frame" x="246" y="390" width="64" height="30"/>
+                                                <state key="normal" title="Siguiente">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnADenunciado:forEvent:" destination="XKb-ga-uRW" eventType="touchUpInside" id="tvE-qX-Dj0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2229,13 +2246,13 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eZn-Oz-qUg"/>
-        <segue reference="N8s-ER-NeE"/>
-        <segue reference="kGR-QG-mw3"/>
         <segue reference="99P-3s-Cru"/>
-        <segue reference="7e9-nd-REY"/>
-        <segue reference="XiG-zO-FHi"/>
-        <segue reference="R5y-sj-C8r"/>
+        <segue reference="051-2c-mEk"/>
         <segue reference="agg-Xm-s6c"/>
+        <segue reference="o9W-tP-t42"/>
+        <segue reference="kGR-QG-mw3"/>
+        <segue reference="N8s-ER-NeE"/>
+        <segue reference="eDN-bc-mB5"/>
+        <segue reference="7e9-nd-REY"/>
     </inferredMetricsTieBreakers>
 </document>

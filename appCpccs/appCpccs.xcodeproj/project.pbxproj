@@ -20,6 +20,8 @@
 		64EA1A581F7170DE00718EE8 /* right arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA1A561F7170DD00718EE8 /* right arrow.png */; };
 		64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */; };
 		64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */; };
+		D24A84DD1F7246F3006C581F /* MapaUbicacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */; };
+		D24A84DF1F724C5D006C581F /* Ubicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DE1F724C5D006C581F /* Ubicacion.swift */; };
 		D32C5D511F6989B600553FCB /* Genero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D501F6989B600553FCB /* Genero.swift */; };
 		D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D521F69A8A200553FCB /* Denuncia.swift */; };
 		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
@@ -109,7 +111,7 @@
 		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "appCpccs/_images/bar item narrow.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "appCpccs/_images/bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB731F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
-		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "../../../../../Downloads/sharp bar item.png"; sourceTree = "<group>"; };
+		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
 		64DA9FEC1F70256800FD2B3F /* section background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section background.png"; sourceTree = "<group>"; };
 		64EA1A511F71689500718EE8 /* DenunciadoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciadoController.swift; sourceTree = "<group>"; };
 		64EA1A521F71689500718EE8 /* EvidenciaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenciaController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,8 @@
 		64EA1A561F7170DD00718EE8 /* right arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right arrow.png"; sourceTree = "<group>"; };
 		64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoControlSocial.swift; sourceTree = "<group>"; };
 		64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoParticipacionCiudadana.swift; sourceTree = "<group>"; };
+		D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaUbicacionController.swift; sourceTree = "<group>"; };
+		D24A84DE1F724C5D006C581F /* Ubicacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubicacion.swift; sourceTree = "<group>"; };
 		D32C5D501F6989B600553FCB /* Genero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genero.swift; sourceTree = "<group>"; };
 		D32C5D521F69A8A200553FCB /* Denuncia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Denuncia.swift; sourceTree = "<group>"; };
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 				64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */,
 				64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */,
 				64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */,
+				D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */,
+				D24A84DE1F724C5D006C581F /* Ubicacion.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 				D3CCE8601F702ED800C3EB23 /* (null) in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
+				D24A84DF1F724C5D006C581F /* Ubicacion.swift in Sources */,
 				64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
@@ -546,6 +553,7 @@
 				DBDBD6941F54CF2D00006221 /* denunciasPageViewController.swift in Sources */,
 				D393D35E1F632E5C00519D34 /* TransparenciaController.swift in Sources */,
 				D39BC2251F630F2300C01340 /* EstadoCivil.swift in Sources */,
+				D24A84DD1F7246F3006C581F /* MapaUbicacionController.swift in Sources */,
 				DB29FB591F5DE7730022FC70 /* YoutubeController.swift in Sources */,
 				D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */,
 				DBDBD6921F54B2C800006221 /* noticiasController.swift in Sources */,
