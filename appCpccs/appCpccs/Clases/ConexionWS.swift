@@ -16,7 +16,7 @@ class ConexionWS {
     class func getDatos(datoaRecuperar:String, completion:(NSData)->Void) -> Void {
         let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/\(datoaRecuperar)")
         let session = NSURLSession.sharedSession()
-        let loadTask=session.dataTaskWithURL(url!) { (data, response, error) in
+        session.dataTaskWithURL(url!) { (data, response, error) in
             if error != nil {
                 println(error.localizedDescription)
                 return
@@ -26,5 +26,19 @@ class ConexionWS {
                 completion(data)
             }
         }.resume()
+    }
+    class func getUbicaciones(completion:(NSData)->Void) -> Void {
+        let url = NSURL(string: "http://denunciaec.co.nf/oficinas.json")
+        let session = NSURLSession.sharedSession()
+        session.dataTaskWithURL(url!) { (data, response, error) in
+            if error != nil {
+                println(error.localizedDescription)
+                return
+            }
+            let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if result != nil {
+                completion(data)
+            }
+            }.resume()
     }
 }

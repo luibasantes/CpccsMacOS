@@ -22,6 +22,7 @@
 		64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */; };
 		D24A84DD1F7246F3006C581F /* MapaUbicacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */; };
 		D24A84DF1F724C5D006C581F /* Ubicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DE1F724C5D006C581F /* Ubicacion.swift */; };
+		D2E0ADD71F7313DB00E8CB7A /* MarcadorMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */; };
 		D32C5D511F6989B600553FCB /* Genero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D501F6989B600553FCB /* Genero.swift */; };
 		D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32C5D521F69A8A200553FCB /* Denuncia.swift */; };
 		D36E450F1F61D60E00DDD2DB /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */; };
@@ -121,6 +122,7 @@
 		64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoParticipacionCiudadana.swift; sourceTree = "<group>"; };
 		D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaUbicacionController.swift; sourceTree = "<group>"; };
 		D24A84DE1F724C5D006C581F /* Ubicacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubicacion.swift; sourceTree = "<group>"; };
+		D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarcadorMapa.swift; sourceTree = "<group>"; };
 		D32C5D501F6989B600553FCB /* Genero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genero.swift; sourceTree = "<group>"; };
 		D32C5D521F69A8A200553FCB /* Denuncia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Denuncia.swift; sourceTree = "<group>"; };
 		D36E450E1F61D60E00DDD2DB /* OverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */,
 				D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */,
 				D24A84DE1F724C5D006C581F /* Ubicacion.swift */,
+				D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
 				D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */,
 				64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */,
+				D2E0ADD71F7313DB00E8CB7A /* MarcadorMapa.swift in Sources */,
 				D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */,
 				DB0D923B1F618BE900AF626B /* DenunciasController.swift in Sources */,
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+    var datosDenuncia: Denuncia!
     var provinciasEC: Array<Provincia>!
     
     let pickerCiudades = UIPickerView()
@@ -75,7 +76,7 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         return "error"
     }
     @IBAction func btnADenunciado(sender: UIButton, forEvent event: UIEvent) {
-        if txtNombres.text.isEmpty || txtApellidos.text.isEmpty || txtInstitucion.text.isEmpty || txtCargo.text.isEmpty{
+        if self.txtNombres.text.isEmpty || self.txtApellidos.text.isEmpty || self.txtInstitucion.text.isEmpty || self.txtCargo.text.isEmpty || self.txtGenero.text.isEmpty || self.txtCiudad.text.isEmpty || self.txtParroquia.text.isEmpty{
             let alertController = UIAlertController(title: "Error", message: "Debe completar los campos para pasar a la siguiente parte de su denuncia", preferredStyle: .Alert)
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
                 println("you have pressed Yes button");
@@ -83,7 +84,33 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
             }
             alertController.addAction(OKAction)
             self.presentViewController(alertController, animated: true, completion:nil)
+        }else {
+            recolectarDatosDenunciado()
+            let alertController = UIAlertController(title: "AVISO", message: "Al presionar OK, enviará su denuncia al CPCCS para su verificación", preferredStyle: .Alert)
+            let CancelAction = UIAlertAction(title: "BACK", style: .Default) { (action:UIAlertAction!) in
+                println("you have pressed Yes button");
+                //Call another alert here
+            }
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+                println("you have pressed Yes button");
+                enviarDenuncia()
+                //Call another alert here
+            }
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true, completion:nil)
         }
+    }
+    func recolectarDatosDenunciado(){
+        self.datosDenuncia.nombres_apellidos_denunciado = "\(self.txtNombres) \(self.txtApellidos)"
+        self.datosDenuncia.genero_denunciado = self.txtGenero.text
+        self.datosDenuncia.institucion_denunciado = self.txtInstitucion.text
+        self.datosDenuncia.cargo_denunciado = self.txtCargo.text
+        var prov: [String]
+        prov=txtCiudad.text.componentsSeparatedByString(",")
+        self.datosDenuncia.provincia_denunciado_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
+        var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
+        self.datosDenuncia.ciudad_denunciado_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])
+        self.datosDenuncia.parroquia_denunciado = self.txtParroquia.text
     }
     func cargarPickers(){
         let toolbarCiudad = UIToolbar()
@@ -114,5 +141,12 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destino = segue.destinationViewController as EvidenciaController
+        destino.datos = self.datosDenuncia
+    }
+    func enviarDenuncia(){
+        
     }
 }

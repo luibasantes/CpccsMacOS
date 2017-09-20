@@ -38,6 +38,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var txtDireccion: UITextField!
     @IBOutlet weak var txtInstitucion: UITextField!
     @IBOutlet weak var txtCargo: UITextField!
+    @IBOutlet weak var optId: UISegmentedControl!
     @IBOutlet weak var txtCed: UITextField!
     @IBOutlet weak var txtPais: UITextField!
     
@@ -136,7 +137,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     func recolectarDatos(){
         var datos: Denuncia = Denuncia()
         datos.identidad_reservada = self.optIdentidad.selected
-        datos.nombres_apellidos_denunciado = "\(self.txtNombres) \(self.txtApellidos)"
+        datos.nombres_apellidos_denunciante = "\(self.txtNombres) \(self.txtApellidos)"
         datos.edad_denunciante = self.txtEdad.text.toInt()
         datos.correo_denunciante = self.txtCorreo.text
         datos.telefono = self.txtTelefono.text
@@ -144,10 +145,22 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         datos.direccion = self.txtDireccion.text
         var prov: [String]
         prov=txtCiudad.text.componentsSeparatedByString(",")
-        //datos.provincia_denunciado_id = Provincia.buscarProvinciaId(provinciasEC,prov[0])
-        //datos.ciudad_denunciado_id = Ciudad.buscarCiudadId(provinciasEC[datos.provincia_denunciado_id].ciudades,prov[1])
-        datos.genero_denunciado = txtGenero.text
-        //datos.etnia = Etnia.buscarEtniaId(etniasEC)
+        datos.provincia_denunciante_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
+        var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
+        datos.ciudad_denunciante_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])
+        datos.genero_denunciante = txtGenero.text
+        datos.etnia = pickerEtnia.selectedRowInComponent(0)
+        datos.nivel_educacion_id = pickerEducacion.selectedRowInComponent(0)
+        datos.institucion_denunciante = txtInstitucion.text
+        datos.cargo_denunciante = txtCargo.text
+        if optId.selectedSegmentIndex == 0 {
+            datos.tipo_identificacion = "CEDULA"
+        }else {
+            datos.tipo_identificacion = "PASAPORTE"
+        }
+        datos.no_identificacion = txtCed.text
+        datos.pais = txtPais.text
+        self.datosDenuncia = datos
     }
     func cargarPickers(){
         let toolbarCiudad = UIToolbar()
@@ -205,6 +218,6 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destino = segue.destinationViewController as EvidenciaController
-        //destino.datos = "vdvdvd"
+        destino.datos = self.datosDenuncia
     }
 }

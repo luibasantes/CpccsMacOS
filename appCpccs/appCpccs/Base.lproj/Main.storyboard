@@ -674,8 +674,8 @@
                                                     <segue destination="iut-oG-MqN" kind="modal" id="XiG-zO-FHi"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="País" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-n2-w8B">
-                                                <rect key="frame" x="10" y="688" width="33" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-n2-w8B">
+                                                <rect key="frame" x="10" y="758" width="33" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -816,6 +816,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="optId" destination="nOJ-Nu-Vcg" id="6Oe-aV-hln"/>
                         <outlet property="optIdentidad" destination="BWT-ZZ-DOL" id="9Ae-HS-UvJ"/>
                         <outlet property="txtApellidos" destination="7ut-5U-bx1" id="XUX-X6-LQJ"/>
                         <outlet property="txtCargo" destination="Z4Y-zs-UMb" id="IRy-J7-vr7"/>
@@ -889,6 +890,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnADenunciado:" destination="iut-oG-MqN" eventType="touchUpInside" id="Dv6-TI-T5W"/>
                                     <segue destination="XKb-ga-uRW" kind="modal" id="yIq-K5-77Y"/>
                                 </connections>
                             </button>
@@ -911,6 +913,9 @@
                             <constraint firstItem="D1e-gP-IAT" firstAttribute="leading" secondItem="Blr-qM-VlJ" secondAttribute="leading" id="xOj-vd-gbe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtDescripcion" destination="D1e-gP-IAT" id="gF8-4l-4pp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BN-zQ-CVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2246,13 +2251,13 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="99P-3s-Cru"/>
         <segue reference="051-2c-mEk"/>
         <segue reference="agg-Xm-s6c"/>
-        <segue reference="o9W-tP-t42"/>
-        <segue reference="kGR-QG-mw3"/>
-        <segue reference="N8s-ER-NeE"/>
+        <segue reference="R5y-sj-C8r"/>
         <segue reference="eDN-bc-mB5"/>
+        <segue reference="jtG-qD-f20"/>
+        <segue reference="8ac-0B-ITq"/>
+        <segue reference="Ovz-yT-5yI"/>
         <segue reference="7e9-nd-REY"/>
     </inferredMetricsTieBreakers>
 </document>

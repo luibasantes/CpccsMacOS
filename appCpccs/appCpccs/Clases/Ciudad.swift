@@ -32,7 +32,7 @@ class Ciudad {
         }
         return ciudadesEC
     }
-    class func buscarCuidadId(ciudades: Array<Ciudad>,ciudadBuscar: String) -> Int{
+    class func buscarCiudadId(ciudades: Array<Ciudad>,ciudadBuscar: String) -> Int{
         return 0
     }
 }

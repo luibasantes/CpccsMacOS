@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "appCpccs.MapaUbicacionController.(viewDidLoad (appCpccs.MapaUbicacionController) -&gt; () -&gt; ()).(closure #1):MapaUbicacionController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.Ubicacion.dataUbicaciones (appCpccs.Ubicacion.Type)(ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;:Ubicacion.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "y.objectForKey(&quot;nombre&quot;) as String">
+            </PersistentString>
+            <PersistentString
+               value = "(agencias.objectAtIndex(0) as NSDictionary).object(&quot;nombre&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.Ubicacion.(dataUbicaciones (appCpccs.Ubicacion.Type) -&gt; (ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;).(closure #1):Ubicacion.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "provinciasArray">
+            </PersistentString>
+            <PersistentString
+               value = "agencias.get(0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
