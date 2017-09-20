@@ -70,6 +70,18 @@ class subMenuViewController: UIViewController {
         return viewController
     }()
     
+    private lazy var contactoController: ContactoController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ContactoController") as ContactoController
+        
+        // Add View Controller as Child View Controller
+        self.add(asChildViewController: viewController)
+        
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,6 +151,7 @@ class subMenuViewController: UIViewController {
         btnTransparencia.setImage(imageTransparencia,forState: .Normal)
         btnContacto.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         btnNoticias.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        add(asChildViewController: contactoController)
     }
     
     private func add(asChildViewController viewController: UIViewController) {

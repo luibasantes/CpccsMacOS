@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64389D7C1F72F4E5004E7920 /* ContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64389D7B1F72F4E5004E7920 /* ContactoController.swift */; };
+		64389D7E1F731EC9004E7920 /* CpccsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64389D7D1F731EC9004E7920 /* CpccsTVController.swift */; };
 		64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */; };
 		64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */; };
 		64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB711F6F56AE00694AD6 /* bar item narrow.png */; };
@@ -107,6 +109,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64389D7B1F72F4E5004E7920 /* ContactoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoController.swift; sourceTree = "<group>"; };
+		64389D7D1F731EC9004E7920 /* CpccsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpccsTVController.swift; sourceTree = "<group>"; };
 		64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
 		64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoTransparencia.swift; sourceTree = "<group>"; };
 		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "appCpccs/_images/bar item narrow.png"; sourceTree = SOURCE_ROOT; };
@@ -263,6 +267,8 @@
 				D393D35D1F632E5C00519D34 /* TransparenciaController.swift */,
 				D393D35F1F632FF100519D34 /* NoticiasTabController.swift */,
 				64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */,
+				64389D7B1F72F4E5004E7920 /* ContactoController.swift */,
+				64389D7D1F731EC9004E7920 /* CpccsTVController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -542,9 +548,11 @@
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
 				D39BC2211F6302D900C01340 /* Ciudad.swift in Sources */,
 				D24A84DF1F724C5D006C581F /* Ubicacion.swift in Sources */,
+				64389D7E1F731EC9004E7920 /* CpccsTVController.swift in Sources */,
 				64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
+				64389D7C1F72F4E5004E7920 /* ContactoController.swift in Sources */,
 				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
 				D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */,
 				64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */,
