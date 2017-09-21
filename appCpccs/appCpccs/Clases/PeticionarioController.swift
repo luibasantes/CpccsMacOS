@@ -1,15 +1,16 @@
 //
-//  DenunciasController.swift
+//  Peticionario.swift
 //  appCpccs
 //
-//  Created by Erick Rocafuerte on 7/9/17.
+//  Created by Erick Rocafuerte on 21/9/17.
 //  Copyright (c) 2017 Espol. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
 
-class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     var provinciasEC: Array<Provincia>!
     var ciudadesEC: Array<Ciudad>!
     var etniasEC: Array<Etnia>!
@@ -140,22 +141,22 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         datos.celular = self.txtCelular.text
         datos.direccion = self.txtDireccion.text
         var prov: [String]
-        prov=txtCiudad.text.componentsSeparatedByString(", ")
+        prov=self.txtCiudad.text.componentsSeparatedByString(", ")
         datos.provincia_denunciante_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
         var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
         datos.ciudad_denunciante_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])
-        datos.genero_denunciante = txtGenero.text
-        datos.etnia = pickerEtnia.selectedRowInComponent(0)
-        datos.nivel_educacion_id = pickerEducacion.selectedRowInComponent(0)
-        datos.institucion_denunciante = txtInstitucion.text
-        datos.cargo_denunciante = txtCargo.text
+        datos.genero_denunciante = self.txtGenero.text
+        datos.etnia = self.pickerEtnia.selectedRowInComponent(0)
+        datos.nivel_educacion_id = self.pickerEducacion.selectedRowInComponent(0)
+        datos.institucion_denunciante = self.txtInstitucion.text
+        datos.cargo_denunciante = self.txtCargo.text
         if optId.selectedSegmentIndex == 0 {
             datos.tipo_identificacion = "CEDULA"
         }else {
             datos.tipo_identificacion = "PASAPORTE"
         }
-        datos.no_identificacion = txtCed.text
-        datos.pais = txtPais.text
+        datos.no_identificacion = self.txtCed.text
+        datos.pais = self.txtPais.text
         self.datosDenuncia = datos
     }
     func cargarPickers(){
@@ -216,6 +217,5 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         if let destino = segue.destinationViewController as? EvidenciaController {
             destino.datos = self.datosDenuncia
         }
-        
     }
 }

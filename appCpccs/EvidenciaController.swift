@@ -31,7 +31,14 @@ class EvidenciaController: UIViewController{
             }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destino = segue.destinationViewController as DenunciadoController
-        destino.datosDenuncia = self.datos
+        if let destino = segue.destinationViewController as? DenunciadoController {
+            destino.datosDenuncia = self.datos
+        } else if let destino = segue.destinationViewController as? DenunciasController {
+            destino.datosDenuncia = self.datos
+        }else if let destino = segue.destinationViewController as? PeticionarioController {
+            destino.datosDenuncia = self.datos
+        } else if let destino = segue.destinationViewController as? PedidoController {
+            destino.datosDenuncia = self.datos
+        }
     }
 }

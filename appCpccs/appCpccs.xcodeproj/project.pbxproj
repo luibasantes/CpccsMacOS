@@ -22,6 +22,8 @@
 		64EA1A581F7170DE00718EE8 /* right arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64EA1A561F7170DD00718EE8 /* right arrow.png */; };
 		64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */; };
 		64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */; };
+		D241B22A1F7381CB002BCBBE /* PeticionarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241B2291F7381CB002BCBBE /* PeticionarioController.swift */; };
+		D241B22C1F739154002BCBBE /* PedidoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D241B22B1F739154002BCBBE /* PedidoController.swift */; };
 		D24A84DD1F7246F3006C581F /* MapaUbicacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */; };
 		D24A84DF1F724C5D006C581F /* Ubicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A84DE1F724C5D006C581F /* Ubicacion.swift */; };
 		D2E0ADD71F7313DB00E8CB7A /* MarcadorMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */; };
@@ -124,6 +126,8 @@
 		64EA1A561F7170DD00718EE8 /* right arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right arrow.png"; sourceTree = "<group>"; };
 		64FC5EC01F705F9D001830FE /* ContenidoControlSocial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoControlSocial.swift; sourceTree = "<group>"; };
 		64FC5EC41F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoParticipacionCiudadana.swift; sourceTree = "<group>"; };
+		D241B2291F7381CB002BCBBE /* PeticionarioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeticionarioController.swift; sourceTree = "<group>"; };
+		D241B22B1F739154002BCBBE /* PedidoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoController.swift; sourceTree = "<group>"; };
 		D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaUbicacionController.swift; sourceTree = "<group>"; };
 		D24A84DE1F724C5D006C581F /* Ubicacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ubicacion.swift; sourceTree = "<group>"; };
 		D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarcadorMapa.swift; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 				D24A84DC1F7246F3006C581F /* MapaUbicacionController.swift */,
 				D24A84DE1F724C5D006C581F /* Ubicacion.swift */,
 				D2E0ADD61F7313DB00E8CB7A /* MarcadorMapa.swift */,
+				D241B2291F7381CB002BCBBE /* PeticionarioController.swift */,
+				D241B22B1F739154002BCBBE /* PedidoController.swift */,
 			);
 			path = Clases;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				D39BC2231F630B4000C01340 /* Etnia.swift in Sources */,
 				64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */,
 				D32C5D531F69A8A200553FCB /* Denuncia.swift in Sources */,
+				D241B22A1F7381CB002BCBBE /* PeticionarioController.swift in Sources */,
 				DB29FB551F5DE5310022FC70 /* FacebookController.swift in Sources */,
 				D3CCE8601F702ED800C3EB23 /* (null) in Sources */,
 				D393D3601F632FF100519D34 /* NoticiasTabController.swift in Sources */,
@@ -554,6 +561,7 @@
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
 				64389D7C1F72F4E5004E7920 /* ContactoController.swift in Sources */,
 				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
+				D241B22C1F739154002BCBBE /* PedidoController.swift in Sources */,
 				D39BC2271F6310AB00C01340 /* NivelEducacion.swift in Sources */,
 				64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */,
 				D2E0ADD71F7313DB00E8CB7A /* MarcadorMapa.swift in Sources */,

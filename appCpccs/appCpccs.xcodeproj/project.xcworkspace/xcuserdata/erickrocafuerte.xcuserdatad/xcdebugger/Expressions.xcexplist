@@ -3,6 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "appCpccs.DenunciasController.prepareForSegue (appCpccs.DenunciasController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():DenunciasController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.EvidenciaController.btnADenunciado (appCpccs.EvidenciaController)(ObjectiveC.UIButton) -&gt; ():EvidenciaController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.DenunciasController.recolectarDatos (appCpccs.DenunciasController)() -&gt; ():DenunciasController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "prov[1]">
+            </PersistentString>
+            <PersistentString
+               value = "pickerEducacion.selectedRowInComponent(0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.EvidenciaController.prepareForSegue (appCpccs.EvidenciaController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():EvidenciaController.swift">
+      </ContextState>
+      <ContextState
          contextName = "appCpccs.Ubicacion.(dataUbicaciones (appCpccs.Ubicacion.Type) -&gt; (ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;).(closure #1):Ubicacion.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,10 +37,10 @@
          contextName = "appCpccs.MapaUbicacionController.(viewDidLoad (appCpccs.MapaUbicacionController) -&gt; () -&gt; ()).(closure #1):MapaUbicacionController.swift">
       </ContextState>
       <ContextState
-         contextName = "appCpccs.DenunciasController.recolectarDatos (appCpccs.DenunciasController)() -&gt; ():DenunciasController.swift">
+         contextName = "appCpccs.PeticionarioController.recolectarDatos (appCpccs.PeticionarioController)() -&gt; ():PeticionarioController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "prov[1]">
+               value = "self.txtCed.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
