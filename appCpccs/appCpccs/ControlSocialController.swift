@@ -18,7 +18,7 @@ class ControlSocialController : UIViewController{
     var videoButtonArray: Array<UIButton>!
     var textArray: Array<UITextView>!
     var indexVideoArray: Array<Int>!
-
+    var linkVideo : String!
     
     func showView(sender: UIButton!){
         var delta : CGFloat
@@ -70,6 +70,23 @@ class ControlSocialController : UIViewController{
         }
     }
     
+    func showVideo(sender: UIButton!){
+        for i in 0...(videoButtonArray.count-1){
+            if(sender == videoButtonArray[i]){
+                var linkIndex = find(indexVideoArray, i)
+                if(linkIndex != nil){
+                    print("link index: \(linkIndex) \n")
+                    self.linkVideo = contenidos[linkIndex!].link
+                    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    var videoController = storyboard.instantiateViewControllerWithIdentifier("VideoController") as VideoController
+                    videoController.link = self.linkVideo
+                    self.presentViewController(videoController, animated:true, completion:nil)
+                }
+            }
+            
+        }
+    }
+    
     override func viewDidLoad() {
         ConexionWS.getDatos("contenidos/?limit=100"){
             result in dispatch_async(dispatch_get_main_queue()){
@@ -104,13 +121,16 @@ class ControlSocialController : UIViewController{
                         buttonVideo.setTitle("Toque para ver video", forState: UIControlState.Normal)
                         buttonVideo.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                         buttonVideo.backgroundColor = UIColor.redColor()
+                        buttonVideo.addTarget(self, action: "showVideo:", forControlEvents: UIControlEvents.TouchUpInside)
                         self.scrollMaster.addSubview(buttonVideo)
                         self.videoButtonArray.append(buttonVideo)
                         self.indexVideoArray.append(self.videoButtonArray.count-1)
                         yPos = buttonVideo.frame.maxY
+                        print("link contenido: \(contenido.link)")
                     }
                     else{
                         self.indexVideoArray.append(-1)
+                        print("link contenido: \(contenido.link)")
                     }
                 }
             }

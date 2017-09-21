@@ -18,7 +18,7 @@ class ParticipacionController : UIViewController{
     var videoButtonArray: Array<UIButton>!
     var textArray: Array<UITextView>!
     var indexVideoArray: Array<Int>!
-    
+    var linkVideo : String!
     
     func showView(sender: UIButton!){
         var delta : CGFloat
@@ -63,10 +63,28 @@ class ParticipacionController : UIViewController{
                             if(indexVideoArray[j] != -1){
                                 var index = indexVideoArray[j]
                                 videoButtonArray[index].frame = CGRect(x: videoButtonArray[index].frame.minX, y: videoButtonArray[index].frame.minY - delta, width: videoButtonArray[index].frame.width, height: videoButtonArray[index].frame.height)
-                            }                        }
+                            }
+                        }
+                        
                     }
                 }
             }
+        }
+    }
+    
+    func showVideo(sender: UIButton!){
+        for i in 0...(videoButtonArray.count-1){
+            if(sender == videoButtonArray[i]){
+               var linkIndex = find(indexVideoArray, i)
+                if(linkIndex != nil){
+                    self.linkVideo = contenidos[linkIndex!].link
+                    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    var videoController = storyboard.instantiateViewControllerWithIdentifier("VideoController") as VideoController
+                    videoController.link = self.linkVideo
+                    self.presentViewController(videoController, animated:true, completion:nil)
+                }
+            }
+            
         }
     }
     
@@ -106,6 +124,7 @@ class ParticipacionController : UIViewController{
                         buttonVideo.setTitle("Toque para ver video", forState: UIControlState.Normal)
                         buttonVideo.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                         buttonVideo.backgroundColor = UIColor.redColor()
+                        buttonVideo.addTarget(self, action: "showVideo:", forControlEvents: UIControlEvents.TouchUpInside)
                         self.scrollMaster.addSubview(buttonVideo)
                         self.videoButtonArray.append(buttonVideo)
                         self.indexVideoArray.append(self.videoButtonArray.count-1)

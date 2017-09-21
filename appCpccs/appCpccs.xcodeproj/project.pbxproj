@@ -11,6 +11,7 @@
 		64389D7E1F731EC9004E7920 /* CpccsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64389D7D1F731EC9004E7920 /* CpccsTVController.swift */; };
 		64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */; };
 		64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */; };
+		6469C5071F73CDF5007108A4 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469C5061F73CDF5007108A4 /* VideoController.swift */; };
 		64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB711F6F56AE00694AD6 /* bar item narrow.png */; };
 		64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB721F6F56AE00694AD6 /* bar item.png */; };
 		64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item.png */; };
@@ -115,6 +116,7 @@
 		64389D7D1F731EC9004E7920 /* CpccsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpccsTVController.swift; sourceTree = "<group>"; };
 		64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
 		64532DE51F70B229003F63F7 /* ContenidoTransparencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContenidoTransparencia.swift; sourceTree = "<group>"; };
+		6469C5061F73CDF5007108A4 /* VideoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
 		64A9CB711F6F56AE00694AD6 /* bar item narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item narrow.png"; path = "appCpccs/_images/bar item narrow.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "appCpccs/_images/bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB731F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
@@ -273,6 +275,7 @@
 				64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */,
 				64389D7B1F72F4E5004E7920 /* ContactoController.swift */,
 				64389D7D1F731EC9004E7920 /* CpccsTVController.swift */,
+				6469C5061F73CDF5007108A4 /* VideoController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				64FC5EC11F705F9D001830FE /* ContenidoControlSocial.swift in Sources */,
 				D2E0ADD71F7313DB00E8CB7A /* MarcadorMapa.swift in Sources */,
 				D3D4E03D1F61D843004AEB67 /* ControlSocialController.swift in Sources */,
+				6469C5071F73CDF5007108A4 /* VideoController.swift in Sources */,
 				DB0D923B1F618BE900AF626B /* DenunciasController.swift in Sources */,
 				D3D4E0411F61DDE1004AEB67 /* subMenuViewController.swift in Sources */,
 				D36E45111F61D73B00DDD2DB /* MessageViewController.swift in Sources */,

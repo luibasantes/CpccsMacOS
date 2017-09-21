@@ -18,6 +18,7 @@ class subMenuViewController: UIViewController {
     @IBOutlet weak var btnTransparencia: UIButton!
     @IBOutlet weak var labelTema: UILabel!
     @IBOutlet weak var contenedor: UIView!
+    var comeFrom: String!
     
     private lazy var participacionController: ParticipacionController = {
         // Load Storyboard
@@ -84,6 +85,29 @@ class subMenuViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        if(comeFrom != nil){
+            if(comeFrom == "PC"){
+                labelTema.text = "Participacion Ciudadana"
+                showParticipacionCiudadana()
+            }
+            else if(comeFrom == "CS"){
+                labelTema.text = "Control Social"
+                showControlSocial()
+            }
+            else if(comeFrom == "TP"){
+                labelTema.text = "Transparencia"
+                showTransparencia()
+            }
+            else if(comeFrom == "NOTICIAS"){
+                labelTema.text = "Noticias"
+                showNoticias()
+            }
+            else if(comeFrom == "CONTACTO"){
+                labelTema.text = "Contacto"
+                showContacto()
+            }
+            comeFrom = ""
+        }
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
