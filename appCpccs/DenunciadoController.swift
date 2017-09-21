@@ -93,7 +93,7 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
             }
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
                 println("you have pressed Yes button");
-                enviarDenuncia()
+                self.enviarDenuncia()
                 //Call another alert here
             }
             alertController.addAction(OKAction)
