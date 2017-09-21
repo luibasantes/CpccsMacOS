@@ -428,9 +428,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="NVm-xB-8u2" kind="modal" id="qhA-hU-9or"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1001,7 +998,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zN1-KS-7hJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-272" y="248"/>
+            <point key="canvasLocation" x="-1032" y="-34"/>
         </scene>
         <!--CpccsTV Controller-->
         <scene sceneID="ewp-HT-xlc">
@@ -1015,21 +1012,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iav-GL-5Ap">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Ipm-Aj-xvJ"/>
-                                    <constraint firstAttribute="height" constant="44" id="juP-GP-ywh"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem systemItem="reply" id="SvW-dJ-6eY">
-                                        <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                    </barButtonItem>
-                                </items>
-                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.cpccs.gob.ec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dB-jw-nLT">
                                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                                 <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1061,6 +1043,24 @@
                                     <constraint firstAttribute="height" constant="478" id="H8Y-0i-JFz"/>
                                 </constraints>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iav-GL-5Ap">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Ipm-Aj-xvJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="juP-GP-ywh"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="reply" id="SvW-dJ-6eY">
+                                        <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="Chv-Tj-BBp" kind="modal" id="Fd2-OB-Ntl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1102,13 +1102,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-9E-m9u">
-                                <rect key="frame" x="0.0" y="38" width="320" height="258"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="258" id="8ct-FU-Rl2"/>
-                                    <constraint firstAttribute="width" constant="320" id="uBg-ro-olB"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-HT-lcL">
                                 <rect key="frame" x="0.0" y="311" width="90" height="21"/>
                                 <constraints>
@@ -1157,6 +1150,9 @@
                                 <items>
                                     <barButtonItem systemItem="reply" id="WOc-FH-zCK">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="Chv-Tj-BBp" kind="modal" id="U5X-xX-pr1"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1187,6 +1183,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-9E-m9u">
+                                <rect key="frame" x="0.0" y="38" width="320" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="8ct-FU-Rl2"/>
+                                    <constraint firstAttribute="width" constant="320" id="uBg-ro-olB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1236,13 +1239,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="C7Y-6C-uZ0">
-                                <rect key="frame" x="0.0" y="28" width="320" height="268"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="268" id="5IT-kk-gqU"/>
-                                    <constraint firstAttribute="width" constant="320" id="Rt5-ZG-04h"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-29-Ofg">
                                 <rect key="frame" x="0.0" y="309" width="111" height="21"/>
                                 <constraints>
@@ -1289,6 +1285,9 @@
                                 <items>
                                     <barButtonItem systemItem="reply" id="FQM-d7-upe">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <segue destination="Chv-Tj-BBp" kind="modal" id="8S5-pR-dSw"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1318,6 +1317,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="C7Y-6C-uZ0">
+                                <rect key="frame" x="0.0" y="28" width="320" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="5IT-kk-gqU"/>
+                                    <constraint firstAttribute="width" constant="320" id="Rt5-ZG-04h"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1587,11 +1593,84 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj6-rW-JmD">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="568"/>
+                                <rect key="frame" x="-184" y="0.0" width="160" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SideMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-XJ-zEn">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="Hdh-X5-9re"/>
+                                            <constraint firstAttribute="height" constant="150" id="x0w-Rm-4Vo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t3-zm-6Ef">
+                                        <rect key="frame" x="0.0" y="187" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="MISION">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Djn-bp-6WI" kind="modal" id="Ha2-UG-pb0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaa-rV-cBJ">
+                                        <rect key="frame" x="0.0" y="225" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="VISION">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Psl-ci-Sge" kind="modal" id="PGA-Uc-Zjh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-iV-eyl">
+                                        <rect key="frame" x="0.0" y="265" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="OFICINAS">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="NVm-xB-8u2" kind="modal" id="k8K-Mo-eGl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty5-cY-nhB">
+                                        <rect key="frame" x="0.0" y="303" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="CPCCSTV">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Du9-MT-0iZ" kind="modal" id="iiL-CI-Tur"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="uaa-rV-cBJ" firstAttribute="top" secondItem="8t3-zm-6Ef" secondAttribute="bottom" constant="9" id="1y7-39-K2d"/>
+                                    <constraint firstAttribute="bottom" secondItem="iA4-XJ-zEn" secondAttribute="bottom" constant="418" id="8fx-Xl-z6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ty5-cY-nhB" secondAttribute="trailing" id="9T4-7p-Ep7"/>
+                                    <constraint firstAttribute="trailing" secondItem="iA4-XJ-zEn" secondAttribute="trailing" id="M3y-br-nSG"/>
+                                    <constraint firstItem="8t3-zm-6Ef" firstAttribute="top" secondItem="iA4-XJ-zEn" secondAttribute="bottom" constant="36" id="MMh-Vo-m1P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ty5-cY-nhB" secondAttribute="bottom" constant="235" id="VCE-Ox-d6G"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnj-iV-eyl" secondAttribute="trailing" id="Vr4-0o-ZrJ"/>
+                                    <constraint firstItem="fnj-iV-eyl" firstAttribute="leading" secondItem="Uj6-rW-JmD" secondAttribute="leading" id="Wq9-wD-0Nu"/>
+                                    <constraint firstItem="iA4-XJ-zEn" firstAttribute="top" secondItem="Uj6-rW-JmD" secondAttribute="top" id="YVz-r2-K7E"/>
+                                    <constraint firstItem="uaa-rV-cBJ" firstAttribute="leading" secondItem="Uj6-rW-JmD" secondAttribute="leading" id="b0F-il-R4c"/>
+                                    <constraint firstItem="Ty5-cY-nhB" firstAttribute="top" secondItem="fnj-iV-eyl" secondAttribute="bottom" constant="9" id="dn6-Bf-pxN"/>
+                                    <constraint firstItem="8t3-zm-6Ef" firstAttribute="leading" secondItem="Uj6-rW-JmD" secondAttribute="leading" id="eaa-o5-V1h"/>
+                                    <constraint firstItem="Ty5-cY-nhB" firstAttribute="leading" secondItem="Uj6-rW-JmD" secondAttribute="leading" id="fUz-8A-EU3"/>
                                     <constraint firstAttribute="width" constant="160" id="iV5-Xm-ZwP"/>
+                                    <constraint firstItem="iA4-XJ-zEn" firstAttribute="leading" secondItem="Uj6-rW-JmD" secondAttribute="leading" id="kUc-fU-n1a"/>
+                                    <constraint firstItem="fnj-iV-eyl" firstAttribute="top" secondItem="uaa-rV-cBJ" secondAttribute="bottom" constant="9" id="ncr-kJ-T2C"/>
                                     <constraint firstAttribute="height" constant="568" id="oX3-6p-tZh"/>
+                                    <constraint firstAttribute="trailing" secondItem="8t3-zm-6Ef" secondAttribute="trailing" id="qCi-uK-yCK"/>
+                                    <constraint firstAttribute="trailing" secondItem="uaa-rV-cBJ" secondAttribute="trailing" id="v5r-2R-ZH8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1629,7 +1708,7 @@
                             <constraint firstItem="NWi-QS-j7A" firstAttribute="leading" secondItem="WI9-Mb-2uh" secondAttribute="leadingMargin" constant="-9" id="bhW-cp-EHH"/>
                             <constraint firstItem="OK9-bW-0XE" firstAttribute="top" secondItem="c1A-iJ-sUm" secondAttribute="bottom" constant="12" id="d27-fn-0eI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OK9-bW-0XE" secondAttribute="trailing" constant="-7" id="d75-kc-VoL"/>
-                            <constraint firstItem="Uj6-rW-JmD" firstAttribute="leading" secondItem="WI9-Mb-2uh" secondAttribute="leadingMargin" constant="-16" id="dXo-3r-mzP"/>
+                            <constraint firstItem="Uj6-rW-JmD" firstAttribute="leading" secondItem="WI9-Mb-2uh" secondAttribute="leadingMargin" constant="-200" id="dXo-3r-mzP"/>
                             <constraint firstItem="0E9-yr-oAK" firstAttribute="top" secondItem="9Fc-Ru-m5M" secondAttribute="bottom" id="exp-Ki-NFv"/>
                             <constraint firstItem="9jM-Y8-8Sa" firstAttribute="leading" secondItem="l2x-RH-WkF" secondAttribute="trailing" constant="27" id="fkY-CB-w1a"/>
                             <constraint firstItem="gs5-ao-dne" firstAttribute="top" secondItem="l2x-RH-WkF" secondAttribute="bottom" constant="12" id="fzj-U3-WVO"/>
@@ -2648,7 +2727,7 @@ Edificio Centenario
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5k-aC-OLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171" y="1684"/>
+            <point key="canvasLocation" x="-169" y="498"/>
         </scene>
         <!--Denunciado Controller-->
         <scene sceneID="zRM-Tc-bcp">
@@ -2883,6 +2962,7 @@ Edificio Centenario
         </scene>
     </scenes>
     <resources>
+        <image name="SideMenu.png" width="761" height="539"/>
         <image name="controlSocial.png" width="169" height="166"/>
         <image name="controlSocialGris.png" width="165" height="171"/>
         <image name="control_social.png" width="170" height="170"/>
@@ -2911,13 +2991,13 @@ Edificio Centenario
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="eZn-Oz-qUg"/>
-        <segue reference="Ovz-yT-5yI"/>
-        <segue reference="bgT-UX-qQl"/>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="o9W-tP-t42"/>
         <segue reference="7e9-nd-REY"/>
+        <segue reference="o9W-tP-t42"/>
+        <segue reference="bgT-UX-qQl"/>
+        <segue reference="8S5-pR-dSw"/>
+        <segue reference="8ac-0B-ITq"/>
+        <segue reference="jtG-qD-f20"/>
+        <segue reference="Ovz-yT-5yI"/>
         <segue reference="eDN-bc-mB5"/>
     </inferredMetricsTieBreakers>
 </document>
