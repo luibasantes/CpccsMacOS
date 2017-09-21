@@ -93,7 +93,7 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
             }
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
                 println("you have pressed Yes button");
-                enviarDenuncia()
+                self.enviarDenuncia()
                 //Call another alert here
             }
             alertController.addAction(OKAction)
@@ -147,6 +147,31 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         destino.datos = self.datosDenuncia
     }
     func enviarDenuncia(){
+        //////ejemploooooo
+        let username = "cpccs-admin"
+        let password = "cpccs2017admin"
+        let loginString = NSString(format: "%@:%@",username,password)
+        let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
+        let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
+        
+        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/predenuncias/")
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        var values = "tipo=3&genero_denunciante=\(self.datosDenuncia.genero_denunciante)&descripcion_investigacion=\(self.datosDenuncia.descripcion_denuncia)&genero_denunciado=\(self.datosDenuncia.genero_denunciado)&funcionario_publico=senagua&nivel_educacion_denunciante=\(self.datosDenuncia.nivel_educacion_id)&ocupacion_denunciante=\(1)&nacionalidad_denunciante=\(1)&estado_civil_denunciante=\(2)&institucion_implicada=\(2)"
+        request.HTTPBody = values.dataUsingEncoding(NSUTF8StringEncoding)
+        print(request.HTTPBody)
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        let urlConnection = NSURLSession.sharedSession()
+        urlConnection.dataTaskWithRequest(request, completionHandler:{(data,response, error) in
+            if error != nil {
+                println(error.localizedDescription)
+                return
+            }
+            let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            if result != nil {
+                print(result)
+            }
+        }).resume()
         
     }
 }

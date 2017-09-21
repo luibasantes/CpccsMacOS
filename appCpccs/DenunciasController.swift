@@ -50,19 +50,15 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         ConexionWS.getDatos("provincias/?limit=100"){ result in
             self.provinciasEC = Provincia.dataProvincias(result)
-            println("Provincias: \(self.provinciasEC.count)")
         }
         ConexionWS.getDatos("etnias/?limit=10"){ result in
             self.etniasEC = Etnia.dataEtnia(result)
-            println("etnias \(self.etniasEC.count)")
         }
         ConexionWS.getDatos("estados-civiles/?limit=10"){ result in
             self.estadosC = EstadoCivil.dataEstadoC(result)
-            println("estado civil: \(self.estadosC.count)")
         }
         ConexionWS.getDatos("niveles-educacion/?limit=10"){ result in
             self.nivelesEduc = NivelEducacion.dataNivelEduc(result)
-            println("niveles de educacion: \(self.nivelesEduc.count)")
         }
         pickerCiudades.delegate = self
         pickerEtnia.delegate = self
@@ -144,7 +140,7 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         datos.celular = self.txtCelular.text
         datos.direccion = self.txtDireccion.text
         var prov: [String]
-        prov=txtCiudad.text.componentsSeparatedByString(",")
+        prov=txtCiudad.text.componentsSeparatedByString(", ")
         datos.provincia_denunciante_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
         var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
         datos.ciudad_denunciante_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])

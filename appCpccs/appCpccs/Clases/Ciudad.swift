@@ -33,6 +33,11 @@ class Ciudad {
         return ciudadesEC
     }
     class func buscarCiudadId(ciudades: Array<Ciudad>,ciudadBuscar: String) -> Int{
-        return 0
+        for var i=0; i<ciudades.count; i++ {
+            if ciudades[i].nombre == ciudadBuscar {
+                return ciudades[i].id
+            }
+        }
+        return -1
     }
 }

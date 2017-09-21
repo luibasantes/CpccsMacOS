@@ -3,7 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "appCpccs.Ubicacion.(dataUbicaciones (appCpccs.Ubicacion.Type) -&gt; (ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;).(closure #1):Ubicacion.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "provinciasArray">
+            </PersistentString>
+            <PersistentString
+               value = "agencias.get(0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "appCpccs.MapaUbicacionController.(viewDidLoad (appCpccs.MapaUbicacionController) -&gt; () -&gt; ()).(closure #1):MapaUbicacionController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.DenunciasController.recolectarDatos (appCpccs.DenunciasController)() -&gt; ():DenunciasController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "prov[1]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "appCpccs.Ubicacion.dataUbicaciones (appCpccs.Ubicacion.Type)(ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;:Ubicacion.swift">
@@ -13,17 +32,6 @@
             </PersistentString>
             <PersistentString
                value = "(agencias.objectAtIndex(0) as NSDictionary).object(&quot;nombre&quot;)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "appCpccs.Ubicacion.(dataUbicaciones (appCpccs.Ubicacion.Type) -&gt; (ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;).(closure #1):Ubicacion.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "provinciasArray">
-            </PersistentString>
-            <PersistentString
-               value = "agencias.get(0)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
