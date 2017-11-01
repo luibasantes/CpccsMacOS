@@ -1903,17 +1903,6 @@
                                     <segue destination="iSv-2y-e2o" kind="modal" id="uhM-oq-Bso"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Participacion Ciudadana" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-zz-jDC">
-                                <rect key="frame" x="0.0" y="142" width="321" height="39"/>
-                                <color key="backgroundColor" red="0.027450980392156862" green="0.26666666666666666" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="H2x-lR-czu"/>
-                                    <constraint firstAttribute="width" constant="321" id="RFE-L0-QMw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participacion Ciudadana" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dt-Eb-5dh">
                                 <rect key="frame" x="0.0" y="447" width="68" height="34"/>
                                 <constraints>
@@ -2010,12 +1999,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peH-qG-a2Q">
-                                <rect key="frame" x="5" y="492" width="92" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                <state key="normal" title="&lt;- Regresar">
+                                <rect key="frame" x="227" y="147" width="92" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.37" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="12"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="0.34999999999999998" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Menu Principal">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Chv-Tj-BBp" kind="modal" id="gcr-bl-znA"/>
@@ -2029,6 +2019,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-zz-jDC">
+                                <rect key="frame" x="0.0" y="142" width="321" height="39"/>
+                                <color key="backgroundColor" red="0.027450980392156862" green="0.26666666666666666" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="H2x-lR-czu"/>
+                                    <constraint firstAttribute="width" constant="321" id="RFE-L0-QMw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2941,6 +2942,51 @@ Edificio Centenario
                 <placeholder placeholderIdentifier="IBFirstResponder" id="028-75-NPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746" y="-485"/>
+        </scene>
+        <!--Noticias Viewer Controller-->
+        <scene sceneID="KFU-U2-fS4">
+            <objects>
+                <viewController storyboardIdentifier="NoticiasViewerController" id="dBY-Kj-RIO" customClass="noticiasViewerController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YS7-tc-QGA"/>
+                        <viewControllerLayoutGuide type="bottom" id="3n7-ZD-RSN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYT-1z-D4j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-p2-vCv">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4T-8W-VVH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Visor de noticias" id="bIh-ML-v9Y">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="BSF-CU-c6Q">
+                                            <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="R0n-xu-ZUU" kind="modal" id="bAF-10-JOw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="hmM-p2-vCv" id="yXf-79-0Sy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfj-Bj-MjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2139" y="-482"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AF5-PS-yWH">
@@ -4000,11 +4046,12 @@ Edificio Centenario
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dF4-qC-cut"/>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="bgT-UX-qQl"/>
-        <segue reference="Ovz-yT-5yI"/>
-        <segue reference="8ac-0B-ITq"/>
+        <segue reference="bAF-10-JOw"/>
+        <segue reference="uhM-oq-Bso"/>
+        <segue reference="gcr-bl-znA"/>
+        <segue reference="N8s-ER-NeE"/>
+        <segue reference="kGR-QG-mw3"/>
+        <segue reference="99P-3s-Cru"/>
         <segue reference="qJC-Ez-Zb6"/>
         <segue reference="7e9-nd-REY"/>
         <segue reference="R5y-sj-C8r"/>
