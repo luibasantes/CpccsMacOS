@@ -34,4 +34,12 @@ class NivelEducacion{
         }
         return result
     }
+    class func buscarNEducId(niveles: Array<NivelEducacion>,nivelBuscar: String) -> Int{
+        for var i=0; i<niveles.count; i++ {
+            if(niveles[i].nombre == nivelBuscar) {
+                return niveles[i].id
+            }
+        }
+        return -1
+    }
 }

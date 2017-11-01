@@ -31,4 +31,12 @@ class EstadoCivil{
         }
         return estadoC
     }
+    class func buscarEstadoCId(estadosC: Array<EstadoCivil>,estadoC: String) -> Int{
+        for var i=0; i<estadosC.count; i++ {
+            if(estadosC[i].nombre == estadoC) {
+                return estadosC[i].id
+            }
+        }
+        return -1
+    }
 }

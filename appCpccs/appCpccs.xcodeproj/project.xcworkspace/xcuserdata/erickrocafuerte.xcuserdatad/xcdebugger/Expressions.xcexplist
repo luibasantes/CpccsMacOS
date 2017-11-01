@@ -3,24 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "appCpccs.DenunciasController.prepareForSegue (appCpccs.DenunciasController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():DenunciasController.swift">
+         contextName = "appCpccs.EvidenciaController.btnADenunciado (appCpccs.EvidenciaController)(ObjectiveC.UIButton) -&gt; ():EvidenciaController.swift">
       </ContextState>
       <ContextState
-         contextName = "appCpccs.EvidenciaController.btnADenunciado (appCpccs.EvidenciaController)(ObjectiveC.UIButton) -&gt; ():EvidenciaController.swift">
+         contextName = "appCpccs.Ubicacion.dataUbicaciones (appCpccs.Ubicacion.Type)(ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;:Ubicacion.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "y.objectForKey(&quot;nombre&quot;) as String">
+            </PersistentString>
+            <PersistentString
+               value = "(agencias.objectAtIndex(0) as NSDictionary).object(&quot;nombre&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.MapaUbicacionController.(viewDidLoad (appCpccs.MapaUbicacionController) -&gt; () -&gt; ()).(closure #1):MapaUbicacionController.swift">
       </ContextState>
       <ContextState
          contextName = "appCpccs.DenunciasController.recolectarDatos (appCpccs.DenunciasController)() -&gt; ():DenunciasController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "prov[1]">
+               value = "self.generosEC.count">
             </PersistentString>
             <PersistentString
-               value = "pickerEducacion.selectedRowInComponent(0)">
+               value = "txtGenero.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "appCpccs.EvidenciaController.prepareForSegue (appCpccs.EvidenciaController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():EvidenciaController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.DenunciadoController.(enviarDenuncia (appCpccs.DenunciadoController) -&gt; () -&gt; ()).(closure #1):DenunciadoController.swift">
       </ContextState>
       <ContextState
          contextName = "appCpccs.Ubicacion.(dataUbicaciones (appCpccs.Ubicacion.Type) -&gt; (ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;).(closure #1):Ubicacion.swift">
@@ -34,7 +48,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "appCpccs.MapaUbicacionController.(viewDidLoad (appCpccs.MapaUbicacionController) -&gt; () -&gt; ()).(closure #1):MapaUbicacionController.swift">
+         contextName = "appCpccs.DenunciadoController.enviarDenuncia (appCpccs.DenunciadoController)() -&gt; ():DenunciadoController.swift">
       </ContextState>
       <ContextState
          contextName = "appCpccs.PeticionarioController.recolectarDatos (appCpccs.PeticionarioController)() -&gt; ():PeticionarioController.swift">
@@ -42,18 +56,29 @@
             <PersistentString
                value = "self.txtCed.text">
             </PersistentString>
+            <PersistentString
+               value = "self.optIdentidad.selected">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "appCpccs.Ubicacion.dataUbicaciones (appCpccs.Ubicacion.Type)(ObjectiveC.NSData) -&gt; Swift.Array&lt;appCpccs.Ubicacion&gt;:Ubicacion.swift">
+         contextName = "appCpccs.PedidoController.(enviarDenuncia (appCpccs.PedidoController) -&gt; () -&gt; ()).(closure #1):PedidoController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "y.objectForKey(&quot;nombre&quot;) as String">
-            </PersistentString>
-            <PersistentString
-               value = "(agencias.objectAtIndex(0) as NSDictionary).object(&quot;nombre&quot;)">
+               value = "values">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.Genero.buscarGeneroId (appCpccs.Genero.Type)(Swift.Array&lt;appCpccs.Genero&gt;, generoBuscar : Swift.String) -&gt; Swift.Int:Genero.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "generos[i].id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "appCpccs.DenunciasController.prepareForSegue (appCpccs.DenunciasController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():DenunciasController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

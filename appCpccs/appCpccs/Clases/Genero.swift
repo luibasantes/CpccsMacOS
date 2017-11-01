@@ -31,4 +31,12 @@ class Genero{
         }
         return result
     }
+    class func buscarGeneroId(generos: Array<Genero>,generoBuscar: String) -> Int{
+        for var i=0; i<generos.count; i++ {
+            if(generos[i].nombre == generoBuscar) {
+                return generos[i].id
+            }
+        }
+        return -1
+    }
 }

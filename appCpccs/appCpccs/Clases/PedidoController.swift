@@ -12,6 +12,7 @@ import UIKit
 class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     var datosDenuncia: Denuncia!
     var provinciasEC: Array<Provincia>!
+    var generosEC: Array<Genero>!
     
     let pickerCiudades = UIPickerView()
     let pickerGenero = UIPickerView()
@@ -26,12 +27,16 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var txtParroquia: UITextField!
     
     
-    var genero = ["Masculino","Femenino","LGBTI"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ConexionWS.getDatos("provincias/?limit=100"){ result in
             self.provinciasEC = Provincia.dataProvincias(result)
+            print(self.datosDenuncia.no_identificacion)
+        }
+        ConexionWS.getDatos("generos/?limit=10"){ result in
+            self.generosEC = Genero.dataGenero(result)
             print(self.datosDenuncia.no_identificacion)
         }
         pickerCiudades.delegate = self
@@ -47,7 +52,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var countrows : Int = 0
         if pickerView == pickerGenero {
-            return self.genero.count
+            return self.generosEC.count
         }else if pickerView == pickerCiudades{
             if component == 0 {
                 return self.provinciasEC.count
@@ -66,7 +71,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         if pickerView == pickerGenero {
-            return self.genero[row]
+            return self.generosEC[row].nombre
         }else if pickerView == pickerCiudades{
             if component == 0{
                 return self.provinciasEC[row].nombre
@@ -106,8 +111,8 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
         }
     }
     func recolectarDatosDenunciado(){
-        self.datosDenuncia.nombres_apellidos_denunciado = "\(self.txtNombres) \(self.txtApellidos)"
-        self.datosDenuncia.genero_denunciado = self.txtGenero.text
+        self.datosDenuncia.nombres_apellidos_denunciado = "\(self.txtNombres.text) \(self.txtApellidos.text)"
+        self.datosDenuncia.genero_denunciado = Genero.buscarGeneroId(self.generosEC, generoBuscar: txtGenero.text)
         self.datosDenuncia.institucion_denunciado = self.txtInstitucion.text
         self.datosDenuncia.cargo_denunciado = self.txtCargo.text
         var prov: [String]
@@ -140,7 +145,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
     }
     func doneGeneroPressed(){
         let row = pickerGenero.selectedRowInComponent(0)
-        txtGenero.text = "\(genero[row])"
+        txtGenero.text = "\(generosEC[row].nombre)"
         self.view.endEditing(true)
     }
     override func didReceiveMemoryWarning() {
@@ -148,8 +153,11 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
         // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destino = segue.destinationViewController as EvidenciaController
-        destino.datos = self.datosDenuncia
+        if let destino = segue.destinationViewController as? EvidenciaController{
+            destino.datos = self.datosDenuncia
+            
+        }
+        
     }
     
     func enviarDenuncia(){
@@ -160,13 +168,12 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
         
-        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/reclamos/")
+        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/requerimiento/")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
-        var values = "nombres_apellidos_denunciante=\(self.datosDenuncia.nombres_apellidos_denunciante)&tipo_identificacion=\(self.datosDenuncia.tipo_identificacion)&numero_identificacion=\(self.datosDenuncia.no_identificacion)&email=\(self.datosDenuncia.correo_denunciante)&nombres_apellidos_denunciado=\(self.datosDenuncia.nombres_apellidos_denunciado)&ciudad_del_denunciante=\(self.datosDenuncia.ciudad_denunciante_id)&ciudad_del_denunciado=\(self.datosDenuncia.ciudad_denunciado_id)&provincia_denunciante=\(self.datosDenuncia.provincia_denunciante_id)&provincia_denunciado=\(self.datosDenuncia.provincia_denunciado_id)&institucion_implicada=\(2)"
-        /*
-        tipo=3&genero_denunciante=\(self.datosDenuncia.genero_denunciante)&descripcion_investigacion=\(self.datosDenuncia.descripcion_denuncia)&genero_denunciado=\(self.datosDenuncia.genero_denunciado)&funcionario_publico=senagua&nivel_educacion_denunciante=\(self.datosDenuncia.nivel_educacion_id+1)&ocupacion_denunciante=\(1)&nacionalidad_denunciante=\(1)&estado_civil_denunciante=\(2)
-        */
+        let reservada:Bool = false
+        var values = "tipodenuncia=\(1) & identidad_reservada=\(self.datosDenuncia.identidad_reservada) &nombres_apellidos_denunciante=\(self.datosDenuncia.nombres_apellidos_denunciante) &edad_denunciante=\(self.datosDenuncia.edad_denunciante) &correo_denunciante=\(self.datosDenuncia.correo_denunciante) &telefono_denunciante=\(self.datosDenuncia.telefono) &celular_denunciante=\(self.datosDenuncia.celular) &direccion_denunciante=\(self.datosDenuncia.direccion) &provincia_denunciante=\(self.datosDenuncia.provincia_denunciante_id) &ciudad_denunciante=\(self.datosDenuncia.ciudad_denunciante_id) &genero_denunciante=\(self.datosDenuncia.genero_denunciante) &estado_civil_denunciante=\(self.datosDenuncia.estadoC) &etnia_denunciante=\(self.datosDenuncia.etnia) &niveleducaciondenunciante=\(self.datosDenuncia.nivel_educacion_id) &institucion_denunciante=\(self.datosDenuncia.institucion_denunciante) &cargo_denunciante=\(self.datosDenuncia.cargo_denunciante) &tipo_identificacion=\(self.datosDenuncia.tipo_identificacion) &identificacion_id=\(self.datosDenuncia.no_identificacion) &pais=\(self.datosDenuncia.pais) &descripcion=\(self.datosDenuncia.descripcion_denuncia) &nombres_apellidos_denunciado=\(self.datosDenuncia.nombres_apellidos_denunciado) &genero_denunciado=\(self.datosDenuncia.genero_denunciado) &institucion_denunciado=\(self.datosDenuncia.institucion_denunciado) &cargo_denunciado=\(self.datosDenuncia.cargo_denunciado) &provincia_denunciado=\(self.datosDenuncia.provincia_denunciado_id) &ciudad_denunciado=\(self.datosDenuncia.ciudad_denunciado_id) &parroquia_denunciado=\(self.datosDenuncia.parroquia_denunciado)"
+        
         request.HTTPBody = values.dataUsingEncoding(NSUTF8StringEncoding)
         print(request.HTTPBody)
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")

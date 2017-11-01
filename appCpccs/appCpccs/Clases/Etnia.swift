@@ -31,4 +31,12 @@ class Etnia{
         }
         return etniasEC
     }
+    class func buscarEtniaId(etnias: Array<Etnia>,etniaBuscar: String) -> Int{
+        for var i=0; i<etnias.count; i++ {
+            if(etnias[i].nombre == etniaBuscar) {
+                return etnias[i].id
+            }
+        }
+        return -1
+    }
 }

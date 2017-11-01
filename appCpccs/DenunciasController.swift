@@ -15,19 +15,21 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     var etniasEC: Array<Etnia>!
     var estadosC: Array<EstadoCivil>!
     var nivelesEduc: Array<NivelEducacion>!
-    
+    var generosEC: Array<Genero>!
     var datosDenuncia: Denuncia!
     
     let pickerCiudades = UIPickerView()
     let pickerGenero = UIPickerView()
     let pickerEtnia = UIPickerView()
     let pickerEducacion = UIPickerView()
+    let pickerEstadosC = UIPickerView()
     
     @IBOutlet weak var optIdentidad: UISwitch!
     @IBOutlet weak var txtGenero: UITextField!
     @IBOutlet weak var txtEducacion: UITextField!
     @IBOutlet weak var txtEtnia: UITextField!
     @IBOutlet weak var txtCiudad: UITextField!
+    @IBOutlet weak var estadoC: UITextField!
     
     @IBOutlet weak var txtNombres: UITextField!
     @IBOutlet weak var txtApellidos: UITextField!
@@ -41,10 +43,6 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var optId: UISegmentedControl!
     @IBOutlet weak var txtCed: UITextField!
     @IBOutlet weak var txtPais: UITextField!
-    
-    
-    
-    var genero = ["MASCULINO","FEMENINO","LGBTI"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,10 +58,14 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         ConexionWS.getDatos("niveles-educacion/?limit=10"){ result in
             self.nivelesEduc = NivelEducacion.dataNivelEduc(result)
         }
+        ConexionWS.getDatos("generos/?limit=10"){ result in
+            self.generosEC = Genero.dataGenero(result)
+        }
         pickerCiudades.delegate = self
         pickerEtnia.delegate = self
         pickerEducacion.delegate = self
         pickerGenero.delegate = self
+        pickerEstadosC.delegate = self
         cargarPickers()
     }
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -79,7 +81,9 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         }else if pickerView == pickerEtnia {
             return self.etniasEC.count
         }else if pickerView == pickerGenero {
-            return self.genero.count
+            return self.generosEC.count
+        }else if pickerView == pickerEstadosC {
+            return self.estadosC.count
         }else if pickerView == pickerCiudades{
             if component == 0 {
                 return self.provinciasEC.count
@@ -103,7 +107,9 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         }else if pickerView == pickerEtnia {
             return self.etniasEC[row].nombre
         }else if pickerView == pickerGenero {
-            return self.genero[row]
+            return self.generosEC[row].nombre
+        }else if pickerView == pickerEstadosC {
+            return self.estadosC[row].nombre
         }else if pickerView == pickerCiudades{
             if component == 0{
                 pickerView.selectRow(0, inComponent: 1, animated: false)
@@ -132,8 +138,8 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     func recolectarDatos(){
         var datos: Denuncia = Denuncia()
-        datos.identidad_reservada = self.optIdentidad.selected
-        datos.nombres_apellidos_denunciante = "\(self.txtNombres) \(self.txtApellidos)"
+        datos.identidad_reservada = self.optIdentidad.on
+        datos.nombres_apellidos_denunciante = "\(self.txtNombres.text) \(self.txtApellidos.text)"
         datos.edad_denunciante = self.txtEdad.text.toInt()
         datos.correo_denunciante = self.txtCorreo.text
         datos.telefono = self.txtTelefono.text
@@ -144,9 +150,10 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         datos.provincia_denunciante_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
         var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
         datos.ciudad_denunciante_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])
-        datos.genero_denunciante = txtGenero.text
-        datos.etnia = pickerEtnia.selectedRowInComponent(0)
-        datos.nivel_educacion_id = pickerEducacion.selectedRowInComponent(0)
+        datos.genero_denunciante = Genero.buscarGeneroId(self.generosEC, generoBuscar: txtGenero.text)
+        datos.estadoC = EstadoCivil.buscarEstadoCId(self.estadosC, estadoC: estadoC.text)
+        datos.etnia = Etnia.buscarEtniaId(self.etniasEC, etniaBuscar:txtEtnia.text)
+        datos.nivel_educacion_id = NivelEducacion.buscarNEducId(self.nivelesEduc, nivelBuscar: txtEducacion.text)
         datos.institucion_denunciante = txtInstitucion.text
         datos.cargo_denunciante = txtCargo.text
         if optId.selectedSegmentIndex == 0 {
@@ -186,6 +193,13 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         toolbarGenero.setItems([doneGeneroButton], animated: false)
         txtGenero.inputAccessoryView = toolbarGenero
         txtGenero.inputView = pickerGenero
+        
+        let toolbarEstadoCivil = UIToolbar()
+        toolbarEstadoCivil.sizeToFit()
+        let doneEstadoCButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "doneEstadoCPressed")
+        toolbarEstadoCivil.setItems([doneEstadoCButton], animated: false)
+        estadoC.inputAccessoryView = toolbarEstadoCivil
+        estadoC.inputView = pickerEstadosC
     }
     func doneCiudadPressed(){
         let row = pickerCiudades.selectedRowInComponent(0)
@@ -205,7 +219,12 @@ class DenunciasController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
     }
     func doneGeneroPressed(){
         let row = pickerGenero.selectedRowInComponent(0)
-        txtGenero.text = "\(genero[row])"
+        txtGenero.text = "\(generosEC[row].nombre)"
+        self.view.endEditing(true)
+    }
+    func doneEstadoCPressed(){
+        let row = pickerEstadosC.selectedRowInComponent(0)
+        estadoC.text = "\(estadosC[row].nombre)"
         self.view.endEditing(true)
     }
     override func didReceiveMemoryWarning() {
