@@ -16,6 +16,15 @@
 		64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB721F6F56AE00694AD6 /* bar item.png */; };
 		64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item.png */; };
 		64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB741F6F56AE00694AD6 /* sharp bar item.png */; };
+		64BC596B1FA9F8750046F438 /* not_img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59631FA9F8740046F438 /* not_img1.png */; };
+		64BC596C1FA9F8750046F438 /* not_img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59641FA9F8740046F438 /* not_img2.png */; };
+		64BC596D1FA9F8750046F438 /* not_img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59651FA9F8740046F438 /* not_img3.jpg */; };
+		64BC596E1FA9F8750046F438 /* not_img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59661FA9F8740046F438 /* not_img4.jpg */; };
+		64BC596F1FA9F8750046F438 /* not_img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59671FA9F8740046F438 /* not_img5.jpg */; };
+		64BC59701FA9F8750046F438 /* not_img6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59681FA9F8740046F438 /* not_img6.jpg */; };
+		64BC59711FA9F8750046F438 /* not_img7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59691FA9F8740046F438 /* not_img7.jpg */; };
+		64BC59721FA9F8750046F438 /* not_img8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64BC596A1FA9F8740046F438 /* not_img8.jpg */; };
+		64BC59741FA9FE200046F438 /* noticiasViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC59731FA9FE200046F438 /* noticiasViewerController.swift */; };
 		64DA9FED1F70256800FD2B3F /* section background.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9FEC1F70256800FD2B3F /* section background.png */; };
 		64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA1A511F71689500718EE8 /* DenunciadoController.swift */; };
 		64EA1A541F71689500718EE8 /* EvidenciaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA1A521F71689500718EE8 /* EvidenciaController.swift */; };
@@ -121,6 +130,15 @@
 		64A9CB721F6F56AE00694AD6 /* bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bar item.png"; path = "appCpccs/_images/bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB731F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
 		64A9CB741F6F56AE00694AD6 /* sharp bar item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sharp bar item.png"; path = "appCpccs/_images/sharp bar item.png"; sourceTree = SOURCE_ROOT; };
+		64BC59631FA9F8740046F438 /* not_img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_img1.png; sourceTree = "<group>"; };
+		64BC59641FA9F8740046F438 /* not_img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_img2.png; sourceTree = "<group>"; };
+		64BC59651FA9F8740046F438 /* not_img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img3.jpg; sourceTree = "<group>"; };
+		64BC59661FA9F8740046F438 /* not_img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img4.jpg; sourceTree = "<group>"; };
+		64BC59671FA9F8740046F438 /* not_img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img5.jpg; sourceTree = "<group>"; };
+		64BC59681FA9F8740046F438 /* not_img6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img6.jpg; sourceTree = "<group>"; };
+		64BC59691FA9F8740046F438 /* not_img7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img7.jpg; sourceTree = "<group>"; };
+		64BC596A1FA9F8740046F438 /* not_img8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = not_img8.jpg; sourceTree = "<group>"; };
+		64BC59731FA9FE200046F438 /* noticiasViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = noticiasViewerController.swift; sourceTree = "<group>"; };
 		64DA9FEC1F70256800FD2B3F /* section background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section background.png"; sourceTree = "<group>"; };
 		64EA1A511F71689500718EE8 /* DenunciadoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DenunciadoController.swift; path = ../../DenunciadoController.swift; sourceTree = "<group>"; };
 		64EA1A521F71689500718EE8 /* EvidenciaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EvidenciaController.swift; path = ../../EvidenciaController.swift; sourceTree = "<group>"; };
@@ -273,6 +291,7 @@
 				64389D7B1F72F4E5004E7920 /* ContactoController.swift */,
 				64389D7D1F731EC9004E7920 /* CpccsTVController.swift */,
 				6469C5061F73CDF5007108A4 /* VideoController.swift */,
+				64BC59731FA9FE200046F438 /* noticiasViewerController.swift */,
 			);
 			path = appCpccs;
 			sourceTree = "<group>";
@@ -370,6 +389,14 @@
 		DBEEF5021F50B9EC003409AE /* _images */ = {
 			isa = PBXGroup;
 			children = (
+				64BC59631FA9F8740046F438 /* not_img1.png */,
+				64BC59641FA9F8740046F438 /* not_img2.png */,
+				64BC59651FA9F8740046F438 /* not_img3.jpg */,
+				64BC59661FA9F8740046F438 /* not_img4.jpg */,
+				64BC59671FA9F8740046F438 /* not_img5.jpg */,
+				64BC59681FA9F8740046F438 /* not_img6.jpg */,
+				64BC59691FA9F8740046F438 /* not_img7.jpg */,
+				64BC596A1FA9F8740046F438 /* not_img8.jpg */,
 				64DA9FEC1F70256800FD2B3F /* section background.png */,
 				64A9CB711F6F56AE00694AD6 /* bar item narrow.png */,
 				64A9CB721F6F56AE00694AD6 /* bar item.png */,
@@ -479,15 +506,20 @@
 				D3AE59B71F632E1F00AB04D1 /* sidemenuINTERFAZ.png in Resources */,
 				DBEEF5211F50B9EC003409AE /* twitter_logo.png in Resources */,
 				DB491DED1F58ACC600B26BF9 /* barraIconosGris.png in Resources */,
+				64BC596C1FA9F8750046F438 /* not_img2.png in Resources */,
 				64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */,
+				64BC596F1FA9F8750046F438 /* not_img5.jpg in Resources */,
 				DBEEF51D1F50B9EC003409AE /* marker_logo.png in Resources */,
 				DB491DF61F58ACC600B26BF9 /* participacionGris.png in Resources */,
 				DB00537D1F4F75CE00664030 /* Main.storyboard in Resources */,
 				64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */,
 				DB491DF81F58ACC600B26BF9 /* transparencia.png in Resources */,
+				64BC596B1FA9F8750046F438 /* not_img1.png in Resources */,
 				DB491DF11F58ACC600B26BF9 /* facebook.png in Resources */,
 				DBEEF51E1F50B9EC003409AE /* participacion_ciudadana.png in Resources */,
 				DB491E041F58AF7600B26BF9 /* Recurso 18.svg in Resources */,
+				64BC59711FA9F8750046F438 /* not_img7.jpg in Resources */,
+				64BC59701FA9F8750046F438 /* not_img6.jpg in Resources */,
 				DB491DF91F58ACC600B26BF9 /* transparenciaGris.png in Resources */,
 				DB491DF41F58ACC600B26BF9 /* luchaContraC.png in Resources */,
 				DBEEF5141F50B9EC003409AE /* control_social.png in Resources */,
@@ -497,6 +529,7 @@
 				64EA1A581F7170DE00718EE8 /* right arrow.png in Resources */,
 				DBEEF5171F50B9EC003409AE /* fondo.png in Resources */,
 				DBEEF5201F50B9EC003409AE /* transparencia.png in Resources */,
+				64BC596E1FA9F8750046F438 /* not_img4.jpg in Resources */,
 				DB491DF71F58ACC600B26BF9 /* particpacion.png in Resources */,
 				DB491DF01F58ACC600B26BF9 /* controlSocialGris.png in Resources */,
 				DBEEF51A1F50B9EC003409AE /* freepik.jpg in Resources */,
@@ -504,6 +537,7 @@
 				DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */,
 				DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */,
 				64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */,
+				64BC59721FA9F8750046F438 /* not_img8.jpg in Resources */,
 				DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */,
 				DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */,
 				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
@@ -519,6 +553,7 @@
 				64EA1A571F7170DE00718EE8 /* left arrow.png in Resources */,
 				DB491DEF1F58ACC600B26BF9 /* controlSocial.png in Resources */,
 				64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */,
+				64BC596D1FA9F8750046F438 /* not_img3.jpg in Resources */,
 				DBEEF5221F50B9EC003409AE /* ubicacion_provincias.png in Resources */,
 				DBEEF5241F50CF02003409AE /* noticias2.png in Resources */,
 				DBEEF51C1F50B9EC003409AE /* lucha_anti_corrupcion.png in Resources */,
@@ -561,6 +596,7 @@
 				64389D7E1F731EC9004E7920 /* CpccsTVController.swift in Sources */,
 				64EA1A531F71689500718EE8 /* DenunciadoController.swift in Sources */,
 				64FC5EC51F70A5E4001830FE /* ContenidoParticipacionCiudadana.swift in Sources */,
+				64BC59741FA9FE200046F438 /* noticiasViewerController.swift in Sources */,
 				DB0D92701F61B43900AF626B /* ConexionWS.swift in Sources */,
 				64389D7C1F72F4E5004E7920 /* ContactoController.swift in Sources */,
 				64532DE61F70B229003F63F7 /* ContenidoTransparencia.swift in Sources */,
