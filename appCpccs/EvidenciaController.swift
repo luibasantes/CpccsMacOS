@@ -19,8 +19,8 @@ class EvidenciaController: UIViewController{
     @IBAction func btnADenunciado(sender: UIButton) {
             if txtDescripcion.text.isEmpty{
                 let alertController = UIAlertController(title: "Error", message: "Debe completar los campos para pasar a la siguiente parte de su denuncia", preferredStyle: .Alert)
-                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction?) in
-                    println("you have pressed Yes button");
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+                    print("you have pressed Yes button");
                     //Call another alert here
                 }
                 alertController.addAction(OKAction)

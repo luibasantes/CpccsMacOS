@@ -19,13 +19,13 @@ class EstadoCivil{
     }
     class func dataEstadoC(nsdatos: NSData) -> Array<EstadoCivil>{
         var estadoC: [EstadoCivil] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let estadosciviles = jsonData["results"]
         if let estadoscivilesArray = estadosciviles as? NSArray{
             estadoscivilesArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var nombre = model["nombre"] as String
-                var estadocivil: EstadoCivil = EstadoCivil(id: id, nombre: nombre)
+                let id = model["id"] as! Int
+                let nombre = model["nombre"] as! String
+                let estadocivil: EstadoCivil = EstadoCivil(id: id, nombre: nombre)
                 estadoC.append(estadocivil)
             });
         }

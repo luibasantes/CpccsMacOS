@@ -39,26 +39,26 @@ class Ubicacion{
     }
     class func dataUbicaciones(nsdatos: NSData) -> Array<Ubicacion>{
         var agenciasEC: [Ubicacion] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let provincias: AnyObject! = jsonData["oficinas"]
         if NSJSONSerialization.isValidJSONObject(jsonData) {
             //let provincias: AnyObject! = NSJSONSerialization.valueForKey("oficinas")
             //print(provincias)
             
-            if var provinciasArray = provincias as? NSObject{
+            if let provinciasArray = provincias as? NSObject{
                 //print(provinciasArray.objectAtIndex(0) as? NSArray)
                 let x: NSObject! = provinciasArray.valueForKeyPath("provincia") as? NSObject
-                let agencias = x as NSArray
+                let agencias = x as! NSArray
                 print(agencias.count)
                 for var i = 0; i < agencias.count; i++ {
-                    var nombre = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("nombre") as String
-                    var latitud = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("latitud") as String
-                    var longitud = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("longitud") as String
-                    var telefono = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("telefono") as String
-                    var ciudad = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("ciudad") as String
-                    var direccion = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("direccion") as String
-                    var twitter = (agencias.objectAtIndex(i) as NSDictionary).objectForKey("twitter") as String
-                    var ubicacion: Ubicacion = Ubicacion(nombre: nombre, latitud: latitud, longitud: longitud, telefono:telefono, ciudad: ciudad, direccion: direccion, twitter: twitter)
+                    let nombre = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("nombre") as! String
+                    let latitud = (agencias.objectAtIndex(i)as! NSDictionary).objectForKey("latitud") as! String
+                    let longitud = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("longitud")as! String
+                    let telefono = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("telefono") as!  String
+                    let ciudad = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("ciudad") as! String
+                    let direccion = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("direccion")as! String
+                    let twitter = (agencias.objectAtIndex(i) as! NSDictionary).objectForKey("twitter") as! String
+                    let ubicacion: Ubicacion = Ubicacion(nombre: nombre, latitud: latitud, longitud: longitud, telefono:telefono, ciudad: ciudad, direccion: direccion, twitter: twitter)
                     agenciasEC.append(ubicacion)
                     print(ubicacion)
 

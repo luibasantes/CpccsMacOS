@@ -19,13 +19,13 @@ class Genero{
     }
     class func dataGenero(nsdatos: NSData) -> Array<Genero>{
         var result: [Genero] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let generos = jsonData["results"]
         if let generosArray = generos as? NSArray{
             generosArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var nombre = model["nombre"] as String
-                var generos: Genero = Genero(id: id, nombre: nombre)
+                let id = model["id"] as! Int
+                let nombre = model["nombre"] as! String
+                let generos: Genero = Genero(id: id, nombre: nombre)
                 result.append(generos)
             });
         }

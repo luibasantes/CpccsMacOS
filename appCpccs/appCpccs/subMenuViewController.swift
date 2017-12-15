@@ -25,7 +25,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("ParticipacionController") as ParticipacionController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ParticipacionController") as! ParticipacionController
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
         
@@ -37,7 +37,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("ControlSocialController") as ControlSocialController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ControlSocialController")as! ControlSocialController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -50,7 +50,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("TransparenciaController") as TransparenciaController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("TransparenciaController") as! TransparenciaController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -63,7 +63,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("NoticiasTabController") as NoticiasTabController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("NoticiasTabController") as! NoticiasTabController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -76,7 +76,7 @@ class subMenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("ContactoController") as ContactoController
+        var viewController = storyboard.instantiateViewControllerWithIdentifier("ContactoController") as! ContactoController
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)

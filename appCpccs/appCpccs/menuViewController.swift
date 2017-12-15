@@ -40,7 +40,7 @@ class menuViewController: UIViewController {
         }
         
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("subMenuViewController") as subMenuViewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("subMenuViewController") as! subMenuViewController
         viewController.comeFrom = self.section
         self.presentViewController(viewController, animated:true, completion:nil)
     }
@@ -62,7 +62,7 @@ class menuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func toolBar(sender: AnyObject) {
-      println("hola")
+      print("hola")
         if(menuControl){
             leadingToolBar.constant = -200
         }else{

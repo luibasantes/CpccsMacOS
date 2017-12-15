@@ -14,7 +14,6 @@
 		6469C5071F73CDF5007108A4 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6469C5061F73CDF5007108A4 /* VideoController.swift */; };
 		64A9CB751F6F56AE00694AD6 /* bar item narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB711F6F56AE00694AD6 /* bar item narrow.png */; };
 		64A9CB761F6F56AE00694AD6 /* bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB721F6F56AE00694AD6 /* bar item.png */; };
-		64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB731F6F56AE00694AD6 /* sharp bar item.png */; };
 		64A9CB781F6F56AE00694AD6 /* sharp bar item.png in Resources */ = {isa = PBXBuildFile; fileRef = 64A9CB741F6F56AE00694AD6 /* sharp bar item.png */; };
 		64BC596B1FA9F8750046F438 /* not_img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59631FA9F8740046F438 /* not_img1.png */; };
 		64BC596C1FA9F8750046F438 /* not_img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64BC59641FA9F8740046F438 /* not_img2.png */; };
@@ -467,7 +466,9 @@
 		DB00536A1F4F75CE00664030 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Espol;
 				TargetAttributes = {
 					DB0053711F4F75CE00664030 = {
@@ -536,7 +537,6 @@
 				D3AE59B51F632E0D00AB04D1 /* SideMenu.png in Resources */,
 				DBEEF5131F50B9EC003409AE /* cabecera.jpg in Resources */,
 				DBEEF51F1F50B9EC003409AE /* preguntasfrecuentes.png in Resources */,
-				64A9CB771F6F56AE00694AD6 /* sharp bar item.png in Resources */,
 				64BC59721FA9F8750046F438 /* not_img8.jpg in Resources */,
 				DBEEF5191F50B9EC003409AE /* footer.jpg in Resources */,
 				DB5706AF1F54CC7A00BFAF3F /* logo.png in Resources */,
@@ -681,6 +681,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -745,6 +746,7 @@
 				INFOPLIST_FILE = appCpccs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -756,6 +758,7 @@
 				INFOPLIST_FILE = appCpccs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -774,6 +777,7 @@
 				);
 				INFOPLIST_FILE = appCpccsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/appCpccs.app/appCpccs";
 			};
@@ -789,6 +793,7 @@
 				);
 				INFOPLIST_FILE = appCpccsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/appCpccs.app/appCpccs";
 			};

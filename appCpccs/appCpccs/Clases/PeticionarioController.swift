@@ -81,7 +81,7 @@ class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerVie
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        var countrows : Int = 0
+        let countrows : Int = 0
         if pickerView == pickerEducacion {
             return self.nivelesEduc.count
         }else if pickerView == pickerEtnia {
@@ -107,7 +107,7 @@ class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerVie
         }
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == pickerEducacion {
             return self.nivelesEduc[row].descripcion
         }else if pickerView == pickerEtnia {
@@ -128,11 +128,11 @@ class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerVie
         return "error"
     }
     @IBAction func btnADenunciado(sender: UIButton) {
-        if txtNombres.text.isEmpty || txtApellidos.text.isEmpty || txtEdad.text.isEmpty || txtCorreo.text.isEmpty || txtTelefono.text.isEmpty || txtDireccion.text.isEmpty || txtInstitucion.text.isEmpty || txtCed.text.isEmpty || txtPais.text.isEmpty{
+        if txtNombres.text!.isEmpty || txtApellidos.text!.isEmpty || txtEdad.text!.isEmpty || txtCorreo.text!.isEmpty || txtTelefono.text!.isEmpty || txtDireccion.text!.isEmpty || txtInstitucion.text!.isEmpty || txtCed.text!.isEmpty || txtPais.text!.isEmpty{
             
             let alertController = UIAlertController(title: "Error", message: "Debe completar los campos para pasar a la siguiente parte de su denuncia", preferredStyle: .Alert)
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction?) in
-                println("you have pressed Yes button");
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+                print("you have pressed Yes button");
                 //Call another alert here
             }
             alertController.addAction(OKAction)
@@ -143,23 +143,23 @@ class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerVie
         }
     }
     func recolectarDatos(){
-        var datos: Denuncia = Denuncia()
+        let datos: Denuncia = Denuncia()
         datos.identidad_reservada = false
         datos.nombres_apellidos_denunciante = "\(self.txtNombres.text) \(self.txtApellidos.text)"
-        datos.edad_denunciante = self.txtEdad.text.toInt()
+        datos.edad_denunciante = Int(self.txtEdad.text!)
         datos.correo_denunciante = self.txtCorreo.text
         datos.telefono = self.txtTelefono.text
         datos.celular = self.txtCelular.text
         datos.direccion = self.txtDireccion.text
         var prov: [String]
-        prov=self.txtCiudad.text.componentsSeparatedByString(", ")
+        prov=self.txtCiudad.text!.componentsSeparatedByString(", ")
         datos.provincia_denunciante_id = Provincia.buscarProvinciaId(self.provinciasEC,provinciaBuscar: prov[0])
-        var listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
+        let listaCiudades: Array<Ciudad> = self.provinciasEC[pickerCiudades.selectedRowInComponent(0)].ciudades
         datos.ciudad_denunciante_id = Ciudad.buscarCiudadId(listaCiudades, ciudadBuscar: prov[1])
-        datos.genero_denunciante = Genero.buscarGeneroId(self.generosEC, generoBuscar: txtGenero.text)
-        datos.estadoC = EstadoCivil.buscarEstadoCId(self.estadosC, estadoC: txtEstadoC.text)
-        datos.etnia = Etnia.buscarEtniaId(self.etniasEC, etniaBuscar: txtEtnia.text)
-        datos.nivel_educacion_id = NivelEducacion.buscarNEducId(self.nivelesEduc, nivelBuscar: txtEducacion.text)
+        datos.genero_denunciante = Genero.buscarGeneroId(self.generosEC, generoBuscar: txtGenero.text!)
+        datos.estadoC = EstadoCivil.buscarEstadoCId(self.estadosC, estadoC: txtEstadoC.text!)
+        datos.etnia = Etnia.buscarEtniaId(self.etniasEC, etniaBuscar: txtEtnia.text!)
+        datos.nivel_educacion_id = NivelEducacion.buscarNEducId(self.nivelesEduc, nivelBuscar: txtEducacion.text!)
         datos.institucion_denunciante = self.txtInstitucion.text
         datos.cargo_denunciante = self.txtCargo.text
         if optId.selectedSegmentIndex == 0 {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIkit
+import UIKit
 import MapKit
 class MapaUbicacionController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, MKMapViewDelegate{
     
@@ -34,7 +34,7 @@ class MapaUbicacionController: UIViewController, UIPickerViewDelegate, UIPickerV
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     //aqui debo reajustar el papa con la ubicacion
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.ubicaciones[row].nombre
     }
     func cargarPicker(){
@@ -48,7 +48,7 @@ class MapaUbicacionController: UIViewController, UIPickerViewDelegate, UIPickerV
     func doneCiudadPressed(){
         let row = pickerUbicaciones.selectedRowInComponent(0)
         txtUbicacion.text = "\(self.ubicaciones[row].nombre)"
-        var coordenadas = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(self.ubicaciones[row].latitud,self.ubicaciones[row].longitud), 200,200)
+        let coordenadas = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(self.ubicaciones[row].latitud,self.ubicaciones[row].longitud), 200,200)
         mapa.setRegion(coordenadas, animated: true)
         let ubicaAgencia = MarcadorMapa(direccion: self.ubicaciones[row].direccion, telefono: self.ubicaciones[row].telefono,coord: CLLocationCoordinate2DMake(self.ubicaciones[row].latitud, self.ubicaciones[row].longitud))
         if self.mapa.annotations.count > 0 {

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func llamarNoticias(sender: UIButton) {
-        print("Hola Mundo")
+        print("Hola Mundo", terminator: "")
     }
 
 }

@@ -26,18 +26,18 @@ class ContenidoControlSocial{
     
     class func getContenido(data:NSData)-> Array<ContenidoControlSocial>{
         var contenidos: [ContenidoControlSocial] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
         let itemsContenidos = jsonData["results"]
         if let contenidosArray = itemsContenidos as? NSArray{
             contenidosArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var titulo = model["descripcion"] as String
-                var descripcion = model["contenido"] as String
-                var link = model["url_video"] as String
-                var splitTitulo = split(titulo){$0 == "-"}
-                var titulo1 = splitTitulo[0]
-                var seccion = splitTitulo[1]
-                var contenidoCS: ContenidoControlSocial = ContenidoControlSocial(id: id, titulo: titulo1,descripcion:descripcion,link:link)
+                let id = model["id"] as! Int
+                let titulo = model["descripcion"] as! String
+                let descripcion = model["contenido"] as! String
+                let link = model["url_video"] as! String
+                var splitTitulo = titulo.componentsSeparatedByString("-")
+                let titulo1 = splitTitulo[0]
+                let seccion = splitTitulo[1]
+                let contenidoCS: ContenidoControlSocial = ContenidoControlSocial(id: id, titulo: titulo1,descripcion:descripcion,link:link)
                 if(seccion=="CS"){
                     contenidos.append(contenidoCS)
                 }

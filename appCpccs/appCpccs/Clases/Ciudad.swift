@@ -19,14 +19,14 @@ class Ciudad {
     }
     class func dataCiudad(nsdatos: NSData) -> Array<Ciudad>{
         var ciudadesEC: [Ciudad] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let ciudades = jsonData["results"]
         if let ciudadesArray = ciudades as? NSArray{
             ciudadesArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var nombre = model["nombre"] as String
-                var prov = model["provincia"] as Int
-                var ciudad: Ciudad = Ciudad(id: id, nombre: nombre, provincia: prov)
+                let id = model["id"] as! Int
+                let nombre = model["nombre"] as! String
+                let prov = model["provincia"] as! Int
+                let ciudad: Ciudad = Ciudad(id: id, nombre: nombre, provincia: prov)
                 ciudadesEC.append(ciudad)
             });
         }

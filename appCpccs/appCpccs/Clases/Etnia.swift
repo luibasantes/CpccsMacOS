@@ -19,13 +19,13 @@ class Etnia{
     }
     class func dataEtnia(nsdatos: NSData) -> Array<Etnia>{
         var etniasEC: [Etnia] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let etnias = jsonData["results"]
         if let etniasArray = etnias as? NSArray{
             etniasArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var nombre = model["nombre"] as String
-                var etnias: Etnia = Etnia(id: id, nombre: nombre)
+                let id = model["id"] as! Int
+                let nombre = model["nombre"] as! String
+                let etnias: Etnia = Etnia(id: id, nombre: nombre)
                 etniasEC.append(etnias)
             });
         }

@@ -21,14 +21,14 @@ class NivelEducacion{
     }
     class func dataNivelEduc(nsdatos: NSData) -> Array<NivelEducacion>{
         var result: [NivelEducacion] = []
-        let jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
         let niveles = jsonData["results"]
         if let nivelesArray = niveles as? NSArray{
             nivelesArray.enumerateObjectsUsingBlock({model, index, stop in
-                var id = model["id"] as Int
-                var nombre = model["nombre"] as String
-                var desc = model["descripcion"] as String
-                var nivelesEduc: NivelEducacion = NivelEducacion(id: id, nombre: nombre, descripcion: desc)
+                let id = model["id"] as! Int
+                let nombre = model["nombre"] as! String
+                let desc = model["descripcion"] as! String
+                let nivelesEduc: NivelEducacion = NivelEducacion(id: id, nombre: nombre, descripcion: desc)
                 result.append(nivelesEduc)
             });
         }

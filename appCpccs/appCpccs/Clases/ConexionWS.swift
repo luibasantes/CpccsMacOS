@@ -18,12 +18,12 @@ class ConexionWS {
         let session = NSURLSession.sharedSession()
         session.dataTaskWithURL(url!) { (data, response, error) in
             if error != nil {
-                println(error.localizedDescription)
+                print(error!.localizedDescription)
                 return
             }
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
             if result != nil {
-                completion(data)
+                completion(data!)
             }
         }.resume()
     }
@@ -32,12 +32,12 @@ class ConexionWS {
         let session = NSURLSession.sharedSession()
         session.dataTaskWithURL(url!) { (data, response, error) in
             if error != nil {
-                println(error.localizedDescription)
+                print(error!.localizedDescription)
                 return
             }
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
             if result != nil {
-                completion(data)
+                completion(data!)
             }
             }.resume()
     }

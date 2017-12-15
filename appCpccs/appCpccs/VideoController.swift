@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIkit
+import UIKit
 
 class VideoController : UIViewController{
     
@@ -18,7 +18,7 @@ class VideoController : UIViewController{
     override func viewDidLoad(){
         let url = NSURL(string: link)
         webView.loadRequest(NSURLRequest(URL: url!))
-        print("Link:  \(link)")
+        print("Link:  \(link)", terminator: "")
         super.viewDidLoad()
     }
     

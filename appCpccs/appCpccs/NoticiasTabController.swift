@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIkit
+import UIKit
 
 class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     
@@ -26,7 +26,7 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
         for i in 0...(buttons.count - 1){
             if(sender == buttons[i]){
                 let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                var viewController = storyboard.instantiateViewControllerWithIdentifier("NoticiasViewerController") as noticiasViewerController
+                let viewController = storyboard.instantiateViewControllerWithIdentifier("NoticiasViewerController") as! noticiasViewerController
                 viewController.link = self.links[i]
                 self.presentViewController(viewController, animated:true, completion:nil)
             }
@@ -41,9 +41,9 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
         var delta : CGFloat = 0
         self.maxWidth = 0
         for i in 0...(titles.count-1){
-            var view = UIView(frame: CGRect(x: 20 + delta, y: 10, width: 230, height: 200))
-            var image = UIImageView(frame: CGRect(x: 0, y: 0, width: 230, height: 150))
-            var button = UIButton(frame: CGRect(x: 0, y: 150, width: 230, height: 50))
+            let view = UIView(frame: CGRect(x: 20 + delta, y: 10, width: 230, height: 200))
+            let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 230, height: 150))
+            let button = UIButton(frame: CGRect(x: 0, y: 150, width: 230, height: 50))
             button.setTitle(titles[i], forState: UIControlState.Normal)
             button.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 0.8)
             button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
@@ -56,9 +56,9 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
             delta = view.frame.maxX
         }
         
-        var left = UIImageView(frame: CGRect(x: 0, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
+        let left = UIImageView(frame: CGRect(x: 0, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
         left.image = UIImage(named: "left arrow.png")
-        var right = UIImageView(frame: CGRect(x: self.view.frame.width-30, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
+        let right = UIImageView(frame: CGRect(x: self.view.frame.width-30, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
         right.image = UIImage(named: "right arrow.png")
         
         self.view.addSubview(left)
@@ -85,10 +85,10 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
     {
         element = elementName
-        println("THIS ELEMENT: \(elementName)")
+        print("THIS ELEMENT: \(elementName)")
         if (elementName as NSString).isEqualToString("article")
         {
-            println("This is an article tag!")
+            print("This is an article tag!")
         }
     }
     
@@ -101,7 +101,7 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     
     func parser(parser: NSXMLParser, foundCharacters string: String)
     {
-            println("This content: \(string)")
+            print("This content: \(string)")
     }
     
 }
