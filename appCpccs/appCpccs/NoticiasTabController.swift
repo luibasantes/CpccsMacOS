@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     
     @IBOutlet weak var scrollMaster: UIScrollView!
