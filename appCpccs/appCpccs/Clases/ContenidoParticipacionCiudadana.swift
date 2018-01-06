@@ -35,11 +35,13 @@ class ContenidoParticipacionCiudadana{
                 let descripcion = model["contenido"] as! String
                 let link = model["url_video"] as! String
                 var splitTitulo = titulo.componentsSeparatedByString("-")
-                let titulo1 = splitTitulo[0]
-                let seccion = splitTitulo[1]
-                let contenidoPC: ContenidoParticipacionCiudadana = ContenidoParticipacionCiudadana(id: id, titulo: titulo1,descripcion:descripcion,link:link)
-                if(seccion=="PC"){
-                    contenidos.append(contenidoPC)
+                if(splitTitulo.count>1){
+                    let titulo1 = splitTitulo[0]
+                    let seccion = splitTitulo[1]
+                    let contenidoPC: ContenidoParticipacionCiudadana = ContenidoParticipacionCiudadana(id: id, titulo: titulo1,descripcion:descripcion,link:link)
+                    if(seccion=="PC"){
+                        contenidos.append(contenidoPC)
+                    }
                 }
             });
         }

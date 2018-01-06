@@ -7,7 +7,7 @@ target 'appCpccs' do
 
   # Pods for appCpccs
   pod 'Kanna', '~> 1.1.0'
-  pod 'Alamofire', '~> 2.0'
+  pod 'Alamofire', '~> 3.4'
 
   target 'appCpccsTests' do
     inherit! :search_paths

@@ -14,15 +14,17 @@ class ConexionWS {
         
     }
     class func getDatos(datoaRecuperar:String, completion:(NSData)->Void) -> Void {
-        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/\(datoaRecuperar)")
+        let url = NSURL(string: "http://190.152.149.89:8181/\(datoaRecuperar)")
         let session = NSURLSession.sharedSession()
         session.dataTaskWithURL(url!) { (data, response, error) in
             if error != nil {
+                print("Se ha lanzado un error!")
                 print(error!.localizedDescription)
                 return
             }
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
             if result != nil {
+                print("PETICION GET A WEB SERVICE HA SIDO PROCESADA!!!")
                 completion(data!)
             }
         }.resume()
