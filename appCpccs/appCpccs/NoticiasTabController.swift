@@ -149,6 +149,7 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
          scrollMaster.frame = CGRect(x: scrollMaster.frame.minX, y: scrollMaster.frame.minY, width: self.view.frame.width, height: scrollMaster.frame.height)
          maxWidth = delta
         
+         scrollMaster.contentSize = CGSizeMake(scrollMaster.contentSize.width,scrollMaster.frame.size.height);
 
     }
     
