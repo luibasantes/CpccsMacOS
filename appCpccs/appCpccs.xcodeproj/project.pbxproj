@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DFB6FCF11A775DD12508150 /* Pods_appCpccs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562EC542EC980A2820F9EACE /* Pods_appCpccs.framework */; };
 		422DCF2C935ED04620AB4497 /* Pods_appCpccsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B9D63D6FF38CACF6547A3E /* Pods_appCpccsTests.framework */; };
+		6422C9D52003038A0050688A /* img_asset_44hdpi.png in Resources */ = {isa = PBXBuildFile; fileRef = 6422C9D32003038A0050688A /* img_asset_44hdpi.png */; };
+		6422C9D62003038A0050688A /* portada_app2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6422C9D42003038A0050688A /* portada_app2.png */; };
 		64389D7C1F72F4E5004E7920 /* ContactoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64389D7B1F72F4E5004E7920 /* ContactoController.swift */; };
 		64389D7E1F731EC9004E7920 /* CpccsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64389D7D1F731EC9004E7920 /* CpccsTVController.swift */; };
 		64532DE41F70ADB5003F63F7 /* ParticipacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */; };
@@ -127,6 +129,8 @@
 /* Begin PBXFileReference section */
 		12CAA3DFA256674830CEC3B4 /* Pods-appCpccs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appCpccs.release.xcconfig"; path = "Pods/Target Support Files/Pods-appCpccs/Pods-appCpccs.release.xcconfig"; sourceTree = "<group>"; };
 		562EC542EC980A2820F9EACE /* Pods_appCpccs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_appCpccs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6422C9D32003038A0050688A /* img_asset_44hdpi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_asset_44hdpi.png; sourceTree = "<group>"; };
+		6422C9D42003038A0050688A /* portada_app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portada_app2.png; sourceTree = "<group>"; };
 		64389D7B1F72F4E5004E7920 /* ContactoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoController.swift; sourceTree = "<group>"; };
 		64389D7D1F731EC9004E7920 /* CpccsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpccsTVController.swift; sourceTree = "<group>"; };
 		64532DE31F70ADB5003F63F7 /* ParticipacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipacionController.swift; sourceTree = "<group>"; };
@@ -387,6 +391,8 @@
 		DB491DDB1F58ACC600B26BF9 /* _iconos */ = {
 			isa = PBXGroup;
 			children = (
+				6422C9D32003038A0050688A /* img_asset_44hdpi.png */,
+				6422C9D42003038A0050688A /* portada_app2.png */,
 				64B15EF42001EBD2003FAAF9 /* icono_app.png */,
 				64B15EF52001EBD2003FAAF9 /* mision_pic.jpg */,
 				64B15EF62001EBD2003FAAF9 /* vision_pic.jpg */,
@@ -572,6 +578,7 @@
 				DB491DF41F58ACC600B26BF9 /* luchaContraC.png in Resources */,
 				64B15EF72001EBD2003FAAF9 /* icono_app.png in Resources */,
 				DBEEF5141F50B9EC003409AE /* control_social.png in Resources */,
+				6422C9D52003038A0050688A /* img_asset_44hdpi.png in Resources */,
 				DB491DEC1F58ACC600B26BF9 /* barraIconos.png in Resources */,
 				DB491E021F58AF7600B26BF9 /* Recurso 16.svg in Resources */,
 				64B15EF82001EBD2003FAAF9 /* mision_pic.jpg in Resources */,
@@ -592,6 +599,7 @@
 				DBEEF5181F50B9EC003409AE /* fondo2.png in Resources */,
 				DB491DEE1F58ACC600B26BF9 /* barraRedesSociales.png in Resources */,
 				64DA9FED1F70256800FD2B3F /* section background.png in Resources */,
+				6422C9D62003038A0050688A /* portada_app2.png in Resources */,
 				DBEEF51B1F50B9EC003409AE /* logo_youtube.png in Resources */,
 				DB491DF21F58ACC600B26BF9 /* fotoMenu.png in Resources */,
 				DB491DF31F58ACC600B26BF9 /* fotoTopMenu.png in Resources */,
