@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -409,21 +409,14 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="reply" id="Y7r-xm-Suk">
+                                        <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
                                             <segue destination="Chv-Tj-BBp" kind="modal" id="051-2c-mEk"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.011764705882352941" green="0.19607843137254902" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-7f-aq8">
-                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.2274509804" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.074509803921568626" green="0.22745098039215686" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="MQH-65-nAE"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ylA-mF-90I">
                                 <rect key="frame" x="-11" y="44" width="331" height="482"/>
                                 <constraints>
@@ -454,15 +447,16 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-wN-iyr">
                                 <rect key="frame" x="53" y="232" width="202" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8XY-3n-cSg"/>
                                     <constraint firstAttribute="width" constant="202" id="h2r-f3-ldn"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
                                 <state key="normal" title="Haga su denuncia aquí">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="titleShadowColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -473,14 +467,15 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-zW-JOz">
                                 <rect key="frame" x="53" y="446" width="202" height="46"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="VUl-JF-bbT"/>
                                     <constraint firstAttribute="height" constant="46" id="wHw-KN-H7Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Haga su pedido aquí">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -498,6 +493,14 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx3-7f-aq8">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="MQH-65-nAE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1594,7 +1597,7 @@
                                     <constraint firstAttribute="width" constant="55" id="0pq-3D-am6"/>
                                     <constraint firstAttribute="height" constant="55" id="e6m-P7-F59"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="transparencia.png">
+                                <state key="normal" title="Button" image="transparencia.png" backgroundImage="transparencia.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -1663,7 +1666,7 @@
                                     <constraint firstAttribute="width" constant="166" id="H32-uI-jTB"/>
                                     <constraint firstAttribute="height" constant="65" id="R13-TV-9NC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1921,7 +1924,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3II-IJ-d4n" kind="modal" id="99P-3s-Cru"/>
+                                    <segue destination="csC-6J-6f2" kind="modal" id="OA3-GQ-6YO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-Lq-yzr">
@@ -2041,7 +2044,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="csC-6J-6f2" kind="modal" id="kGR-QG-mw3"/>
+                                    <segue destination="3II-IJ-d4n" kind="modal" id="LkV-Ol-9Zp"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7s-ue-SF2">
@@ -2054,19 +2057,6 @@
                                     <constraint firstAttribute="height" constant="75" id="1bE-1f-wAe"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peH-qG-a2Q">
-                                <rect key="frame" x="227" y="147" width="92" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.37" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="12"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="0.34999999999999998" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Menu Principal">
-                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Chv-Tj-BBp" kind="modal" id="gcr-bl-znA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-PU-Sja">
                                 <rect key="frame" x="0.0" y="535" width="134" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -2096,6 +2086,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-me-yhC">
+                                <rect key="frame" x="202" y="147" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="3YD-EF-gBR"/>
+                                    <constraint firstAttribute="height" constant="30" id="aSN-Zw-qpn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="3"/>
+                                <state key="normal" title="Menu Principal">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Chv-Tj-BBp" kind="modal" id="apv-kL-MA1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2117,6 +2123,7 @@
                             <constraint firstItem="fyh-PU-Sja" firstAttribute="top" secondItem="d92-13-91g" secondAttribute="bottom" constant="3" id="GIB-vx-Yhn"/>
                             <constraint firstItem="bN0-Yh-vVl" firstAttribute="centerX" secondItem="6Dt-Eb-5dh" secondAttribute="centerX" id="GaI-C7-1uu"/>
                             <constraint firstItem="v7s-ue-SF2" firstAttribute="leading" secondItem="usA-io-q9I" secondAttribute="leadingMargin" constant="-21" id="H88-2J-Hcy"/>
+                            <constraint firstAttribute="trailing" secondItem="cd3-me-yhC" secondAttribute="trailing" constant="8" id="HD2-CK-aVb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v7s-ue-SF2" secondAttribute="trailing" constant="-21" id="HZg-av-aE4"/>
                             <constraint firstItem="pab-OC-DLH" firstAttribute="leading" secondItem="usA-io-q9I" secondAttribute="leadingMargin" constant="-16" id="I2d-yy-t6C"/>
                             <constraint firstItem="2Ha-7q-s73" firstAttribute="leading" secondItem="ibu-yj-IFU" secondAttribute="trailing" constant="14" id="JSg-p4-Cn6"/>
@@ -2124,6 +2131,7 @@
                             <constraint firstItem="BRp-zN-xsB" firstAttribute="top" secondItem="3iy-p5-Zoa" secondAttribute="bottom" constant="2" id="RxF-kO-sfr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d92-13-91g" secondAttribute="trailing" constant="-16" id="UOO-jO-UbY"/>
                             <constraint firstItem="3U5-3w-8Ir" firstAttribute="top" secondItem="bjV-Qt-Mst" secondAttribute="bottom" id="VGt-uN-IAF"/>
+                            <constraint firstItem="cd3-me-yhC" firstAttribute="centerY" secondItem="usA-io-q9I" secondAttribute="centerY" constant="-122" id="XeL-zy-o3v"/>
                             <constraint firstItem="Udo-sU-UeM" firstAttribute="centerX" secondItem="usA-io-q9I" secondAttribute="centerX" constant="117" id="a45-cA-0Mf"/>
                             <constraint firstItem="bl4-Pr-Zuq" firstAttribute="top" secondItem="3iy-p5-Zoa" secondAttribute="bottom" id="aTJ-U3-oaA"/>
                             <constraint firstItem="xQC-hE-yub" firstAttribute="leading" secondItem="bl4-Pr-Zuq" secondAttribute="trailing" constant="8" id="cVM-iH-Mzq"/>
@@ -2634,29 +2642,6 @@ Edificio Centenario
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-3h-jhl">
-                                <rect key="frame" x="0.0" y="531" width="321" height="37"/>
-                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="aau-iX-uaQ"/>
-                                    <constraint firstAttribute="width" constant="321" id="tt4-fj-i77"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6d-kv-0nS">
-                                <rect key="frame" x="93" y="535" width="134" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aLL-ce-Nw3"/>
-                                    <constraint firstAttribute="width" constant="134" id="aiV-KD-be9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="www.cpcss.gob.ec">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNk-1u-MYK">
                                 <rect key="frame" x="0.0" y="39" width="320" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2675,7 +2660,8 @@ Edificio Centenario
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube CPCCS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98s-5c-Z7i">
                                 <rect key="frame" x="93" y="6" width="134" height="21"/>
@@ -2687,23 +2673,30 @@ Edificio Centenario
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-3h-jhl">
+                                <rect key="frame" x="0.0" y="531" width="321" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="aau-iX-uaQ"/>
+                                    <constraint firstAttribute="width" constant="321" id="tt4-fj-i77"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kNk-1u-MYK" firstAttribute="leading" secondItem="RGM-6s-Lrm" secondAttribute="leadingMargin" constant="-16" id="6uB-bJ-jUb"/>
                             <constraint firstItem="kNk-1u-MYK" firstAttribute="top" secondItem="98s-5c-Z7i" secondAttribute="bottom" constant="12" id="8EG-XG-24Z"/>
                             <constraint firstItem="lO5-Sg-cW6" firstAttribute="leading" secondItem="kNk-1u-MYK" secondAttribute="leading" id="C4Z-pV-8e1"/>
-                            <constraint firstItem="P6d-kv-0nS" firstAttribute="top" secondItem="kNk-1u-MYK" secondAttribute="bottom" constant="3" id="GTT-U9-Mpr"/>
                             <constraint firstItem="98s-5c-Z7i" firstAttribute="centerX" secondItem="RGM-6s-Lrm" secondAttribute="centerX" id="IBd-lf-G7G"/>
                             <constraint firstItem="98s-5c-Z7i" firstAttribute="top" secondItem="RGM-6s-Lrm" secondAttribute="topMargin" constant="6" id="MHD-s9-JKZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8PF-3h-jhl" secondAttribute="trailing" constant="-17" id="ObL-pG-dhg"/>
                             <constraint firstItem="Mlz-Ph-fGd" firstAttribute="top" secondItem="8PF-3h-jhl" secondAttribute="bottom" id="OnW-yQ-uas"/>
                             <constraint firstItem="lO5-Sg-cW6" firstAttribute="trailing" secondItem="kNk-1u-MYK" secondAttribute="trailing" id="WbB-KQ-uop"/>
                             <constraint firstItem="lO5-Sg-cW6" firstAttribute="bottom" secondItem="kNk-1u-MYK" secondAttribute="top" id="buf-t5-fJQ"/>
-                            <constraint firstItem="P6d-kv-0nS" firstAttribute="leading" secondItem="RGM-6s-Lrm" secondAttribute="leadingMargin" constant="77" id="hVd-nZ-tGF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="P6d-kv-0nS" secondAttribute="trailing" constant="77" id="hZv-xd-rfl"/>
-                            <constraint firstItem="P6d-kv-0nS" firstAttribute="top" secondItem="kNk-1u-MYK" secondAttribute="bottom" constant="3" id="iKV-vT-yeY"/>
-                            <constraint firstItem="Mlz-Ph-fGd" firstAttribute="top" secondItem="P6d-kv-0nS" secondAttribute="bottom" constant="3" id="jZG-Xh-g9l"/>
                             <constraint firstItem="8PF-3h-jhl" firstAttribute="leading" secondItem="RGM-6s-Lrm" secondAttribute="leadingMargin" constant="-16" id="r35-Lc-rgS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kNk-1u-MYK" secondAttribute="trailing" constant="-16" id="xNB-Xj-sAQ"/>
                         </constraints>
@@ -2732,6 +2725,7 @@ Edificio Centenario
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X6-HO-3te">
                                 <rect key="frame" x="0.0" y="531" width="321" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="EVE-uq-Kcl"/>
                                     <constraint firstAttribute="width" constant="321" id="gUj-fJ-Qzs"/>
@@ -2762,7 +2756,8 @@ Edificio Centenario
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter CPCCS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5P-zR-QFz">
                                 <rect key="frame" x="98" y="11" width="134" height="21"/>
@@ -2774,18 +2769,6 @@ Edificio Centenario
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSS-rf-7dA">
-                                <rect key="frame" x="98" y="535" width="134" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="X9F-SA-MIe"/>
-                                    <constraint firstAttribute="width" constant="134" id="sjD-5M-7bp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="www.cpcss.gob.ec">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2793,16 +2776,12 @@ Edificio Centenario
                             <constraint firstAttribute="trailingMargin" secondItem="6X6-HO-3te" secondAttribute="trailing" constant="-17" id="2hu-NO-92R"/>
                             <constraint firstItem="oG9-NE-9oJ" firstAttribute="top" secondItem="E5P-zR-QFz" secondAttribute="bottom" constant="12" id="3Em-td-Agl"/>
                             <constraint firstItem="oG9-NE-9oJ" firstAttribute="leading" secondItem="uDD-wA-4lk" secondAttribute="leadingMargin" constant="-16" id="BIC-d2-fyl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JSS-rf-7dA" secondAttribute="trailing" constant="72" id="DAz-Dj-DQz"/>
                             <constraint firstItem="oG9-NE-9oJ" firstAttribute="top" secondItem="mTn-hq-dxP" secondAttribute="bottom" id="DJV-Tf-Hbp"/>
                             <constraint firstItem="6X6-HO-3te" firstAttribute="leading" secondItem="uDD-wA-4lk" secondAttribute="leadingMargin" constant="-16" id="FVI-2B-Ttx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mTn-hq-dxP" secondAttribute="trailing" constant="-16" id="FZ2-2t-9Tv"/>
-                            <constraint firstItem="JSS-rf-7dA" firstAttribute="top" secondItem="oG9-NE-9oJ" secondAttribute="bottom" constant="4" id="L92-7x-suZ"/>
                             <constraint firstItem="mTn-hq-dxP" firstAttribute="leading" secondItem="uDD-wA-4lk" secondAttribute="leadingMargin" constant="-16" id="ZjX-Rd-8HC"/>
                             <constraint firstItem="6X6-HO-3te" firstAttribute="top" secondItem="oG9-NE-9oJ" secondAttribute="bottom" id="aiC-RA-doJ"/>
                             <constraint firstItem="mTn-hq-dxP" firstAttribute="top" secondItem="uDD-wA-4lk" secondAttribute="topMargin" id="epr-pn-Wc2"/>
-                            <constraint firstItem="PkV-EM-bF8" firstAttribute="top" secondItem="JSS-rf-7dA" secondAttribute="bottom" constant="3" id="eqL-gM-O6y"/>
-                            <constraint firstItem="JSS-rf-7dA" firstAttribute="leading" secondItem="uDD-wA-4lk" secondAttribute="leadingMargin" constant="82" id="exz-OB-AwJ"/>
                             <constraint firstItem="PkV-EM-bF8" firstAttribute="top" secondItem="6X6-HO-3te" secondAttribute="bottom" id="nhn-EJ-ktT"/>
                             <constraint firstItem="E5P-zR-QFz" firstAttribute="centerX" secondItem="uDD-wA-4lk" secondAttribute="centerX" constant="5" id="plg-2c-e29"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oG9-NE-9oJ" secondAttribute="trailing" constant="-27" id="yQQ-gP-84e"/>
@@ -2839,7 +2818,7 @@ Edificio Centenario
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-9T-qkU">
                                 <rect key="frame" x="1" y="44" width="319" height="488"/>
@@ -2865,8 +2844,8 @@ Edificio Centenario
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zl-YG-X0C">
                                 <rect key="frame" x="0.0" y="529" width="320" height="39"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.2274509804" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.074509803920000006" green="0.2274509804" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -4272,15 +4251,15 @@ Edificio Centenario
         <image name="youtube.png" width="151" height="157"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FUq-sj-hHR"/>
-        <segue reference="bAF-10-JOw"/>
-        <segue reference="N8s-ER-NeE"/>
-        <segue reference="99P-3s-Cru"/>
-        <segue reference="kGR-QG-mw3"/>
-        <segue reference="trb-we-6CP"/>
-        <segue reference="qJC-Ez-Zb6"/>
-        <segue reference="llv-at-3uU"/>
-        <segue reference="o9W-tP-t42"/>
         <segue reference="eDN-bc-mB5"/>
+        <segue reference="FUq-sj-hHR"/>
+        <segue reference="o9W-tP-t42"/>
+        <segue reference="bgT-UX-qQl"/>
+        <segue reference="apv-kL-MA1"/>
+        <segue reference="bAF-10-JOw"/>
+        <segue reference="jtG-qD-f20"/>
+        <segue reference="Ovz-yT-5yI"/>
+        <segue reference="8ac-0B-ITq"/>
+        <segue reference="qJC-Ez-Zb6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -526,6 +526,7 @@
 				TargetAttributes = {
 					DB0053711F4F75CE00664030 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QVL8P25ZVA;
 					};
 					DB0053861F4F75CE00664030 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -906,11 +907,14 @@
 			baseConfigurationReference = E8EC6DD6B251E6DCEBE0471B /* Pods-appCpccs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = appCpccs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods /**";
 			};
 			name = Debug;
@@ -920,11 +924,14 @@
 			baseConfigurationReference = 12CAA3DFA256674830CEC3B4 /* Pods-appCpccs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = appCpccs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods /**";
 			};
 			name = Release;
