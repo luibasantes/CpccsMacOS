@@ -20,16 +20,21 @@ class Genero{
     class func dataGenero(nsdatos: NSData) -> Array<Genero>{
         var result: [Genero] = []
         let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
-        let generos = jsonData["results"]
-        if let generosArray = generos as? NSArray{
-            generosArray.enumerateObjectsUsingBlock({model, index, stop in
-                let id = model["id"] as! Int
-                let nombre = model["nombre"] as! String
-                let generos: Genero = Genero(id: id, nombre: nombre)
-                result.append(generos)
-            });
+        if(jsonData != nil){
+            let generos = jsonData["results"]
+            if let generosArray = generos as? NSArray{
+                generosArray.enumerateObjectsUsingBlock({model, index, stop in
+                    let id = model["id"] as! Int
+                    let nombre = model["nombre"] as! String
+                    let generos: Genero = Genero(id: id, nombre: nombre)
+                    result.append(generos)
+                });
+            }
+            return result
         }
-        return result
+        else{
+            return result
+        }
     }
     class func buscarGeneroId(generos: Array<Genero>,generoBuscar: String) -> Int{
         for var i=0; i<generos.count; i++ {

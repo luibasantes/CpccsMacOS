@@ -20,16 +20,22 @@ class Etnia{
     class func dataEtnia(nsdatos: NSData) -> Array<Etnia>{
         var etniasEC: [Etnia] = []
         let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
-        let etnias = jsonData["results"]
-        if let etniasArray = etnias as? NSArray{
-            etniasArray.enumerateObjectsUsingBlock({model, index, stop in
-                let id = model["id"] as! Int
-                let nombre = model["nombre"] as! String
-                let etnias: Etnia = Etnia(id: id, nombre: nombre)
-                etniasEC.append(etnias)
-            });
+        if(jsonData != nil){
+            let etnias = jsonData["results"]
+        
+            if let etniasArray = etnias as? NSArray{
+                etniasArray.enumerateObjectsUsingBlock({model, index, stop in
+                    let id = model["id"] as! Int
+                    let nombre = model["nombre"] as! String
+                    let etnias: Etnia = Etnia(id: id, nombre: nombre)
+                    etniasEC.append(etnias)
+                });
+            }
+            return etniasEC
         }
-        return etniasEC
+        else{
+            return etniasEC
+        }
     }
     class func buscarEtniaId(etnias: Array<Etnia>,etniaBuscar: String) -> Int{
         for var i=0; i<etnias.count; i++ {

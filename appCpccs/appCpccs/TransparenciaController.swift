@@ -19,6 +19,27 @@ class TransparenciaController : UIViewController{
     var textArray: Array<UITextView>!
     var indexVideoArray: Array<Int>!
     var linkVideo: String!
+    var loaded = false
+    var maxHeight: CGFloat!
+    
+    let errorAlert = UIAlertController(title: "Solicitud Fallida", message: "No se puede conectar al servirdor, intente luego", preferredStyle: UIAlertControllerStyle.Alert)
+    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+        print("OK button tapped")
+    })
+    let progressAlert = UIAlertController(title: "Enviando Solicitud", message: "Cargando datos..", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    func showError(){
+        errorAlert.addAction(okAction)
+        presentViewController(errorAlert, animated: true, completion: nil)
+    }
+    
+    func showProgress(){
+        presentViewController(progressAlert, animated: true, completion: nil)
+    }
+    
+    func dismissProgress(){
+        self.progressAlert.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func showView(sender: UIButton!){
         var delta : CGFloat
@@ -88,59 +109,79 @@ class TransparenciaController : UIViewController{
     }
     
     override func viewDidLoad() {
-        
-        
-        ConexionWS.getDatos("contenidos/?limit=100"){
+        super.viewDidLoad()
+        self.maxHeight = 0
+        ConexionWS.getDatos("contenidos/?limit=50"){
             result in dispatch_async(dispatch_get_main_queue()){
-                self.contenidos = ContenidoTransparencia.getContenido(result)
-                self.buttonArray = []
-                self.textArray = []
-                self.videoButtonArray = []
-                self.indexVideoArray = []
-                var yPos : CGFloat! = 0
-                for contenido in self.contenidos{
-                    let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: 30))
-                    button.setTitle(contenido.titulo, forState: UIControlState.Normal)
-                    button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
-                    button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-                    button.addTarget(self, action: "showView:", forControlEvents: UIControlEvents.TouchUpInside)
-                    
-                    let textView = UITextView(frame: CGRect(x: 10, y: button.frame.maxY, width: self.view.frame.width - 20, height: 0))
-                    textView.text = contenido.descripcion
-                    textView.textAlignment = NSTextAlignment.Justified
-                    textView.backgroundColor = UIColor(white: 0.5, alpha: 0.2)
-                    textView.layer.cornerRadius = 10
-                    textView.editable = false
-                    
-                    self.scrollMaster.addSubview(button)
-                    self.scrollMaster.addSubview(textView)
-                    yPos = textView.frame.maxY
-                    self.buttonArray.append(button)
-                    self.textArray.append(textView)
-                    
-                    if(contenido.link != "ninguno"){
-                        let buttonVideo = UIButton(frame: CGRect(x: 30, y: textView.frame.maxY, width: 0, height: 0))
-                        buttonVideo.setTitle("Toque para ver video", forState: UIControlState.Normal)
-                        buttonVideo.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-                        buttonVideo.backgroundColor = UIColor.redColor()
-                        buttonVideo.addTarget(self, action: "showVideo:", forControlEvents: UIControlEvents.TouchUpInside)
-                        self.scrollMaster.addSubview(buttonVideo)
-                        self.videoButtonArray.append(buttonVideo)
-                        self.indexVideoArray.append(self.videoButtonArray.count-1)
-                        yPos = buttonVideo.frame.maxY
+                if(result.length != 5){
+                    self.contenidos = ContenidoTransparencia.getContenido(result)
+                    self.buttonArray = []
+                    self.textArray = []
+                    self.videoButtonArray = []
+                    self.indexVideoArray = []
+                    var yPos : CGFloat! = 0
+                    for contenido in self.contenidos{
+                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: 30))
+                        button.setTitle(contenido.titulo, forState: UIControlState.Normal)
+                        button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
+                        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                        button.addTarget(self, action: "showView:", forControlEvents: UIControlEvents.TouchUpInside)
+                        
+                        let textView = UITextView(frame: CGRect(x: 10, y: button.frame.maxY, width: self.view.frame.width - 20, height: 0))
+                        textView.text = contenido.descripcion
+                        textView.textAlignment = NSTextAlignment.Justified
+                        textView.backgroundColor = UIColor(white: 0.5, alpha: 0.2)
+                        textView.layer.cornerRadius = 10
+                        textView.editable = false
+                        
+                        self.scrollMaster.addSubview(button)
+                        self.scrollMaster.addSubview(textView)
+                        yPos = textView.frame.maxY
+                        self.buttonArray.append(button)
+                        self.textArray.append(textView)
+                        
+                        if(contenido.link != "ninguno"){
+                            let buttonVideo = UIButton(frame: CGRect(x: 30, y: textView.frame.maxY, width: 0, height: 0))
+                            buttonVideo.setTitle("Toque para ver video", forState: UIControlState.Normal)
+                            buttonVideo.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                            buttonVideo.backgroundColor = UIColor.redColor()
+                            buttonVideo.addTarget(self, action: "showVideo:", forControlEvents: UIControlEvents.TouchUpInside)
+                            self.scrollMaster.addSubview(buttonVideo)
+                            self.videoButtonArray.append(buttonVideo)
+                            self.indexVideoArray.append(self.videoButtonArray.count-1)
+                            yPos = buttonVideo.frame.maxY
+                        }
+                        else{
+                            self.indexVideoArray.append(-1)
+                        }
+                        self.maxHeight = yPos
                     }
-                    else{
-                        self.indexVideoArray.append(-1)
-                    }
+                    self.loaded = true
+                    self.dismissProgress()
+                }
+                else{
+                    self.dismissProgress()
+                    self.showError()
+                    self.loaded = false
                 }
             }
         }
-        
-        super.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if(!loaded){
+            showProgress()
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.scrollMaster.contentSize = CGSize(width:0, height: self.maxHeight * 3)
+        super.viewDidLayoutSubviews()
+        
     }
 }

@@ -64,26 +64,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-wN-iyr">
-                                <rect key="frame" x="53" y="232" width="202" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8XY-3n-cSg"/>
-                                    <constraint firstAttribute="width" constant="202" id="h2r-f3-ldn"/>
-                                </constraints>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
-                                <state key="normal" title="Haga su denuncia aquí">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hef-P9-Iix" kind="modal" id="o9W-tP-t42"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyN-zW-JOz">
                                 <rect key="frame" x="53" y="446" width="202" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,6 +100,26 @@
                                     <constraint firstAttribute="height" constant="45" id="MQH-65-nAE"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-wN-iyr">
+                                <rect key="frame" x="53" y="232" width="202" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.35655729339999997" blue="0.74731691919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8XY-3n-cSg"/>
+                                    <constraint firstAttribute="width" constant="202" id="h2r-f3-ldn"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="Haga su denuncia aquí">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.027450980390000001" green="0.2666666667" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hef-P9-Iix" kind="modal" id="o9W-tP-t42"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1008,7 +1008,7 @@
         <!--Menu View Controller-->
         <scene sceneID="P1C-Zs-Yge">
             <objects>
-                <viewController id="Chv-Tj-BBp" customClass="menuViewController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menuViewController" id="Chv-Tj-BBp" customClass="menuViewController" customModule="appCpccs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lyF-q0-lrk"/>
                         <viewControllerLayoutGuide type="bottom" id="GlA-pw-DnL"/>
@@ -1650,6 +1650,7 @@
                             <constraint firstItem="pOX-gz-gc7" firstAttribute="top" secondItem="Udo-sU-UeM" secondAttribute="bottom" constant="31" id="7jZ-rh-3DA"/>
                             <constraint firstItem="d92-13-91g" firstAttribute="top" secondItem="r3b-DD-NuZ" secondAttribute="bottom" constant="1" id="8aQ-CQ-6u8"/>
                             <constraint firstItem="d92-13-91g" firstAttribute="top" secondItem="Udo-sU-UeM" secondAttribute="bottom" constant="1" id="9Wb-KZ-0ZA"/>
+                            <constraint firstItem="cd3-me-yhC" firstAttribute="top" secondItem="WcR-Ih-8Ez" secondAttribute="bottom" constant="5" id="9hI-Gp-9ng"/>
                             <constraint firstItem="3U5-3w-8Ir" firstAttribute="top" secondItem="pOX-gz-gc7" secondAttribute="bottom" constant="16" id="Bto-Tu-0N7"/>
                             <constraint firstItem="66h-vS-vcw" firstAttribute="centerX" secondItem="Udo-sU-UeM" secondAttribute="centerX" id="C2S-yA-YBV"/>
                             <constraint firstItem="hTY-Lq-yzr" firstAttribute="centerX" secondItem="pse-hF-mdq" secondAttribute="centerX" constant="-1" id="C2Z-KL-dky"/>
@@ -1668,7 +1669,6 @@
                             <constraint firstItem="BRp-zN-xsB" firstAttribute="top" secondItem="3iy-p5-Zoa" secondAttribute="bottom" constant="2" id="RxF-kO-sfr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d92-13-91g" secondAttribute="trailing" constant="-16" id="UOO-jO-UbY"/>
                             <constraint firstItem="3U5-3w-8Ir" firstAttribute="top" secondItem="bjV-Qt-Mst" secondAttribute="bottom" id="VGt-uN-IAF"/>
-                            <constraint firstItem="cd3-me-yhC" firstAttribute="centerY" secondItem="usA-io-q9I" secondAttribute="centerY" constant="-122" id="XeL-zy-o3v"/>
                             <constraint firstItem="Udo-sU-UeM" firstAttribute="centerX" secondItem="usA-io-q9I" secondAttribute="centerX" constant="117" id="a45-cA-0Mf"/>
                             <constraint firstItem="bl4-Pr-Zuq" firstAttribute="top" secondItem="3iy-p5-Zoa" secondAttribute="bottom" id="aTJ-U3-oaA"/>
                             <constraint firstItem="xQC-hE-yub" firstAttribute="leading" secondItem="bl4-Pr-Zuq" secondAttribute="trailing" constant="8" id="cVM-iH-Mzq"/>
@@ -2432,7 +2432,7 @@ Edificio Centenario
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8J-zL-ZDA">
-                                <rect key="frame" x="0.0" y="-8" width="320" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="KSd-qD-Yek"/>
                                     <constraint firstAttribute="height" constant="1000" id="btW-9s-1cn"/>
@@ -2441,10 +2441,10 @@ Edificio Centenario
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PD7-yu-FSm" firstAttribute="top" secondItem="U8J-zL-ZDA" secondAttribute="bottom" constant="8" id="huS-Pp-9WT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="U8J-zL-ZDA" secondAttribute="trailing" constant="-16" id="qUT-VS-SSa"/>
-                            <constraint firstItem="U8J-zL-ZDA" firstAttribute="top" secondItem="DxA-m6-puH" secondAttribute="topMargin" constant="-8" id="sGF-un-ec0"/>
-                            <constraint firstItem="U8J-zL-ZDA" firstAttribute="leading" secondItem="DxA-m6-puH" secondAttribute="leadingMargin" constant="-16" id="ty2-hD-FZ8"/>
+                            <constraint firstItem="U8J-zL-ZDA" firstAttribute="leading" secondItem="DxA-m6-puH" secondAttribute="leading" id="T0V-4M-55v"/>
+                            <constraint firstItem="PD7-yu-FSm" firstAttribute="top" secondItem="U8J-zL-ZDA" secondAttribute="bottom" id="huS-Pp-9WT"/>
+                            <constraint firstItem="U8J-zL-ZDA" firstAttribute="top" secondItem="DxA-m6-puH" secondAttribute="topMargin" id="sGF-un-ec0"/>
+                            <constraint firstAttribute="trailing" secondItem="U8J-zL-ZDA" secondAttribute="trailing" id="vgK-Qn-0vO"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -2568,13 +2568,9 @@ Edificio Centenario
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UdV-Bd-4Th" firstAttribute="top" secondItem="uU8-SW-qcF" secondAttribute="topMargin" id="Det-MN-Uqq"/>
-                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="top" secondItem="uU8-SW-qcF" secondAttribute="topMargin" id="DfJ-15-9pp"/>
                             <constraint firstItem="9aE-1M-teL" firstAttribute="top" secondItem="UdV-Bd-4Th" secondAttribute="bottom" id="NTB-KH-c9S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UdV-Bd-4Th" secondAttribute="trailing" constant="-16" id="QOg-5J-r2G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UdV-Bd-4Th" secondAttribute="trailing" constant="-16" id="S8f-f3-Q2t"/>
                             <constraint firstItem="UdV-Bd-4Th" firstAttribute="leading" secondItem="uU8-SW-qcF" secondAttribute="leadingMargin" constant="-16" id="hF6-9T-11d"/>
-                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="leading" secondItem="uU8-SW-qcF" secondAttribute="leadingMargin" constant="-16" id="rmr-wf-g3y"/>
-                            <constraint firstItem="9aE-1M-teL" firstAttribute="top" secondItem="UdV-Bd-4Th" secondAttribute="bottom" id="rwc-kY-XtE"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -3763,14 +3759,14 @@ Edificio Centenario
         <image name="youtube.png" width="151" height="157"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jtG-qD-f20"/>
         <segue reference="051-2c-mEk"/>
-        <segue reference="llv-at-3uU"/>
-        <segue reference="N8s-ER-NeE"/>
+        <segue reference="bgT-UX-qQl"/>
+        <segue reference="o9W-tP-t42"/>
+        <segue reference="XiG-zO-FHi"/>
+        <segue reference="8ac-0B-ITq"/>
+        <segue reference="Ovz-yT-5yI"/>
         <segue reference="bAF-10-JOw"/>
-        <segue reference="OA3-GQ-6YO"/>
-        <segue reference="LkV-Ol-9Zp"/>
-        <segue reference="eDN-bc-mB5"/>
-        <segue reference="R5y-sj-C8r"/>
         <segue reference="crb-2e-PRb"/>
     </inferredMetricsTieBreakers>
 </document>

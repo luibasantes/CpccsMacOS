@@ -46,15 +46,36 @@ class PeticionarioController: UIViewController,UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var txtCed: UITextField!
     @IBOutlet weak var txtPais: UITextField!
     
+    let errorAlert = UIAlertController(title: "Conexion Fallida con el Servidor", message: "No se ha podido conectar con el Servidor para cargar datos al formulario, intente luego", preferredStyle: UIAlertControllerStyle.Alert)
     
+    func showError(doAction : () -> Void){
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+            doAction()
+        })
+        errorAlert.addAction(okAction)
+        presentViewController(errorAlert, animated: true, completion: nil)
+    }
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ConexionWS.getDatos("provincias/?limit=100"){ result in
+        ConexionWS.getDatos("provincias/?limit=100"){ result in dispatch_async(dispatch_get_main_queue()){
             self.provinciasEC = Provincia.dataProvincias(result)
+            if(self.provinciasEC == nil || self.provinciasEC.count == 0){
+                print("ENTRO AL IF")
+                self.showError({() in
+                    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    let viewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController") as! menuViewController
+                    self.presentViewController(viewController, animated:true, completion:nil)
+                })
+            }
+            else{
+                print("NO SE CUMPLIO EL IF!!")
+            }
+            }
         }
+
         ConexionWS.getDatos("generos/?limit=10"){ result in
             self.generosEC = Genero.dataGenero(result)
         }

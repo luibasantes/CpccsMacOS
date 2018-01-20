@@ -909,8 +909,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c7f04183-798a-4af0-b46e-5e7f0674f8e3";
+				PROVISIONING_PROFILE = "6ad37714-987d-4a2e-934e-2253b1def03e";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ad37714-987d-4a2e-934e-2253b1def03e";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods /**";
 			};
 			name = Debug;
@@ -927,8 +927,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ec.edu.espol.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c7f04183-798a-4af0-b46e-5e7f0674f8e3";
+				PROVISIONING_PROFILE = "6ad37714-987d-4a2e-934e-2253b1def03e";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ad37714-987d-4a2e-934e-2253b1def03e";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods /**";
 			};
 			name = Release;

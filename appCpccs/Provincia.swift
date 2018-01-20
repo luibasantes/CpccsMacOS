@@ -27,17 +27,22 @@ class Provincia {
     class func dataProvincias(nsdatos: NSData) -> Array<Provincia>{
         var provinciasEC: [Provincia] = []
         let jsonData : AnyObject! = try? NSJSONSerialization.JSONObjectWithData(nsdatos, options: NSJSONReadingOptions.MutableContainers)
-        let provincias = jsonData["results"]
-        if let provinciasArray = provincias as? NSArray{
-            provinciasArray.enumerateObjectsUsingBlock({model, index, stop in
-                let id = model["id"] as! Int
-                let nombre = model["nombre"] as! String
-                let provincia: Provincia = Provincia(id: id, nombre: nombre)
-                provincia.obtenerCiudades()
-                provinciasEC.append(provincia)
-            });
+        if(jsonData != nil){
+            let provincias = jsonData["results"]
+            if let provinciasArray = provincias as? NSArray{
+                provinciasArray.enumerateObjectsUsingBlock({model, index, stop in
+                    let id = model["id"] as! Int
+                    let nombre = model["nombre"] as! String
+                    let provincia: Provincia = Provincia(id: id, nombre: nombre)
+                    provincia.obtenerCiudades()
+                    provinciasEC.append(provincia)
+                });
+            }
+            return provinciasEC
         }
-        return provinciasEC
+        else{
+            return provinciasEC
+        }
     }
     func obtenerCiudades(){
         let id : Int = self.id

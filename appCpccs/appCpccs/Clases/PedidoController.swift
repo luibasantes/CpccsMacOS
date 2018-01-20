@@ -26,7 +26,15 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var txtCargo: UITextField!
     @IBOutlet weak var txtParroquia: UITextField!
     
+    let successAlert = UIAlertController(title: "Envio exitoso", message: "Se ha enviado con exito la denuncia!", preferredStyle: UIAlertControllerStyle.Alert)
     
+    func showSucess(doAction : () -> Void){
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+            doAction()
+        })
+        successAlert.addAction(okAction)
+        presentViewController(successAlert, animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -103,7 +111,15 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
             }
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
                 print("you have pressed Yes button");
-                self.enviarDenuncia()
+                self.enviarDenuncia(){() in dispatch_async(dispatch_get_main_queue()){
+                    self.showSucess({() in
+                        print("Entering to storyBoard")
+                        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                        let viewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController") as! menuViewController
+                        self.presentViewController(viewController, animated:true, completion:nil)
+                    })
+                    }
+                }
                 //Call another alert here
             }
             alertController.addAction(OKAction)
@@ -160,7 +176,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
         
     }
     
-    func enviarDenuncia(){
+    func enviarDenuncia(action: () -> Void){
         //////ejemploooooo
         let username = "cpccs-admin"
         let password = "cpccs2017admin"
@@ -168,7 +184,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions([])
         
-        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/requerimiento/")
+        let url = NSURL(string: "http://190.152.149.89:8181/requerimiento/")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
         let values = "tipodenuncia=\(1) & identidad_reservada=\(self.datosDenuncia.identidad_reservada) &nombres_apellidos_denunciante=\(self.datosDenuncia.nombres_apellidos_denunciante) &edad_denunciante=\(self.datosDenuncia.edad_denunciante) &correo_denunciante=\(self.datosDenuncia.correo_denunciante) &telefono_denunciante=\(self.datosDenuncia.telefono) &celular_denunciante=\(self.datosDenuncia.celular) &direccion_denunciante=\(self.datosDenuncia.direccion) &provincia_denunciante=\(self.datosDenuncia.provincia_denunciante_id) &ciudad_denunciante=\(self.datosDenuncia.ciudad_denunciante_id) &genero_denunciante=\(self.datosDenuncia.genero_denunciante) &estado_civil_denunciante=\(self.datosDenuncia.estadoC) &etnia_denunciante=\(self.datosDenuncia.etnia) &niveleducaciondenunciante=\(self.datosDenuncia.nivel_educacion_id) &institucion_denunciante=\(self.datosDenuncia.institucion_denunciante) &cargo_denunciante=\(self.datosDenuncia.cargo_denunciante) &tipo_identificacion=\(self.datosDenuncia.tipo_identificacion) &identificacion_id=\(self.datosDenuncia.no_identificacion) &pais=\(self.datosDenuncia.pais) &descripcion=\(self.datosDenuncia.descripcion_denuncia) &nombres_apellidos_denunciado=\(self.datosDenuncia.nombres_apellidos_denunciado) &genero_denunciado=\(self.datosDenuncia.genero_denunciado) &institucion_denunciado=\(self.datosDenuncia.institucion_denunciado) &cargo_denunciado=\(self.datosDenuncia.cargo_denunciado) &provincia_denunciado=\(self.datosDenuncia.provincia_denunciado_id) &ciudad_denunciado=\(self.datosDenuncia.ciudad_denunciado_id) &parroquia_denunciado=\(self.datosDenuncia.parroquia_denunciado)"
@@ -185,6 +201,7 @@ class PedidoController: UIViewController,UIPickerViewDelegate, UIPickerViewDataS
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
             if result != nil {
                 print(result, terminator: "")
+                action()
             }
         }).resume()
         

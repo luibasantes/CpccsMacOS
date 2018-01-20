@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class subMenuViewController: UIViewController {
     
@@ -86,21 +87,66 @@ class subMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         if(comeFrom != nil){
+            
             if(comeFrom == "PC"){
                 labelTema.text = "Participacion Ciudadana"
-                showParticipacionCiudadana()
+                if(NetworkReachabilityManager()!.isReachable){
+                    print("EL INTERNET ESTA DISPONIBLE!!!!!")
+                    showParticipacionCiudadana()
+                }
+                else{
+                    let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                        print("OK button tapped")
+                    })
+                    alertController.addAction(okAction)
+                    presentViewController(alertController, animated: true, completion: nil)
+                }
             }
             else if(comeFrom == "CS"){
                 labelTema.text = "Control Social"
-                showControlSocial()
+                if(NetworkReachabilityManager()!.isReachable){
+                    print("EL INTERNET ESTA DISPONIBLE!!!!!")
+                    showControlSocial()
+                }
+                else{
+                    let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                        print("OK button tapped")
+                    })
+                    alertController.addAction(okAction)
+                    presentViewController(alertController, animated: true, completion: nil)
+                }
             }
             else if(comeFrom == "TP"){
                 labelTema.text = "Transparencia"
-                showTransparencia()
+                if(NetworkReachabilityManager()!.isReachable){
+                    print("EL INTERNET ESTA DISPONIBLE!!!!!")
+                    showTransparencia()
+                }
+                else{
+                    let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                        print("OK button tapped")
+                    })
+                    alertController.addAction(okAction)
+                    presentViewController(alertController, animated: true, completion: nil)
+                }
             }
             else if(comeFrom == "NOTICIAS"){
                 labelTema.text = "Noticias"
-                showNoticias()
+                if(NetworkReachabilityManager()!.isReachable){
+                    print("EL INTERNET ESTA DISPONIBLE!!!!!")
+                    showNoticias()
+                }
+                else{
+                    let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                        print("OK button tapped")
+                    })
+                    alertController.addAction(okAction)
+                    presentViewController(alertController, animated: true, completion: nil)
+                }
             }
             else if(comeFrom == "CONTACTO"){
                 labelTema.text = "Contacto"
@@ -207,22 +253,67 @@ class subMenuViewController: UIViewController {
     
     @IBAction func pressParticipacion(sender: UIButton) {
         labelTema.text = " Participacion Ciudadana"
-        showParticipacionCiudadana()
+        if(NetworkReachabilityManager()!.isReachable){
+            print("EL INTERNET ESTA DISPONIBLE!!!!!")
+            showParticipacionCiudadana()
+        }
+        else{
+            let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func pressControlSocial(sender: UIButton) {
         labelTema.text = " Control Social"
-        showControlSocial()
+        if(NetworkReachabilityManager()!.isReachable){
+            print("EL INTERNET ESTA DISPONIBLE!!!!!")
+            showControlSocial()
+        }
+        else{
+            let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func pressTransparencia(sender: UIButton) {
         labelTema.text = " Transparencia"
-        showTransparencia()
+        if(NetworkReachabilityManager()!.isReachable){
+            print("EL INTERNET ESTA DISPONIBLE!!!!!")
+            showTransparencia()
+        }
+        else{
+            let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func pressNoticias(sender: UIButton) {
         labelTema.text = " Noticias"
-        showNoticias()
+        if(NetworkReachabilityManager()!.isReachable){
+            print("EL INTERNET ESTA DISPONIBLE!!!!!")
+            showNoticias()
+        }
+        else{
+            let alertController = UIAlertController(title: "Solicitud Fallida", message: "No tiene conexion a internet!", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func pressContactos(sender: UIButton) {

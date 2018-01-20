@@ -26,6 +26,17 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var txtCargo: UITextField!
     @IBOutlet weak var txtParroquia: UITextField!
     
+    let successAlert = UIAlertController(title: "Envio exitoso", message: "Se ha enviado con exito la denuncia!", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    func showSucess(doAction : () -> Void){
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+            doAction()
+        })
+        successAlert.addAction(okAction)
+        presentViewController(successAlert, animated: true, completion: nil)
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ConexionWS.getDatos("provincias/?limit=100"){ result in
@@ -89,13 +100,21 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         else {
             self.recolectarDatosDenunciado()
             let alertController = UIAlertController(title: "AVISO", message: "Al presionar OK, enviará su denuncia al CPCCS para su verificación", preferredStyle: .Alert)
-            let CancelAction = UIAlertAction(title: "BACK", style: .Default) { (action:UIAlertAction) in
+            let CancelAction = UIAlertAction(title: "Cancelar", style: .Default) { (action:UIAlertAction) in
                 print("you have pressed Yes button");
                 //Call another alert here
             }
             let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
                 print("you have pressed Yes button");
-                self.enviarDenuncia()
+                self.enviarDenuncia(){() in dispatch_async(dispatch_get_main_queue()){
+                        self.showSucess({() in
+                            print("Entering to storyBoard")
+                            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                            let viewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController") as! menuViewController
+                            self.presentViewController(viewController, animated:true, completion:nil)
+                        })
+                    }
+                }
                 //Call another alert here
             }
             alertController.addAction(CancelAction)
@@ -151,7 +170,7 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         }
         
     }
-    func enviarDenuncia(){
+    func enviarDenuncia(action: () -> Void){
         //////ejemploooooo
         let username = "cpccs-admin"
         let password = "cpccs2017admin"
@@ -159,7 +178,7 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
         let base64LoginString = loginData.base64EncodedStringWithOptions([])
         
-        let url = NSURL(string: "http://ejrocafuerte.pythonanywhere.com/requerimiento/")
+        let url = NSURL(string: "http://190.152.149.89:8181/requerimiento/")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
         print(self.datosDenuncia, terminator: "")
@@ -177,6 +196,8 @@ class DenunciadoController: UIViewController,UIPickerViewDelegate, UIPickerViewD
             let result = NSString(data: data!, encoding: NSUTF8StringEncoding)
             if result != nil {
                 print(result, terminator: "")
+                action()
+                
             }
         }).resume()
         

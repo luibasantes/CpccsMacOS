@@ -24,6 +24,15 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     var parser: NSXMLParser!
     var element: String!
     let file = "HTMLnot.txt"
+    let alertController = UIAlertController(title: "Realizando solicitud", message: "Cargando Noticias...", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    func showAlert(){
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func dismissAlert(){
+        self.alertController.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func mostrarNoticias(sender: UIButton!){
         for i in 0...(buttons.count - 1){
@@ -42,35 +51,12 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
         self.links = []
         self.buttons = []
         self.maxWidth = 0
-        /*var delta : CGFloat = 0
-        for i in 0...(titles.count-1){
-            let view = UIView(frame: CGRect(x: 20 + delta, y: 10, width: 230, height: 200))
-            let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 230, height: 150))
-            let button = UIButton(frame: CGRect(x: 0, y: 150, width: 230, height: 50))
-            button.setTitle(titles[i], forState: UIControlState.Normal)
-            button.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 0.8)
-            button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-            button.addTarget(self, action: "mostrarNoticias:", forControlEvents: UIControlEvents.TouchUpInside)
-            image.image = UIImage(named: img[i])
-            view.addSubview(image)
-            view.addSubview(button)
-            buttons.append(button)
-            scrollMaster.addSubview(view)
-            delta = view.frame.maxX
-        }
-        
-        let left = UIImageView(frame: CGRect(x: 0, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
-        left.image = UIImage(named: "left arrow.png")
-        let right = UIImageView(frame: CGRect(x: self.view.frame.width-30, y: self.scrollMaster.frame.height/2, width: 30, height: 30))
-        right.image = UIImage(named: "right arrow.png")
-        
-        self.view.addSubview(left)
-        self.view.addSubview(right)
-        scrollMaster.frame = CGRect(x: scrollMaster.frame.minX, y: scrollMaster.frame.minY, width: self.view.frame.width, height: scrollMaster.frame.height)
-        maxWidth = delta
-        */
         self.scrape()
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.showAlert()
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,7 +65,7 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     }
     
     override func viewDidLayoutSubviews() {
-        self.scrollMaster.contentSize = CGSize(width:self.maxWidth, height: 355)
+        self.scrollMaster.contentSize = CGSize(width:self.maxWidth, height: 0)
         super.viewDidLayoutSubviews()
         
     }
@@ -120,9 +106,9 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
     func cargarVistas()-> Void{
         var delta : CGFloat = 0
         for i in 0...(titles.count-1){
-            let view = UIView(frame: CGRect(x: 20 + delta, y: 10, width: 230, height: 200))
-            let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 230, height: 150))
-            let button = UIButton(frame: CGRect(x: 0, y: 150, width: 230, height: 50))
+            let view = UIView(frame: CGRect(x: 20 + delta, y: self.scrollMaster.frame.height/6, width: 230, height: self.scrollMaster.frame.height * 3/4))
+            let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 230, height: view.frame.height * 3/4))
+            let button = UIButton(frame: CGRect(x: 0, y: image.frame.height, width: 230, height: view.frame.height * 1/4))
             button.setTitle(titles[i], forState: UIControlState.Normal)
             button.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
             button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
@@ -150,6 +136,8 @@ class NoticiasTabController : UIViewController,NSXMLParserDelegate{
          maxWidth = delta
         
          scrollMaster.contentSize = CGSizeMake(scrollMaster.contentSize.width,scrollMaster.frame.size.height);
+        
+         self.dismissAlert()
 
     }
     
