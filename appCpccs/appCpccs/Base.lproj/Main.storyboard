@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Chv-Tj-BBp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -2559,18 +2559,14 @@ Edificio Centenario
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdV-Bd-4Th">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1800"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1800" id="gZc-8o-o9R"/>
-                                    <constraint firstAttribute="width" constant="320" id="pUj-ev-Pub"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="top" secondItem="uU8-SW-qcF" secondAttribute="topMargin" id="Det-MN-Uqq"/>
-                            <constraint firstItem="9aE-1M-teL" firstAttribute="top" secondItem="UdV-Bd-4Th" secondAttribute="bottom" id="NTB-KH-c9S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UdV-Bd-4Th" secondAttribute="trailing" constant="-16" id="QOg-5J-r2G"/>
-                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="leading" secondItem="uU8-SW-qcF" secondAttribute="leadingMargin" constant="-16" id="hF6-9T-11d"/>
+                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="bottom" secondItem="9aE-1M-teL" secondAttribute="top" id="BE9-vP-85n"/>
+                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="top" secondItem="uU8-SW-qcF" secondAttribute="top" id="OJ6-4r-eBi"/>
+                            <constraint firstAttribute="trailing" secondItem="UdV-Bd-4Th" secondAttribute="trailing" id="gy7-mQ-sFz"/>
+                            <constraint firstItem="UdV-Bd-4Th" firstAttribute="leading" secondItem="uU8-SW-qcF" secondAttribute="leading" id="th6-R3-AdB"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -2597,18 +2593,14 @@ Edificio Centenario
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvS-hy-V2c">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Piw-hI-4Vb"/>
-                                    <constraint firstAttribute="height" constant="1000" id="fAK-uj-fqk"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wqI-B9-J9X" firstAttribute="top" secondItem="JvS-hy-V2c" secondAttribute="bottom" id="Kis-RX-FkB"/>
-                            <constraint firstItem="JvS-hy-V2c" firstAttribute="top" secondItem="vUH-9w-Oiw" secondAttribute="topMargin" id="NyR-0Y-xMF"/>
-                            <constraint firstItem="JvS-hy-V2c" firstAttribute="leading" secondItem="vUH-9w-Oiw" secondAttribute="leadingMargin" constant="-16" id="SxZ-qW-dHT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JvS-hy-V2c" secondAttribute="trailing" constant="-16" id="ecC-3K-E82"/>
+                            <constraint firstItem="JvS-hy-V2c" firstAttribute="leading" secondItem="vUH-9w-Oiw" secondAttribute="leading" id="and-PA-ueG"/>
+                            <constraint firstItem="JvS-hy-V2c" firstAttribute="bottom" secondItem="wqI-B9-J9X" secondAttribute="top" id="qxX-qc-Bic"/>
+                            <constraint firstItem="JvS-hy-V2c" firstAttribute="top" secondItem="vUH-9w-Oiw" secondAttribute="top" id="vGv-jq-GHD"/>
+                            <constraint firstAttribute="trailing" secondItem="JvS-hy-V2c" secondAttribute="trailing" id="yeY-Ct-8Bh"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

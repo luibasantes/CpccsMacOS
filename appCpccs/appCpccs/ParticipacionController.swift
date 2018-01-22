@@ -45,7 +45,7 @@ class ParticipacionController : UIViewController{
         for i in 0...(buttonArray.count-1){
             if(sender == buttonArray[i]){
                 if(textArray[i].frame.height == 0){
-                    textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 70)
+                    textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: self.scrollMaster.frame.height)
                     delta = 80
                     
                     if(indexVideoArray[i] != -1){
@@ -120,18 +120,29 @@ class ParticipacionController : UIViewController{
                     self.indexVideoArray = []
                     var yPos : CGFloat! = 0
                     for contenido in self.contenidos{
-                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: 30))
+                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: self.scrollMaster.frame.height * 1/4))
                         button.setTitle(contenido.titulo, forState: UIControlState.Normal)
                         button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
                         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                         button.addTarget(self, action: "showView:", forControlEvents: UIControlEvents.TouchUpInside)
+                        //Agregado recientemente
+                        button.titleLabel?.font = UIFont.boldSystemFontOfSize(13)
+                        button.titleLabel!.numberOfLines = 5;
+                        button.titleLabel!.adjustsFontSizeToFitWidth = true;
+                        button.titleLabel!.lineBreakMode = NSLineBreakMode.ByClipping;
+                        button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
+                        button.contentVerticalAlignment = UIControlContentVerticalAlignment.Center;
+                        button.contentEdgeInsets.left  = self.scrollMaster.frame.width * 1/4
+                        
                         
                         let textView = UITextView(frame: CGRect(x: 10, y: button.frame.maxY, width: self.view.frame.width - 20, height: 0))
                         textView.text = contenido.descripcion
                         textView.textAlignment = NSTextAlignment.Justified
                         textView.backgroundColor = UIColor(white: 0.5, alpha: 0.2)
-                        textView.layer.cornerRadius = 10
+                        //textView.layer.cornerRadius = 10
                         textView.editable = false
+                        //Agregado recientemente
+                        textView.font = UIFont(name: (textView.font?.fontName)!, size: 12)
                         
                         self.scrollMaster.addSubview(button)
                         self.scrollMaster.addSubview(textView)
