@@ -46,8 +46,11 @@ class TransparenciaController : UIViewController{
         for i in 0...(buttonArray.count-1){
             if(sender == buttonArray[i]){
                 if(textArray[i].frame.height == 0){
-                    textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 70)
-                    delta = 80
+                    //textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 70)
+                    textArray[i].translatesAutoresizingMaskIntoConstraints = true
+                    textArray[i].sizeToFit()
+                    textArray[i].scrollEnabled = false
+                    delta = textArray[i].frame.height + 20
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]
@@ -68,8 +71,9 @@ class TransparenciaController : UIViewController{
                     }
                 }
                 else{
+                    delta = textArray[i].frame.height + 20
                     textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 0)
-                    delta = 80
+                    
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]
@@ -139,7 +143,7 @@ class TransparenciaController : UIViewController{
                         textView.text = contenido.descripcion
                         textView.textAlignment = NSTextAlignment.Justified
                         textView.backgroundColor = UIColor(white: 0.5, alpha: 0.2)
-                        textView.layer.cornerRadius = 10
+                        //textView.layer.cornerRadius = 10
                         textView.editable = false
                         textView.font = UIFont(name: (textView.font?.fontName)!, size: 12)
                         

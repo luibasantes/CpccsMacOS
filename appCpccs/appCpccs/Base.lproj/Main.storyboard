@@ -1602,7 +1602,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-zz-jDC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-zz-jDC">
                                 <rect key="frame" x="0.0" y="142" width="321" height="39"/>
                                 <color key="backgroundColor" red="0.027450980392156862" green="0.26666666666666666" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -3751,14 +3751,14 @@ Edificio Centenario
         <image name="youtube.png" width="151" height="157"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jtG-qD-f20"/>
-        <segue reference="051-2c-mEk"/>
-        <segue reference="bgT-UX-qQl"/>
+        <segue reference="crb-2e-PRb"/>
+        <segue reference="bAF-10-JOw"/>
+        <segue reference="OA3-GQ-6YO"/>
+        <segue reference="N8s-ER-NeE"/>
+        <segue reference="uhM-oq-Bso"/>
+        <segue reference="apv-kL-MA1"/>
+        <segue reference="LkV-Ol-9Zp"/>
         <segue reference="o9W-tP-t42"/>
         <segue reference="XiG-zO-FHi"/>
-        <segue reference="8ac-0B-ITq"/>
-        <segue reference="Ovz-yT-5yI"/>
-        <segue reference="bAF-10-JOw"/>
-        <segue reference="crb-2e-PRb"/>
     </inferredMetricsTieBreakers>
 </document>

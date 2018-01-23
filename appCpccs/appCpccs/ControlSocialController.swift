@@ -49,8 +49,11 @@ class ControlSocialController : UIViewController{
         for i in 0...(buttonArray.count-1){
             if(sender == buttonArray[i]){
                 if(textArray[i].frame.height == 0){
-                    textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: self.scrollMaster.frame.height)
-                    delta = 80
+                    //textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: self.scrollMaster.frame.height)
+                    textArray[i].translatesAutoresizingMaskIntoConstraints = true
+                    textArray[i].sizeToFit()
+                    textArray[i].scrollEnabled = false
+                    delta = textArray[i].frame.height + 20
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]
@@ -71,8 +74,9 @@ class ControlSocialController : UIViewController{
                     }
                 }
                 else{
+                    delta = textArray[i].frame.height + 20
                     textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 0)
-                    delta = 80
+                    
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]

@@ -13,6 +13,8 @@ class ParticipacionController : UIViewController{
     
     
     @IBOutlet weak var scrollMaster: UIScrollView!
+    var screenSizes: Array<CGFloat> = [640]
+    var fontSizes = [15]
     var contenidos : Array<ContenidoParticipacionCiudadana>!
     var buttonArray: Array<UIButton>!
     var videoButtonArray: Array<UIButton>!
@@ -45,8 +47,12 @@ class ParticipacionController : UIViewController{
         for i in 0...(buttonArray.count-1){
             if(sender == buttonArray[i]){
                 if(textArray[i].frame.height == 0){
-                    textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: self.scrollMaster.frame.height)
-                    delta = 80
+                    //textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: self.scrollMaster.frame.height)
+                    //textArray[i]
+                    textArray[i].translatesAutoresizingMaskIntoConstraints = true
+                    textArray[i].sizeToFit()
+                    textArray[i].scrollEnabled = false
+                    delta = textArray[i].frame.height + 20
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]
@@ -67,8 +73,9 @@ class ParticipacionController : UIViewController{
                     }
                 }
                 else{
+                    delta = textArray[i].frame.height + 20
                     textArray[i].frame = CGRect(x: textArray[i].frame.minX, y: textArray[i].frame.minY, width: textArray[i].frame.width, height: 0)
-                    delta = 80
+                    
                     
                     if(indexVideoArray[i] != -1){
                         let index = indexVideoArray[i]
@@ -109,6 +116,7 @@ class ParticipacionController : UIViewController{
     }
     
     override func viewDidLoad() {
+        //Verificando tamanio de pantalla
         self.maxHeight = 0
         ConexionWS.getDatos("contenidos/"){
             result in dispatch_async(dispatch_get_main_queue()){
@@ -118,15 +126,26 @@ class ParticipacionController : UIViewController{
                     self.textArray = []
                     self.videoButtonArray = []
                     self.indexVideoArray = []
+                    var fontSize = CGFloat()
+                    let hscreen = UIScreen.mainScreen().bounds.height
+                    let wscreen = UIScreen.mainScreen().bounds.width
+                    print("size: \(wscreen)")
+                    if(wscreen>400){
+                        fontSize = 17.0
+                    }
+                    else{
+                        fontSize = 13.0
+                    }
                     var yPos : CGFloat! = 0
                     for contenido in self.contenidos{
-                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: self.scrollMaster.frame.height * 1/4))
+                        
+                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: self.scrollMaster.frame.height * 1/5))
                         button.setTitle(contenido.titulo, forState: UIControlState.Normal)
                         button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
                         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                         button.addTarget(self, action: "showView:", forControlEvents: UIControlEvents.TouchUpInside)
                         //Agregado recientemente
-                        button.titleLabel?.font = UIFont.boldSystemFontOfSize(13)
+                        button.titleLabel?.font = UIFont.boldSystemFontOfSize(fontSize)
                         button.titleLabel!.numberOfLines = 5;
                         button.titleLabel!.adjustsFontSizeToFitWidth = true;
                         button.titleLabel!.lineBreakMode = NSLineBreakMode.ByClipping;
@@ -142,7 +161,8 @@ class ParticipacionController : UIViewController{
                         //textView.layer.cornerRadius = 10
                         textView.editable = false
                         //Agregado recientemente
-                        textView.font = UIFont(name: (textView.font?.fontName)!, size: 12)
+                        textView.font = UIFont(name: (textView.font?.fontName)!, size: fontSize)
+                        
                         
                         self.scrollMaster.addSubview(button)
                         self.scrollMaster.addSubview(textView)
