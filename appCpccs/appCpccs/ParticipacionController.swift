@@ -127,19 +127,31 @@ class ParticipacionController : UIViewController{
                     self.videoButtonArray = []
                     self.indexVideoArray = []
                     var fontSize = CGFloat()
+                    var itemsSize = CGFloat()
                     let hscreen = UIScreen.mainScreen().bounds.height
                     let wscreen = UIScreen.mainScreen().bounds.width
-                    print("size: \(wscreen)")
+                    print("size: \(wscreen),\(hscreen)")
+                    //Verificando ancho
                     if(wscreen>400){
                         fontSize = 17.0
                     }
                     else{
                         fontSize = 13.0
                     }
+                    //verificando altura
+                    if(hscreen>580){
+                        itemsSize = self.scrollMaster.frame.height * 1/6
+                    }
+                    else if(hscreen>480){
+                        itemsSize = self.scrollMaster.frame.height * 1/5
+                    }
+                    else{
+                        itemsSize = self.scrollMaster.frame.height * 1/4
+                    }
                     var yPos : CGFloat! = 0
                     for contenido in self.contenidos{
                         
-                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: self.scrollMaster.frame.height * 1/5))
+                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: itemsSize))
                         button.setTitle(contenido.titulo, forState: UIControlState.Normal)
                         button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
                         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
@@ -161,7 +173,7 @@ class ParticipacionController : UIViewController{
                         //textView.layer.cornerRadius = 10
                         textView.editable = false
                         //Agregado recientemente
-                        textView.font = UIFont(name: (textView.font?.fontName)!, size: fontSize)
+                        textView.font = UIFont(name: (textView.font?.fontName)!, size: fontSize - 1)
                         
                         
                         self.scrollMaster.addSubview(button)

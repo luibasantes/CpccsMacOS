@@ -124,14 +124,37 @@ class TransparenciaController : UIViewController{
                     self.videoButtonArray = []
                     self.indexVideoArray = []
                     var yPos : CGFloat! = 0
+                    //en este parte se verifica el tamanio de la pantalla
+                    var fontSize = CGFloat()
+                    var itemsSize = CGFloat()
+                    let hscreen = UIScreen.mainScreen().bounds.height
+                    let wscreen = UIScreen.mainScreen().bounds.width
+                    print("size: \(wscreen),\(hscreen)")
+                    //Verificando ancho
+                    if(wscreen>400){
+                        fontSize = 17.0
+                    }
+                    else{
+                        fontSize = 13.0
+                    }
+                    //verificando altura
+                    if(hscreen>580){
+                        itemsSize = self.scrollMaster.frame.height * 1/6
+                    }
+                    else if(hscreen>480){
+                        itemsSize = self.scrollMaster.frame.height * 1/5
+                    }
+                    else{
+                        itemsSize = self.scrollMaster.frame.height * 1/4
+                    }
                     for contenido in self.contenidos{
-                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: 30))
+                        let button = UIButton(frame: CGRect(x:0, y: yPos, width: self.view.frame.width, height: itemsSize))
                         button.setTitle(contenido.titulo, forState: UIControlState.Normal)
                         button.setBackgroundImage(UIImage(named: "bar item.png"), forState: UIControlState.Normal)
                         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                         button.addTarget(self, action: "showView:", forControlEvents: UIControlEvents.TouchUpInside)
                         //Agregado recientemente
-                        button.titleLabel?.font = UIFont.boldSystemFontOfSize(13)
+                        button.titleLabel?.font = UIFont.boldSystemFontOfSize(fontSize)
                         button.titleLabel!.numberOfLines = 5;
                         button.titleLabel!.adjustsFontSizeToFitWidth = true;
                         button.titleLabel!.lineBreakMode = NSLineBreakMode.ByClipping;
@@ -145,7 +168,7 @@ class TransparenciaController : UIViewController{
                         textView.backgroundColor = UIColor(white: 0.5, alpha: 0.2)
                         //textView.layer.cornerRadius = 10
                         textView.editable = false
-                        textView.font = UIFont(name: (textView.font?.fontName)!, size: 12)
+                        textView.font = UIFont(name: (textView.font?.fontName)!, size: fontSize - 1)
                         
                         self.scrollMaster.addSubview(button)
                         self.scrollMaster.addSubview(textView)
